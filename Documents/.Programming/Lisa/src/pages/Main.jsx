@@ -3,6 +3,8 @@ import AboutScreen from '../components/aboutScreen/AboutScreen.jsx'
 import HomeScreen from '../components/homeScreen/HomeScreen.jsx'
 import ProductsScreen from '../components/productsScreen/ProductsScreen.jsx'
 import { FullPage, Slide } from 'react-full-page'
+import DeliveryScreen from '../components/deliveryScreen/DeliveryScreen.jsx'
+import ContactFormScreen from '../components/contactFormScreen/ContactFormScreen.jsx'
 
 export default function Main() {
 
@@ -23,6 +25,13 @@ export default function Main() {
         <Slide>
           <ProductsScreen />
         </Slide>
+        <Slide>
+          <DeliveryScreen />
+        </Slide>
+        <Slide>
+          <ContactFormScreen />
+        </Slide>
+
       </FullPage>
 
 

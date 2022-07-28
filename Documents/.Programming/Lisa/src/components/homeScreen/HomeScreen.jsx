@@ -12,7 +12,7 @@ export default function HomeScreen() {
          <img className='home-screen__title' src={title} alt="" />
          <OrderButton styles={{
             margin: "0 auto",
-            top: "85%"
+            top: "80%"
          }} />
       </div>
    )

@@ -4,6 +4,7 @@ import Nav from "./components/nav/Nav";
 import Main from "./pages/Main";
 import Shop from "./pages/Shop";
 import About from "./pages/About";
+import Footer from "./components/footer/Footer";
 
 function App() {
    return (
@@ -17,6 +18,7 @@ function App() {
                <Route path='/about/' element={<About />} />
 
             </Routes>
+            <Footer />
          </BrowserRouter>
 
 

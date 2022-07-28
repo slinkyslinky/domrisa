@@ -18,11 +18,16 @@ export default function ProductsScreen() {
 
       <div id='productsScreen' className='products-screen screen'>
          <div className="container">
+            <h2>Отличные подарки</h2>
+            <div className="products-container">
+               {productsList.map(product =>
 
-            {productsList.map(product =>
-
-               <ProductsItem key={product.id} product={product} />
-            )}
+                  <ProductsItem key={product.id} product={product} />
+               )}
+            </div>
+            <article className='products-article'>
+               Любое из этих изделий станет замечательным подарком для близких или для себя. для тех кто дорожит деталями и уникальнотью
+            </article>
 
 
 

@@ -1,11 +1,28 @@
 .products-screen {
    height: 100vh;
    width: 100%;
+   padding: 135px 0 120px;
 
-   .container {
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1600px;
-      height: 100%;
+   h2 {
+      text-align: center;
+      padding: 0 20px;
    }
+
+
+
+}
+
+.products-article {
+   padding: 0 170px;
+   font-size: 32px;
+   text-align: center;
+}
+
+.products-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   padding: 130px 20px 0;
+   margin-bottom: 65px;
 }

@@ -1,10 +1,18 @@
 @import './utils/nullification.scss';
 @import './components/container/container.scss';
-
+@import './components/common//h2.scss';
 
 
 
 #shop {
 
    background-color: red;
+}
+
+body {
+   font-size: 32px;
+}
+
+.about {
+   // width: 100%;
 }

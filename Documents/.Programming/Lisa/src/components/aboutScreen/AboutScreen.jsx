@@ -2,6 +2,7 @@ import React from 'react'
 import './aboutScreen.scss'
 import AboutProducts from '../aboutProducts/AboutProducts.jsx'
 
+
 export default function AboutScreen() {
 
 
@@ -13,13 +14,15 @@ export default function AboutScreen() {
 
          <div className="container">
             <article className='about-screen__item'>
-               <h2>About products</h2>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, vel alias enim ipsa, voluptatibus sint quia commodi sit nostrum tenetur nemo, dolore nam dicta! Iste accusantium atque, numquam maxime quasi quos sint? Corporis impedit quas aliquam hic culpa. Eum aliquid voluptate culpa perferendis adipisci, quidem ullam harum porro voluptatem nesciunt.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, vel alias enim ipsa, voluptatibus sint quia commodi sit nostrum tenetur nemo, dolore nam dicta! Iste accusantium atque, numquam maxime quasi quos sint? Corporis impedit quas aliquam hic culpa. Eum aliquid voluptate culpa perferendis adipisci, quidem ullam harum porro voluptatem nesciunt.</p>
+               <h2>Ручная работа</h2>
+               <p>В этом магазине все товары ручной работы, созданы с индивидуальным подходом и любовью. <br /><br />
+
+                  Можно сделать индивидуальный заказ или приобрести уже готовые изделия в магазине.</p>
             </article>
             <div className='about-screen__item'>
                <AboutProducts />
 
+               <p>Посмотрите больше в <a href=''>Instagram</a></p>
             </div>
          </div>
 

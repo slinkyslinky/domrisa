@@ -1,7 +1,9 @@
+@import '../../variables/variables.scss';
+
 .about-screen {
    height: 100vh;
    width: 100%;
-   padding: 150px 0;
+   padding-top: 120px;
 
    .container {
       display: flex;
@@ -10,7 +12,7 @@
 
    &__item {
       display: block;
-      width: 50%;
+
       padding: 20px;
 
 
@@ -21,8 +23,22 @@
 
       p {
          margin-top: 75px;
-         font-size: 26px;
-         padding-right: 40px;
+         font-size: 32px;
+         padding-right: 100px;
+      }
+   }
+
+   a {
+      color: $yellow;
+   }
+
+   &__item:last-child {
+
+
+      p {
+         padding: 40px 0;
+         text-align: center;
+         font-size: 24px;
       }
    }
 

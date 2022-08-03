@@ -2,7 +2,7 @@ nav {
 
    width: 350px;
 
-   padding: 15px;
+   padding: 10px;
    position: fixed;
    top: 0;
    left: 50%;
@@ -11,24 +11,24 @@ nav {
    border-radius: 0 0 30px 30px;
    z-index: 10;
 
-   li {
+   ul {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       gap: 20px;
 
-      ul {
+      li {
          font-size: 20px;
          line-height: 1;
          font-weight: bold;
       }
 
-      ul:first-child {
+      li:first-child {
          color: rgb(54, 109, 54)
       }
 
-      ul:last-child {
+      li:last-child {
          color: rgb(102, 60, 71)
       }
    }

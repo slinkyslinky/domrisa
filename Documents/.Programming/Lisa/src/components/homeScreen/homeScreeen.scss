@@ -5,6 +5,17 @@
    background-size: cover;
    position: relative;
 
+   .contacts {
+      position: absolute;
+      top: 20px;
+      right: 100px;
+      width: 200px;
+
+      img {
+         width: 20px;
+         height: 20px;
+      }
+   }
 
 }
 

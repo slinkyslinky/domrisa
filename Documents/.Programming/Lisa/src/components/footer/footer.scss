@@ -1,5 +1,15 @@
+@import '../../variables/variables.scss';
+
 footer {
    background-color: #524957;
-   height: 300px;
+   height: 15vh;
    width: 100%;
+   padding: 20px 140px;
+
+   display: flex;
+   justify-content: space-between;
+
+   font-size: 20px;
+   color: $lil;
+
 }

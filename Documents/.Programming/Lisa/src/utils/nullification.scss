@@ -52,6 +52,10 @@ ol {
   list-style: none;
 }
 
+li::marker {
+  opacity: 0;
+}
+
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -85,4 +89,15 @@ a {
 
 a:visited {
   color: inherit;
+}
+
+button,
+button:active,
+button:focus {
+  outline: none;
+  border: 0;
+}
+
+button::-moz-focus-inner {
+  border: 0;
 }

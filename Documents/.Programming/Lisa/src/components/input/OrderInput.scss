@@ -1,0 +1,18 @@
+@import '../../variables/variables.scss';
+
+.order-input {
+   display: block;
+   border-radius: 90px;
+   outline: none;
+   border: 1px solid $lil;
+   color: $lil;
+   font-size: 20px;
+   padding: 16px 38px 12px;
+   background: none;
+   margin: 10px auto;
+}
+
+.order-input::placeholder {
+   color: $lil;
+   opacity: 0.4;
+}

@@ -1,0 +1,72 @@
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   src: local('Montserrat'),
+      url('./montserrat-v25-latin_cyrillic-regular.woff2'),
+      url('./montserrat-v25-latin_cyrillic-regular.woff'),
+      url('./montserrat-v25-latin_cyrillic-regular.ttf'),
+      url('./montserrat-v25-latin_cyrillic-regular.eot'),
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 500;
+   src: local('Montserrat'),
+      url('./montserrat-v25-latin_cyrillic-500.woff2'),
+      url('./montserrat-v25-latin_cyrillic-500.woff'),
+      url('./montserrat-v25-latin_cyrillic-500.ttf'),
+      url('./montserrat-v25-latin_cyrillic-500.eot'),
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   src: local('Montserrat'),
+      url('./montserrat-v25-latin_cyrillic-700.woff2'),
+      url('./montserrat-v25-latin_cyrillic-700.woff'),
+      url('./montserrat-v25-latin_cyrillic-700.ttf'),
+      url('./montserrat-v25-latin_cyrillic-700.eot'),
+}
+
+/* lora-regular - latin */
+@font-face {
+   font-family: 'Lora';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../fonts/lora-v25-latin-regular.eot');
+   /* IE9 Compat Modes */
+   src: local(''),
+      url('../fonts/lora-v25-latin-regular.eot?#iefix') format('embedded-opentype'),
+      /* IE6-IE8 */
+      url('../fonts/lora-v25-latin-regular.woff2') format('woff2'),
+      /* Super Modern Browsers */
+      url('../fonts/lora-v25-latin-regular.woff') format('woff'),
+      /* Modern Browsers */
+      url('../fonts/lora-v25-latin-regular.ttf') format('truetype'),
+      /* Safari, Android, iOS */
+      url('../fonts/lora-v25-latin-regular.svg#Lora') format('svg');
+   /* Legacy iOS */
+}
+
+/* lora-500 - latin */
+@font-face {
+   font-family: 'Lora';
+   font-style: normal;
+   font-weight: 500;
+   src: url('../fonts/lora-v25-latin-500.eot');
+   /* IE9 Compat Modes */
+   src: local(''),
+      url('../fonts/lora-v25-latin-500.eot?#iefix') format('embedded-opentype'),
+      /* IE6-IE8 */
+      url('../fonts/lora-v25-latin-500.woff2') format('woff2'),
+      /* Super Modern Browsers */
+      url('../fonts/lora-v25-latin-500.woff') format('woff'),
+      /* Modern Browsers */
+      url('../fonts/lora-v25-latin-500.ttf') format('truetype'),
+      /* Safari, Android, iOS */
+      url('../fonts/lora-v25-latin-500.svg#Lora') format('svg');
+   /* Legacy iOS */
+}

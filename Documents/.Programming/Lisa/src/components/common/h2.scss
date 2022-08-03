@@ -1,4 +1,7 @@
+@import '../../variables/variables.scss';
+
 h2 {
    font-size: 60px;
-   color: #524957;
+   color: $violet;
+   font-family: 'Lora';
 }

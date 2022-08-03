@@ -1,9 +1,15 @@
 import React from 'react'
+import ShopItem from '../components/shopItem/ShopItem'
 
 export default function Shop() {
+   const items = [
+      {}
+   ]
    return (
       <div id='shop'>
-         Shop
+         <div className="container">
+            <ShopItem />
+         </div>
       </div>
    )
 }

@@ -2,6 +2,11 @@
 
    width: 400px;
    height: 400px;
-   background-color: teal;
+
    border-radius: 20px;
+
+   article,
+   img {
+      display: none;
+   }
 }

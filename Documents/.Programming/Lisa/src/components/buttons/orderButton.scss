@@ -1,9 +1,11 @@
+@import '../../variables/variables.scss';
+
 .order-button {
    text-transform: uppercase;
    width: 250px;
    height: 80px;
    color: rgb(36, 36, 36);
-   background-color: rgb(225, 202, 72);
+   background-color: $yellow;
    border-radius: 20px;
    display: block;
    border: none;

@@ -1,18 +1,25 @@
 @import './utils/nullification.scss';
 @import './components/container/container.scss';
 @import './components/common//h2.scss';
-
-
+@import './components/common//h3.scss';
+@import './variables/variables.scss';
+@import './fonts/fonts.scss';
 
 #shop {
-
-   background-color: red;
+   padding-top: 100px;
 }
 
 body {
+   font-family: 'Montserrat';
+   font-weight: 400;
    font-size: 32px;
+
 }
 
 .about {
    // width: 100%;
+}
+
+a {
+   color: $yellow
 }

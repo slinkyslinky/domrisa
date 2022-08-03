@@ -7,11 +7,11 @@ export default function Nav() {
 
     return (
         <nav>
-            <li>
-                <ul><Link to="/shop/">Магазин</Link></ul>
-                <ul><Link to="/"><Logo /></Link></ul>
-                <ul><Link to="/about/">Обо мне</Link></ul>
-            </li>
+            <ul>
+                <li><Link to="/shop/">Магазин</Link></li>
+                <li><Link to="/"><Logo /></Link></li>
+                <li><Link to="/about/">Обо мне</Link></li>
+            </ul>
         </nav>
     )
 }

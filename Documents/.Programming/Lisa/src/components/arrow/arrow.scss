@@ -1,0 +1,74 @@
+@import '../../variables/variables.scss';
+
+.products__arrow {
+
+   background-color: $grey;
+
+   height: 3px;
+   width: 58px;
+
+   position: absolute;
+   top: 50%;
+
+}
+
+.arrow--right {
+   left: calc(100% + 37px);
+}
+
+.arrow--left {
+   right: calc(100% + 37px);
+}
+
+.products__arrow::before {
+   content: '';
+   position: absolute;
+   top: 50%;
+
+   width: 16px;
+   height: 16px;
+   border-radius: 2px;
+
+   border-right: 3px solid $grey;
+   border-bottom: 3px solid $grey;
+
+
+
+}
+
+.arrow--right::before {
+   right: 0;
+   transform: translateY(-50%) rotateZ(-45deg);
+}
+
+.arrow--left::before {
+   left: 0;
+   transform: translateY(-50%) rotateZ(135deg);
+}
+
+
+.arrow--back {
+   background-color: $yellow;
+
+   height: 3px;
+   width: 28px;
+
+   position: absolute;
+   top: 30%;
+   right: calc(100% + 5px);
+}
+
+.arrow--back::before {
+   content: '';
+   position: absolute;
+   top: 50%;
+
+   width: 14px;
+   height: 14px;
+   border-radius: 2px;
+
+   border-right: 3px solid $yellow;
+   border-bottom: 3px solid $yellow;
+   left: 0;
+   transform: translateY(-50%) rotateZ(135deg);
+}

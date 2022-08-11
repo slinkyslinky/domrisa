@@ -5,11 +5,13 @@
    border-radius: 90px;
    outline: none;
    border: 1px solid $lil;
-   color: $lil;
+   color: $yellow;
    font-size: 20px;
    padding: 16px 38px 12px;
    background: none;
+   width: 350px;
    margin: 10px auto;
+
 }
 
 .order-input::placeholder {

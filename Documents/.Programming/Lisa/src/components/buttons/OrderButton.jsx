@@ -1,10 +1,10 @@
 import React from 'react'
 import './orderButton.scss'
 
-export default function OrderButton({ styles }) {
+export default function OrderButton({ styles, text }) {
    return (
       <button style={styles} className='order-button'>
-         заказать
+         {text}
       </button>
    )
 }

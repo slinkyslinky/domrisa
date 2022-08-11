@@ -1,14 +1,24 @@
 @import '../../variables/variables.scss';
 
 .order-button {
-   text-transform: uppercase;
-   width: 250px;
+   text-transform: capitalize;
+   width: 340px;
    height: 80px;
-   color: rgb(36, 36, 36);
+   color: $violet;
    background-color: $yellow;
-   border-radius: 20px;
+   border-radius: 90px;
    display: block;
    border: none;
    position: relative;
    font-size: 24px;
+   // box-shadow: 0px 0px 8px $violet;
+
+   &:hover,
+   &:focus {
+      cursor: pointer;
+
+      // box-shadow: 0px 0px 12px rgb(67, 43, 95);
+      background-color: $yellow-hovered;
+
+   }
 }

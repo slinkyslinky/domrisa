@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './ContactForm.scss'
 import ContactFormFirstScreen from './contactFormFirstScreen'
-import ContactFormSecondScreen from './contactFormSecondScreen'
+import ContactFormSecondScreen from './ContactFormSecondScreen'
 
 
 

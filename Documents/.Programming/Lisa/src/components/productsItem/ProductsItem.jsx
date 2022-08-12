@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './ProductsItem.scss'
+import bant from '../../img/Bant2.png'
+
+export default function ProductsItem({ product, randomBoxNumber, randomDelayValue, id }) {
 
 
-export default function ProductsItem({ product }) {
+
+
+
+
+
    return (
-      <div className='products-item' style={{ backgroundColor: product.color }}>
-         <article>
-            <h3>{product.title}</h3>
-            <p>{product.text}</p>
-         </article>
+      <div className='products-item' id={'product-' + id} >
+         <img className='products-item__bant' src={bant} alt="" />
+         <div className="products-item__cover" style={{ backgroundColor: product.color }}>
+            <article>
+               <h3>{product.title}</h3>
+               <p>{product.text}</p>
+            </article>
 
-         <img src="" alt={product.img} />
+            <img className='products-item__picture' src="" alt={product.img} />
+
+         </div>
+
       </div>
    )
 }

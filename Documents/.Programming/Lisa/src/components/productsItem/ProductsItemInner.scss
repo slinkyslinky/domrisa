@@ -1,0 +1,48 @@
+.products-item__inner {
+   position: absolute;
+   top: 0;
+   left: 0;
+   cursor: pointer;
+   display: flex;
+   width: 100%;
+   z-index: -1;
+   overflow: hidden;
+
+   .products-item__back {
+      transition: all ease 0.5s;
+      min-width: 350px;
+      height: 350px;
+      background-color: coral;
+
+
+   }
+
+   .products-item__picture {
+
+      object-fit: cover;
+      height: 90%;
+      width: 90%;
+
+
+   }
+
+   article {
+      background-color: rgb(218, 205, 188);
+      animation: innerShowing 1s forwards;
+      min-width: 450px;
+      overflow: hidden;
+   }
+
+
+
+}
+
+@keyframes innerShowing {
+   from {
+      transform: translateX(-450px);
+   }
+
+   to {
+      transform: translateX(-20px);
+   }
+}

@@ -1,35 +1,69 @@
+@import '../../variables/variables.scss';
+
 nav {
 
-   width: 350px;
-
+   width: 490px;
+   height: 80px;
    padding: 10px;
    position: fixed;
    top: 0;
    left: 50%;
    transform: translateX(-50%);
-   background-color: rgba(236, 232, 225, 0.8);
-   border-radius: 0 0 30px 30px;
+   background-color: $bej;
+   border-radius: 0 0 50px 50px;
    z-index: 10;
+
+
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid $lil;
+      background-color: $bej;
+      z-index: -1;
+   }
 
    ul {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 60px;
+      z-index: 11;
+      height: 100%;
 
       li {
          font-size: 20px;
          line-height: 1;
          font-weight: bold;
+         color: $violet;
+
+         &:hover,
+         &:focus,
+
+         &:focus-within {
+            color: $yellow;
+
+
+         }
       }
 
-      li:first-child {
-         color: rgb(54, 109, 54)
-      }
 
-      li:last-child {
-         color: rgb(102, 60, 71)
-      }
+
+
+
+
    }
+}
+
+.nav__logo {
+   width: 60px;
+   height: 60px;
+   fill: $violet
 }

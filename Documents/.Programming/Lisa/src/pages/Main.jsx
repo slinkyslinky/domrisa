@@ -10,6 +10,29 @@ import ProductsScreen from '../components/productsScreen/ProductsScreen.jsx'
 export default function Main() {
 
 
+  let randomBoxNumber = 1;
+  let randomDelayValue = 1000;
+
+
+
+  (function setRandomAnimation() {
+
+    randomDelayValue = Math.floor(Math.random() * (6000 - 1500) + 1500);
+    setTimeout(() => {
+      randomBoxNumber = Math.floor(Math.random() * 3);
+
+
+
+      document.getElementById('productsContainer').children[randomBoxNumber].classList.add('products-item--active')
+      setTimeout(() => {
+        document.getElementById('productsContainer').children[randomBoxNumber].classList.remove('products-item--active')
+        setRandomAnimation()
+      }, 800)
+
+
+
+    }, randomDelayValue)
+  }())
 
 
 

@@ -1,15 +1,13 @@
 @import '../../variables/variables.scss';
 
 .products__arrow {
-
-   background-color: $grey;
-
-   height: 3px;
-   width: 58px;
+   background: none;
+   height: 30px;
+   width: 60px;
 
    position: absolute;
    top: 50%;
-
+   cursor: pointer;
 }
 
 .arrow--right {
@@ -18,6 +16,18 @@
 
 .arrow--left {
    right: calc(100% + 37px);
+}
+
+.products__arrow::after {
+   content: '';
+   position: absolute;
+   left: 10%;
+
+   top: 50%;
+   transform: translateY(-50%);
+   height: 3px;
+   width: 80%;
+   background-color: $grey;
 }
 
 .products__arrow::before {
@@ -37,12 +47,12 @@
 }
 
 .arrow--right::before {
-   right: 0;
+   right: 10%;
    transform: translateY(-50%) rotateZ(-45deg);
 }
 
 .arrow--left::before {
-   left: 0;
+   left: 10%;
    transform: translateY(-50%) rotateZ(135deg);
 }
 

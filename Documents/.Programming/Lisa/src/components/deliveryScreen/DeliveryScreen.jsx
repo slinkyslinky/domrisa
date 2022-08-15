@@ -1,5 +1,7 @@
 import React from 'react'
 import './deliveryScreen.scss'
+import img1 from '../../img/delivery.jpg'
+import img2 from '../../img/box.png'
 
 export default function DeliveryScreen() {
    return (
@@ -7,7 +9,7 @@ export default function DeliveryScreen() {
          <div className="container container--wide">
             <div className="delivery-grid">
                <picture className='delivery-grid__item'>
-                  <img src="https://placehold.jp/800x800.png" alt="first image" />
+                  <img src={img1} alt="first image" />
                </picture>
                <article className='delivery-grid__item'>
                   <h2>Упаковка</h2>
@@ -20,7 +22,12 @@ export default function DeliveryScreen() {
                      Доставка Почтой России — от 300 рублей, рассчитывается индивидуально.</p>
                </article>
                <picture className='delivery-grid__item'>
-                  <img src="https://placehold.jp/800x800.png" alt="second image" />
+                  <div className="delivery-grid__imagebox">
+                     <div className="delivery-grid__backround" />
+                     <img src={img2} alt="second image" />
+                  </div>
+
+
                </picture>
 
             </div>

@@ -1,39 +1,111 @@
 .products-item {
-
-   width: 390px;
-   height: 460px;
+   position: relative;
+   display: block;
+   width: 350px;
+   height: 350px;
    position: relative;
 
+   transform: rotateZ(0);
+   transition: margin ease 0.5s, width ease 0.5s;
+
+
+
+
+
+   &:nth-child(2) {
+      z-index: 3;
+   }
+
+   &:last-child {
+      .products-item__inner {
+         flex-direction: row-reverse;
+      }
+   }
+
    &__cover {
+      display: block;
       width: 350px;
       height: 350px;
-      margin: 95px auto;
+
+      border-radius: 20px;
+      z-index: 5;
+      cursor: pointer;
+      transition: opacity ease 0.5s;
+
+      &--open {
+         // display: none;
+      }
+
+
+   }
+
+   &--open {
+      // animation: open-product 0.5s forwards;
+
+      width: 70vw;
+      margin: 0 auto;
+      animation: none;
+
+
+      .products-item__cover {
+         opacity: 0;
+
+
+         .products-item__cover::after {
+            // display: none;
+         }
+      }
+
+   }
+
+   &__back {
+      width: 350px;
+      height: 350px;
       border-radius: 20px;
    }
 
-   &__bant {
+   &__cover::after {
       position: absolute;
-      top: 0;
-      left: 0;
+      content: url(../../img/Bant2.png);
+      top: -95px;
+      left: -20px;
       width: 390px;
       height: 450px;
+
+
+
    }
 
-   article,
-   &__picture {
-      display: none;
+   &__cover--animated {
+
+      // animation: coverHidden 0.5s forwards;
+
    }
+
+
+
+   &__picture {}
 
 
    animation: jiggling 0.8s infinite;
    animation-play-state: paused;
+   animation-fill-mode: forwards;
+
 
    &--active {
       animation-play-state: running;
    }
+
+
+
+   &:hover {
+      animation-play-state: running;
+   }
+
+
 }
 
-
+////////// Animations /////////////
 
 @keyframes jiggling {
    from {
@@ -68,5 +140,19 @@
 
    to {
       transform: rotateZ(0);
+   }
+}
+
+@keyframes coverHidden {
+   from {
+      opacity: 1;
+      transform: translateX(100px);
+   }
+
+   to {
+      opacity: 0;
+      transform: translateX(0);
+
+
    }
 }

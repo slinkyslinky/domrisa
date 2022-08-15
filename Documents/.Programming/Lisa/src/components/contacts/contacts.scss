@@ -1,9 +1,27 @@
+@import '../../variables/variables.scss';
+
 .contacts {
    display: flex;
    justify-content: space-around;
 
-   img {
-      width: 45px;
-      height: 45px;
+   svg {
+      width: 25px;
+      height: 25px;
+      fill: $lil;
+
+
    }
+
+   a {
+
+      &:hover,
+      &:focus {
+         svg {
+            fill: $green;
+         }
+      }
+   }
+
+
+
 }

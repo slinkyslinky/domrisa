@@ -22,7 +22,7 @@ export default function AboutScreen() {
             <div className='about-screen__item'>
                <AboutProducts />
 
-               <p>Посмотрите больше в <a href=''>Instagram</a></p>
+               <p>Посмотрите больше в <a href='https://vk.com/elisa_domrisa'>Instagram</a></p>
             </div>
          </div>
 

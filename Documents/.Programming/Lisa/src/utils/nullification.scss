@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 /* Убираем внутренние отступы */
 ul,
 ol {
@@ -28,7 +32,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
-
+  cursor: default;
 }
 
 article {

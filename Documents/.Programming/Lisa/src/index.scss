@@ -13,7 +13,7 @@ body {
    font-family: 'Montserrat';
    font-weight: 400;
    font-size: 28px;
-
+   scroll-behavior: smooth;
 }
 
 .about {
@@ -22,4 +22,15 @@ body {
 
 a {
    color: $yellow
+}
+
+#shop {
+   min-height: 100vh;
+
+   footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+   }
+
 }

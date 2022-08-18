@@ -1,18 +1,20 @@
 @import '../../variables/variables.scss';
 
 
-.about-products {
+.slider {
    width: 600px;
    height: 600px;
 
    border-radius: 90px;
    position: relative;
+   background-color: $green;
 
 
    .slider__block {
       overflow: hidden;
       width: 100%;
       height: 100%;
+      border: 3px solid $grey;
       border-radius: 90px;
       position: relative;
       cursor: pointer;

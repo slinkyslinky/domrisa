@@ -3,10 +3,12 @@
 
 .reviews {
    background-color: $lil;
-   height: 100vh;
+
+   height: auto;
    width: 100%;
 
-   padding: 120px 0;
+   padding-top: 120px;
+
 
    &__wrapper {
       background-color: $bej;
@@ -16,6 +18,7 @@
       min-height: 400px;
       margin: 0 auto;
       padding: 10px 50px;
+      margin-bottom: 100px;
 
       h2 {
          text-align: center;

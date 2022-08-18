@@ -1,12 +1,18 @@
 import React from 'react'
 import './aboutScreen.scss'
-import AboutProducts from '../aboutProducts/AboutProducts.jsx'
-
+import Slider from '../slider/Slider'
+import img1 from '../../img/item1.png'
+import img2 from '../../img/py4u3x9Z--Y.jpg'
 
 export default function AboutScreen() {
 
 
 
+   const imageList = [
+      { id: 1, img: img1, alt: 'Image of the product' },
+      { id: 2, img: img2, alt: 'Image of the product' },
+      { id: 3, img: '', alt: 'Image of the product' },
+   ]
 
 
    return (
@@ -20,7 +26,7 @@ export default function AboutScreen() {
                   Можно сделать индивидуальный заказ или приобрести уже готовые изделия в магазине.</p>
             </article>
             <div className='about-screen__item'>
-               <AboutProducts />
+               <Slider itemList={imageList} />
 
                <p>Посмотрите больше в <a href='https://vk.com/elisa_domrisa'>Instagram</a></p>
             </div>

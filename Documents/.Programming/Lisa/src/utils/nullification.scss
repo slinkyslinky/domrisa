@@ -48,6 +48,11 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  user-select: none;
+}
+
+p {
+  user-select: text;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -73,7 +78,7 @@ img {
 
 /* Указываем понятную периодичность в потоке данных у article*/
 article>*+* {
-  margin-top: 1em;
+  margin-top: 0;
 }
 
 /* Наследуем шрифты для инпутов и кнопок */

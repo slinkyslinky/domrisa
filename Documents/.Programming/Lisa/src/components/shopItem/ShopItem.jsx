@@ -38,7 +38,7 @@ export default function ShopItem(props) {
             <img src={props.image} alt="" />
          </div>
          <div className="shop-item__description">
-            <h3>{props.name}</h3>
+            <h4>{props.name}</h4>
             <p>{props.description} </p>
          </div>
          <div className="shop-item__order">

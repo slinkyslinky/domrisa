@@ -1,8 +1,9 @@
 import React from 'react'
 import './aboutScreen.scss'
-import Slider from '../slider/Slider'
+
 import img1 from '../../img/item1.png'
 import img2 from '../../img/py4u3x9Z--Y.jpg'
+import SliderWrapper from '../slider/SliderWrapper'
 
 export default function AboutScreen() {
 
@@ -26,7 +27,7 @@ export default function AboutScreen() {
                   Можно сделать индивидуальный заказ или приобрести уже готовые изделия в магазине.</p>
             </article>
             <div className='about-screen__item'>
-               <Slider itemList={imageList} />
+               <SliderWrapper imageList={imageList} hasPreview={false} />
 
                <p>Посмотрите больше в <a href='https://vk.com/elisa_domrisa'>Instagram</a></p>
             </div>

@@ -51,7 +51,8 @@ body {
   user-select: none;
 }
 
-p {
+p,
+span {
   user-select: text;
 }
 

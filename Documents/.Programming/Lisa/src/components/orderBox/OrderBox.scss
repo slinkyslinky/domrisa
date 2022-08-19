@@ -1,0 +1,28 @@
+.order-box {
+   width: 100%;
+   height: 100%;
+   border: 1px solid black;
+   border-radius: 90px;
+   background-color: white;
+
+   padding: 100px;
+
+   &__table {
+
+      display: grid;
+
+      grid-template-columns: 1fr 2fr 1fr 1fr;
+
+
+   }
+
+   .table-column__name:first-child {
+      grid-column: 3/4;
+   }
+
+   .table-column__name:last-child {
+      grid-column: 4/5;
+   }
+
+   &__summary {}
+}

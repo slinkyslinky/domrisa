@@ -4,18 +4,16 @@ import './Slider.scss'
 
 
 
-export default function Slider({ itemList, }) {
+export default function Slider({ itemList, count, getCount }) {
 
    let displayRight, displayLeft;
 
 
 
-   const [count, setCount] = useState(0)
-
    function countInfinite() {
       if (count <= itemList.length - 2) {
-         setCount(count + 1)
-      } else setCount(0)
+         getCount(count + 1)
+      } else getCount(0)
 
    }
 
@@ -39,8 +37,8 @@ export default function Slider({ itemList, }) {
 
          </div>
 
-         <Arrow arrowType='arrow--right' display={displayRight} count={count} onClick={setCount} />
-         <Arrow arrowType='arrow--left' display={displayLeft} count={count} onClick={setCount} />
+         <Arrow arrowType='arrow--right' display={displayRight} count={count} onClick={getCount} />
+         <Arrow arrowType='arrow--left' display={displayLeft} count={count} onClick={getCount} />
 
       </div>
    )

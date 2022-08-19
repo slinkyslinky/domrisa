@@ -76,7 +76,13 @@
       border-radius: 35px 0 0 35px;
       color: $white;
       cursor: pointer;
+
+      &:hover,
+      &:focus {
+         background-color: $yellow;
+      }
    }
+
 
    .add-button {
       background-color: $lil;

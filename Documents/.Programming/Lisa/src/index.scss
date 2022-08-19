@@ -2,6 +2,7 @@
 @import './components/container/container.scss';
 @import './components/common//h2.scss';
 @import './components/common//h3.scss';
+@import './components/common//h4.scss';
 @import './variables/variables.scss';
 @import './fonts/fonts.scss';
 
@@ -26,6 +27,11 @@ a {
 
 #shop {
    min-height: 100vh;
+   position: relative;
+
+   .container {
+      padding-bottom: 170px;
+   }
 
    footer {
       position: absolute;
@@ -33,4 +39,16 @@ a {
       left: 0;
    }
 
+}
+
+#order {
+   background-color: $bej;
+   min-height: 100vh;
+   padding-top: 12vh;
+
+   .container {
+
+      width: 100%;
+      height: 100%;
+   }
 }

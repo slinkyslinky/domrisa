@@ -14,6 +14,17 @@ export default function Shop() {
             { id: 1, img: image1, alt: '' },
             { id: 2, img: image2, alt: '' },
             { id: 3, img: image3, alt: '' },
+            { id: 4, img: image3, alt: '' },
+            { id: 5, img: image3, alt: '' },
+            { id: 6, img: image2, alt: '' },
+            { id: 7, img: image1, alt: '' },
+         ], description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsum ducimus deserunt saepe sint alias cumque in provident, quasi minima?', valute: 'р'
+      },
+      {
+         id: 2, name: 'Брошь', price: 1200, imageList: [
+            { id: 1, img: image1, alt: '' },
+            { id: 2, img: image2, alt: '' },
+            { id: 3, img: image3, alt: '' },
          ], description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsum ducimus deserunt saepe sint alias cumque in provident, quasi minima?', valute: 'р'
       },
    ]

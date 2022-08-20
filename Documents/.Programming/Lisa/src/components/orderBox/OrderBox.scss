@@ -24,5 +24,24 @@
       grid-column: 4/5;
    }
 
-   &__summary {}
+   &__summary {
+      margin-bottom: 40px;
+   }
+
+   &__delivery {
+      font-size: 24px;
+      padding: 70px 20px 70px 50px;
+
+      input {
+         margin-bottom: 40px;
+      }
+   }
+
+   &__warning {
+      span {
+         font-size: 20px;
+      }
+
+      margin-bottom: 80px;
+   }
 }

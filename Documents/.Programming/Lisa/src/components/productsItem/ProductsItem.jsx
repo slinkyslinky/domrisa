@@ -55,7 +55,7 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
             switch (openedBox) {
                case 1:
 
-                  right = -28;
+                  right = -14;
                   classes.push('products-item--hidden')
 
                   break;
@@ -64,7 +64,7 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
                   break;
                case 3:
 
-                  left = -28;
+                  left = -14;
                   classes.push('products-item--hidden')
 
                   break;
@@ -155,10 +155,10 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
 
 
    return (
-      <div className={classes.join(' ')} style={{ marginLeft: left + 'vw', marginRight: right + 'vw', transitionDelay: delayOpen }}  >
+      <div className={classes.join(' ')} style={{ marginLeft: left + 'vw', marginRight: right + 'vw', }}  >
 
          {/* <img className='products-item__bant' src={bant} alt="" /> */}
-         <div className={coverClasses.join(' ')} style={{ backgroundColor: product.color, transitionDelay: delayClose }} onClick={(e) => showProduct(e, product.color)} />
+         <div className={coverClasses.join(' ')} style={{ backgroundColor: product.color, }} onClick={(e) => showProduct(e, product.color)} />
          <ProductsItemInner product={product} hideProduct={hideProduct} display={display} />
 
 

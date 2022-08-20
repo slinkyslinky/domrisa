@@ -11,7 +11,7 @@ export default function ProductsItemInner({ product, hideProduct }) {
 
          <article  >
 
-            <h3>{product.title}</h3>
+            <h5>{product.title}</h5>
             <p>{product.text}</p>
 
          </article>

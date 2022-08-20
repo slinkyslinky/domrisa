@@ -7,12 +7,18 @@
    width: 100%;
    z-index: -1;
    overflow: hidden;
+   border-radius: 20px;
+   height: 100%;
+
 
    .products-item__back {
-      transition: all ease 0.5s;
+      transition: all ease 2s;
+      transition-delay: 0;
       min-width: 350px;
-      height: 350px;
+      width: 400px;
+      height: 100%;
       background-color: coral;
+      border-radius: 20px 0 0 20px;
 
 
    }
@@ -20,29 +26,26 @@
    .products-item__picture {
 
       object-fit: cover;
-      height: 90%;
-      width: 90%;
+      height: 100%;
+      width: 100%;
 
 
    }
 
    article {
       background-color: rgb(218, 205, 188);
-      animation: innerShowing 1s forwards;
+      // animation: innerShowing 1s forwards;
       min-width: 450px;
+      border-radius: 0 20px 20px 0;
       overflow: hidden;
+      z-index: -1;
+      left: -20px;
+      text-align: left;
+      padding: 20px 70px 20px 40px;
+
+
    }
 
 
 
-}
-
-@keyframes innerShowing {
-   from {
-      transform: translateX(-450px);
-   }
-
-   to {
-      transform: translateX(-20px);
-   }
 }

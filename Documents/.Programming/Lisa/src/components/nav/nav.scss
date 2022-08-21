@@ -2,8 +2,8 @@
 
 nav {
 
-   width: 490px;
-   height: 80px;
+   width: 540px;
+   height: 90px;
    padding: 10px;
    position: fixed;
    top: 0;
@@ -34,12 +34,12 @@ nav {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 60px;
+      gap: 90px;
       z-index: 11;
       height: 100%;
 
       li {
-         font-size: 20px;
+         font-size: 18px;
          line-height: 1;
          font-weight: bold;
          color: $violet;

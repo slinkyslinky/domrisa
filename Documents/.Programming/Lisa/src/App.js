@@ -9,23 +9,23 @@ import Order from "./pages/Order";
 
 function App() {
    return (
-      <div>
-
-         <BrowserRouter>
-            <Nav />
-            <Routes>
-               <Route path='/' element={<Main />} />
-               <Route path='/shop/' element={<Shop />} />
-               <Route path='/about/' element={<About />} />
-               <Route path='/order/' element={<Order />} />
-
-            </Routes>
-
-         </BrowserRouter>
 
 
+      <BrowserRouter>
+         <Nav />
+         <Routes>
+            <Route path='/' element={<Main />} />
+            <Route path='/shop/' element={<Shop />} />
+            <Route path='/about/' element={<About />} />
+            <Route path='/order/' element={<Order />} />
 
-      </div>
+         </Routes>
+
+      </BrowserRouter>
+
+
+
+
 
    );
 }

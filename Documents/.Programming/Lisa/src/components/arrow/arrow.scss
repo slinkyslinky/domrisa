@@ -2,8 +2,8 @@
 
 .products__arrow {
    background: none;
-   height: 30px;
-   width: 60px;
+   height: 50px;
+   width: 100px;
 
    position: absolute;
    top: 50%;
@@ -11,22 +11,22 @@
 }
 
 .arrow--right {
-   left: calc(100% + 37px);
+   left: calc(102%);
 }
 
 .arrow--left {
-   right: calc(100% + 37px);
+   right: calc(102%);
 }
 
 .products__arrow::after {
    content: '';
    position: absolute;
-   left: 10%;
+   left: 25%;
 
    top: 50%;
    transform: translateY(-50%);
    height: 3px;
-   width: 80%;
+   width: 50%;
    background-color: $grey;
 }
 
@@ -47,12 +47,12 @@
 }
 
 .arrow--right::before {
-   right: 10%;
+   right: 25%;
    transform: translateY(-50%) rotateZ(-45deg);
 }
 
 .arrow--left::before {
-   left: 10%;
+   left: 25%;
    transform: translateY(-50%) rotateZ(135deg);
 }
 

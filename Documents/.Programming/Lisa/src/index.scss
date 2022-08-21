@@ -11,11 +11,16 @@
 }
 
 body {
+   max-width: 100%;
    font-family: 'Montserrat';
    font-weight: 400;
    font-size: 28px;
    scroll-behavior: smooth;
 }
+
+#root {}
+
+
 
 .about {
    // width: 100%;

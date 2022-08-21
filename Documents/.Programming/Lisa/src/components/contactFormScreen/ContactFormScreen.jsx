@@ -5,7 +5,7 @@ import './ContactFormScreen.scss'
 export default function ContactFormScreen() {
    return (
       <div className='contact-form-screen'>
-         <div className="container container--max">
+         <div className="container">
             <ContactForm />
          </div>
 

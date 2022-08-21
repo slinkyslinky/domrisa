@@ -2,13 +2,14 @@
 
 
 .slider {
-   width: 600px;
-   height: 600px;
+
 
    border-radius: 90px;
    position: relative;
    background-color: $green;
-
+   max-width: 100%;
+   max-height: 80%;
+   aspect-ratio: 1/1;
 
    .slider__block {
       overflow: hidden;

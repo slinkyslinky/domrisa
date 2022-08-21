@@ -14,7 +14,7 @@ export default function HomeScreen() {
          <Contacts />
          <OrderButton styles={{
             margin: "0 auto",
-            top: "80%"
+            top: "79%"
          }} text='Заказать' />
       </div>
    )

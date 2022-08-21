@@ -1,14 +1,15 @@
 .container {
-   max-width: 1460px;
+   max-width: 1620px;
    margin: 0 auto;
    width: 100%;
    height: 100%;
+   padding: 5% 100px 40px;
 
 }
 
 .container--wide {
-   max-width: 1640px;
-   padding: 100px 20px;
+   max-width: 1840px;
+   padding: 5% 100px;
    width: 100%;
    height: 100%;
 }

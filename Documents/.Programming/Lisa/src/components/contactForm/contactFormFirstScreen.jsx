@@ -11,7 +11,7 @@ export default function contactFormFirstScreen({ setContact }) {
 
    return (
       <div className="contact-form__first-screen">
-         <p className='contact-form__subtitle'>Если у Вас есть вопросы или предлежения по сотрудничеству, заполните форму и я свяжусь с Вами.</p>
+         <span className='contact-form__subtitle'>Для вопросов и предложений!</span>
          <div className="contact-form__inner">
             <p>Выберете удобный вариант для связь с Вами</p>
             <div className="contact-form__contacts">

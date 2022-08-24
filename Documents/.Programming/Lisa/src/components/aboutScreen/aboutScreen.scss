@@ -22,10 +22,11 @@
 
    &__item:first-child {
 
-      padding: 90px 100px 120px 0px;
+      padding: 5% 100px 20px 0px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+
       gap: 55px;
 
       p {
@@ -47,6 +48,7 @@
       text-align: center;
 
       .slider {
+         margin: 0 auto;
          margin-bottom: 25px;
 
       }

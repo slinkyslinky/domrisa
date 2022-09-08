@@ -5,11 +5,17 @@
    border-radius: 90px;
    height: 100%;
    width: 100%;
-   max-width: 1200px;
+   max-width: 1400px;
    margin: 0 auto;
    padding: 5% 10%;
 
 
    h3 {}
 
+   &__subtitle {
+      display: block;
+      color: $lil;
+      font-size: 18px;
+      margin: 5px 0 0 160px;
+   }
 }

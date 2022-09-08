@@ -1,8 +1,10 @@
 @import '../../variables/variables.scss';
 
 .contact-form__second-screen {
+
    position: relative;
-   margin-top: 70px;
+   padding-top: min(10%, 8vh);
+   width: 100%;
 
    .contact-form__contact {
       position: absolute;

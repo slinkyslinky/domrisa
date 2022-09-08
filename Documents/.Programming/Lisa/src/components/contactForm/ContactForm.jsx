@@ -12,6 +12,7 @@ export default function ContactForm() {
       return (
          <div className='contact-form'>
             <h3>Обратная связь</h3>
+            <span className='contact-form__subtitle'>Для вопросов и предложений!</span>
             <ContactFormFirstScreen setContact={setContact} />
 
 
@@ -21,6 +22,7 @@ export default function ContactForm() {
       return (
          <div className='contact-form'>
             <h3>Обратная связь</h3>
+            <span className='contact-form__subtitle'>Для вопросов и предложений!</span>
             <ContactFormSecondScreen contacts={contacts} setContact={setContact} />
          </div>
       )

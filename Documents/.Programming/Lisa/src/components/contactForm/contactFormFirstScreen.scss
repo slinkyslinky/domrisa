@@ -1,6 +1,7 @@
 @import '../../variables/variables.scss';
 
 .contact-form {
+   position: relative;
 
 
    p {
@@ -9,13 +10,10 @@
    }
 
 
-
-   &__subtitle {
-      display: block;
-      color: $lil;
-      font-size: 18px;
-      margin: 14px 0 5% 160px;
+   &__first-screen {
+      padding-top: min(10%, 8vh)
    }
+
 
 
 

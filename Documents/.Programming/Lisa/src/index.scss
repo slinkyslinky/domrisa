@@ -6,9 +6,7 @@
 @import './variables/variables.scss';
 @import './fonts/fonts.scss';
 
-#shop {
-   padding-top: 100px;
-}
+
 
 body {
    max-width: 100%;
@@ -35,6 +33,7 @@ a {
    position: relative;
 
    .container {
+      padding-top: 100px;
       padding-bottom: 170px;
    }
 

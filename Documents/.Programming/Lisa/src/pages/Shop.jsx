@@ -5,6 +5,8 @@ import image1 from '../img/сережки.png'
 import image2 from '../img/балалайка.png'
 import image3 from '../img/домра рука.png'
 import personal from '../img/individ.svg'
+import OrderButton from '../components/buttons/OrderButton'
+import { useState } from 'react'
 
 export default function Shop() {
    const shopList = [
@@ -29,9 +31,15 @@ export default function Shop() {
       },
    ]
 
+   const [ordered, getOrdered] = useState(0)
+   let showOrderButton = 0;
+   if (ordered) {
+      showOrderButton = 1
+   } else showOrderButton = 0
 
    return (
       <div id='shop'>
+         <OrderButton text="Перейти к заказу" styles={{ textTransform: "none", position: "absolute", top: "4vh", right: "4vw", fontSize: "26px", opacity: showOrderButton, }} />
          <div className="container">
 
             {
@@ -44,6 +52,8 @@ export default function Shop() {
                      price={shopItem.price}
                      valute={shopItem.valute}
                      imageList={shopItem.imageList}
+                     ordered={ordered}
+                     getOrdered={getOrdered}
                   />)
             }
 

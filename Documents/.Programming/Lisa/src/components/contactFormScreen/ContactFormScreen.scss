@@ -2,5 +2,8 @@
    width: 100%;
    height: 85vh;
 
-   padding: 2% 0;
+   .container {
+      padding-top: min(4vh, 50px);
+      padding-bottom: min(4vh, 50px)
+   }
 }

@@ -70,12 +70,17 @@
    }
 
    .buy-button {
+
       background-color: $lil;
       height: 100%;
       width: 75%;
       border-radius: 35px 0 0 35px;
       color: $white;
       cursor: pointer;
+
+      line-height: 2.55;
+      text-align: center;
+      padding-left: 10px;
 
       &:hover,
       &:focus {

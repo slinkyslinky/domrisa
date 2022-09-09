@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import ShopModal from '../shopModal/ShopModal';
 import './shopItem.scss'
-
+import { Link } from 'react-router-dom'
 
 export default function ShopItem(props) {
 
@@ -15,9 +15,12 @@ export default function ShopItem(props) {
       if (classList.contains('add-button--active')) {
          classList.remove('add-button--active')
          parentClassList.remove('shop-item--active')
+         props.getOrdered(props.ordered + 1)
+
       } else {
          classList.add('add-button--active');
          parentClassList.add('shop-item--active');
+         props.getOrdered(props.ordered - 1)
       }
 
    }
@@ -43,7 +46,8 @@ export default function ShopItem(props) {
          </div>
          <div className="shop-item__order">
             <div className="shop-item__buttons">
-               <button className='buy-button'>Заказать</button>
+               <Link to="/order/" className='buy-button'>Заказать</Link>
+
                <button className='add-button' onClick={changeAddButton} ></button>
             </div>
             <p className='price'>

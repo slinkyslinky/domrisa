@@ -3,8 +3,9 @@
 .contact-form__second-screen {
 
    position: relative;
-   padding-top: min(10%, 8vh);
+
    width: 100%;
+   padding-top: min(10vh, 120px);
 
    .contact-form__contact {
       position: absolute;
@@ -14,7 +15,11 @@
       transform: translateY(-50%);
    }
 
-
+   .contact-form__inner {
+      p {
+         margin-bottom: 4vh;
+      }
+   }
 
    .contact-back {
       span {

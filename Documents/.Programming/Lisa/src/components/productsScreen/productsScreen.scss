@@ -6,8 +6,13 @@
 
    text-align: center;
 
-   padding-top: 3%;
+   padding-top: 3vh;
 
+   .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
 
 
    h2 {
@@ -40,14 +45,14 @@
    padding: 0 20px 0;
    margin-bottom: 3%;
    margin-top: 6%;
-   height: clamp(350px, 38vh, 400px)
+   height: 380px;
 }
 
 
 @media (max-width: 1400px) {
    .products-screen {
       .container {
-         padding: 80px 40px 0;
+         padding: 80px 40px 40px;
       }
    }
 }
@@ -55,7 +60,7 @@
 @media (max-width: 1270px) {
    .products-screen {
       .container {
-         padding: 80px 20px 0;
+         padding: 80px 20px 40px;
       }
    }
 }
@@ -63,7 +68,7 @@
 @media (max-width: 1200px) {
    .products-screen {
       .container {
-         padding: 80px 0 0;
+         padding: 80px 0 40px;
 
       }
    }

@@ -4,7 +4,7 @@ import './Slider.scss'
 
 
 
-export default function Slider({ itemList, count, getCount, size }) {
+export default function Slider({ itemList, count, getCount }) {
 
    let displayRight, displayLeft;
 
@@ -30,8 +30,9 @@ export default function Slider({ itemList, count, getCount, size }) {
    return (
       <div className="slider" id='slider-product' >
          <div className="slider__block" onClick={() => countInfinite()}>
-            {/* <div className="slider__content" id='sliderContent' style={{ left: "-" + (count * size) + 'px', width: size + 'px', height: size + 'px' }} > */}
-            <div className="slider__content" id='sliderContent' style={{ left: "-" + (count * size) + 'px' }} >
+
+
+            <div className="slider__content" id='sliderContent' style={{ left: "-" + (count * 100) + '%' }} >
                {itemList.map(item => <img key={item.id} src={item.img} alt={item.alt} />)}
             </div>
 

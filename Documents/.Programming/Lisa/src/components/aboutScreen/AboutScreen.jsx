@@ -14,7 +14,7 @@ export default function AboutScreen() {
       { id: 2, img: img2, alt: 'Image of the product' },
       { id: 3, img: '', alt: 'Image of the product' },
    ]
-   const size = 700
+
 
 
    return (
@@ -28,7 +28,7 @@ export default function AboutScreen() {
                   Можно сделать индивидуальный заказ или приобрести уже готовые изделия в магазине.</p>
             </article>
             <div className='about-screen__item'>
-               <SliderWrapper imageList={imageList} hasPreview={false} size={size} />
+               <SliderWrapper imageList={imageList} hasPreview={false} />
 
                <span>Посмотрите больше в <a href='https://vk.com/elisa_domrisa'>Instagram</a></span>
             </div>

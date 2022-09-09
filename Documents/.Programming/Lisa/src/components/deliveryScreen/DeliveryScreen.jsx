@@ -22,10 +22,13 @@ export default function DeliveryScreen() {
                      Доставка Почтой России — от 300 рублей, рассчитывается индивидуально.</p>
                </article>
                <picture className='delivery-grid__item'>
-                  <div className="delivery-grid__imagebox">
-                     <div className="delivery-grid__backround" />
+                  <div className="delivery-screen__img-box">
                      <img src={img2} alt="second image" />
+                     {/* <div className="delivery-grid__backround" /> */}
+
                   </div>
+
+
 
 
                </picture>

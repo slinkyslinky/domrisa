@@ -60,7 +60,7 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
                />
 
                <OrderButton text='Отправить' styles={{
-                  margin: '100px  -120px 0 auto   ',
+                  margin: '12vh  -9vw 0 auto   ',
                   height: 70,
                   width: 298,
                }} />

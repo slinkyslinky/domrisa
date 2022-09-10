@@ -5,14 +5,18 @@
    position: relative;
 
    width: 100%;
-   padding-top: min(10vh, 120px);
+
 
    .contact-form__contact {
       position: absolute;
-      top: 40%;
+      top: 0%;
       left: 35px;
 
-      transform: translateY(-50%);
+      .arrow--back {
+         top: 28%;
+      }
+
+      // transform: translateY(-50%);
    }
 
    .contact-form__inner {
@@ -24,9 +28,12 @@
    .contact-back {
       span {
          color: $yellow;
+         font-size: 16px;
       }
 
       svg {
+         width: 60px;
+         height: 60px;
          fill: $yellow;
       }
    }

@@ -6,7 +6,10 @@ export default function ProductsItemInner({ product, hideProduct }) {
    return (
       <div className={"products-item__inner "} onClick={hideProduct}>
          <div className="products-item__back" style={{ backgroundColor: product.color }} >
+
             <img className='products-item__picture' src={product.img} alt='img of the prod' />
+
+
          </div>
 
          <article  >

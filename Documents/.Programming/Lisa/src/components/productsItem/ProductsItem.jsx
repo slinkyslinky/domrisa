@@ -115,12 +115,16 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
 
 
    function showProduct(e, color) {
-      let curProduct = e.target;
 
-      // coverClasses.push('products-item__cover--animated')
 
-      setopenedBox(id)
-      setIsOpen(true)
+      if (!isOpen) {
+         setopenedBox(id)
+         setIsOpen(true)
+      } else {
+         setIsOpen(false)
+         setopenedBox(null)
+      }
+
 
 
 
@@ -157,8 +161,11 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
    return (
       <div className={classes.join(' ')} style={{ marginLeft: left + 'vw', marginRight: right + 'vw', }}  >
 
-         {/* <img className='products-item__bant' src={bant} alt="" /> */}
-         <div className={coverClasses.join(' ')} style={{ backgroundColor: product.color, }} onClick={(e) => showProduct(e, product.color)} />
+
+         <div className={coverClasses.join(' ')} style={{ backgroundColor: product.color, }}>
+            <img className='products-item__bant' src={bant} alt="" onClick={(e) => showProduct(e, product.color)} />
+
+         </div>
          <ProductsItemInner product={product} hideProduct={hideProduct} display={display} />
 
 

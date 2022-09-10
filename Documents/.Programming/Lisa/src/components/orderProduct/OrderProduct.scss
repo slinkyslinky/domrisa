@@ -1,3 +1,5 @@
+@import '../../variables/variables.scss';
+
 .order-product {
 
    height: 200px;
@@ -5,10 +7,11 @@
 
    display: grid;
 
-   grid-template-columns: 1fr 2fr 1fr 1fr;
+   grid-template-columns: 1fr 1.8fr 1fr 1fr 0.5fr;
    position: relative;
 
    align-items: center;
+   justify-items: center;
 
    picture {
       width: 150px;
@@ -23,6 +26,48 @@
       border-radius: 20px;
    }
 
+
+
+}
+
+.del-button {
+   width: 32px;
+   padding: 0;
+   aspect-ratio: 1/1;
+   background: none;
+   position: relative;
+   cursor: pointer;
+   border-radius: 50%;
+
+   &:hover {
+      background-color: rgb(192, 143, 143);
+
+      &::after,
+      &::before {
+         background-color: rgb(100, 21, 21);
+      }
+   }
+
+   &::after,
+   &::before {
+      content: '';
+      position: absolute;
+      background-color: $grey;
+      top: 50%;
+      left: 50%;
+
+
+      width: 18px;
+      height: 2px;
+   }
+
+   &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+   }
+
+   &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+   }
 }
 
 .table__item:nth-child(1) {

@@ -1,0 +1,22 @@
+.order-count {
+   width: 140px;
+   height: 60px;
+   border-radius: 30px;
+   border: 1px solid black;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+
+
+
+   .products__arrow {
+      position: relative;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 50px;
+      padding: 30px;
+      transform: scale(0.7);
+   }
+}

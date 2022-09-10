@@ -7,13 +7,15 @@
    color: $violet;
    background-color: $yellow;
    border-radius: 90px;
-   display: block;
+
    border: none;
    position: relative;
    font-size: 32px;
    // box-shadow: 0px 0px 8px $violet;
-   text-align: center;
-   line-height: 3.15;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
    transition: opacity ease 0.3s;
 
 

@@ -19,7 +19,7 @@ export default function Reviews() {
 
 
    return (
-      <div className='reviews'>
+      <div className='reviews' id="reviews">
          <div className="reviews__wrapper">
             <h2>Отзывы</h2>
             <div className="reviews__content">

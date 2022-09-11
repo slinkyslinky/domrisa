@@ -3,18 +3,24 @@ import './OrderProduct.scss'
 import image1 from '../../img/image1.jpg'
 import OrderCount from './OrderCount'
 import { useState } from 'react'
+import { useEffect } from 'react'
 
 export default function OrderProduct(props) {
 
    const [ordered, setOrdered] = useState(true)
    const [amount, setAmount] = useState(1)
+   const [amountChange, setAmountChange] = useState(0)
 
 
 
-   function getAmount(value) {
-      setAmount(value)
+   useEffect(() => {
+
+      props.setFullPrice(props.fullPrice + amountChange * props.price)
+   }, [amount])
+
+   function delFromStorage() {
+      localStorage.removeItem(`order-${props.id}`)
    }
-
 
 
    if (ordered) return (
@@ -25,9 +31,9 @@ export default function OrderProduct(props) {
          <span className="table__item">{props.name}</span>
          <span className="table__item">{props.price} р.</span>
          <div className="table__item">
-            <OrderCount amount={amount} setAmount={setAmount} />
+            <OrderCount setAmountChange={setAmountChange} amount={amount} setAmount={setAmount} />
          </div>
-         <button className='del-button' onClick={() => setOrdered(false)} />
+         <button className='del-button' onClick={() => { setOrdered(false); props.setFullPrice(props.fullPrice - amount * props.price); delFromStorage() }} />
       </div>
    )
 }

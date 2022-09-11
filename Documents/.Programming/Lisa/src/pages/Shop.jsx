@@ -7,6 +7,7 @@ import image3 from '../img/домра рука.png'
 import personal from '../img/individ.svg'
 import OrderButton from '../components/buttons/OrderButton'
 import { useState } from 'react'
+import { useEffect } from 'react'
 
 export default function Shop() {
    const shopList = [
@@ -23,7 +24,7 @@ export default function Shop() {
          ], description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsum ducimus deserunt saepe sint alias cumque in provident, quasi minima?', valute: 'р'
       },
       {
-         id: 2, name: 'Брошь', price: 1200, imageList: [
+         id: 2, name: 'Брошь', price: 1000, imageList: [
             { id: 1, img: image1, alt: '' },
             { id: 2, img: image2, alt: '' },
             { id: 3, img: image3, alt: '' },
@@ -31,11 +32,28 @@ export default function Shop() {
       },
    ]
 
-   const [ordered, getOrdered] = useState(0)
+   const [ordered, setOrdered] = useState(0)
    let showOrderButton = 0;
-   if (ordered) {
+   if (ordered > 0) {
       showOrderButton = 1
    } else showOrderButton = 0
+
+
+   let orders = 0;
+
+   if (localStorage.length > 0) {
+
+      for (let i = 0; i < localStorage.length; i++) {
+         if (localStorage.key(i).substring(0, 5) == 'order') {
+            orders++;
+         }
+      }
+   }
+
+   useEffect(() => {
+      setOrdered(orders)
+   }, [])
+
 
    return (
       <div id='shop'>
@@ -46,6 +64,7 @@ export default function Shop() {
                shopList.map(shopItem =>
                   <ShopItem
                      key={shopItem.id}
+                     id={shopItem.id}
                      name={shopItem.name}
                      description={shopItem.description}
                      image={shopItem.imageList[0].img}
@@ -53,7 +72,7 @@ export default function Shop() {
                      valute={shopItem.valute}
                      imageList={shopItem.imageList}
                      ordered={ordered}
-                     getOrdered={getOrdered}
+                     getOrdered={setOrdered}
                   />)
             }
 

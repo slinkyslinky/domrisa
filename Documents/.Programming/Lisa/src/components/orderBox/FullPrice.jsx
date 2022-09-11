@@ -1,0 +1,13 @@
+import React, { useEffect } from 'react'
+
+export default function FullPrice({ fullPrice }) {
+
+
+
+   return (
+      <div className="order-box__summary">
+         <span>Общая стоимость заказа: </span>
+         <span>{fullPrice} р.</span>
+      </div>
+   )
+}

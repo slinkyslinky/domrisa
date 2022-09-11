@@ -9,6 +9,7 @@ import '../arrow/arrow.scss'
 import OrderInput from '../input/OrderInput'
 import { phoneValidation, } from '../../utils/validation'
 
+
 export default function ContactFormSecondScreen({ contacts, setContact }) {
    let secondInputType;
    let secondInputValidation;
@@ -39,6 +40,10 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
       minLength = 18; // Почему то не раотает
    }
 
+
+
+
+
    return (
       <div className="contact-form__second-screen">
          <button className="contact-form__contact contact-back" onClick={() => setContact(0)}>
@@ -50,7 +55,7 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
             <p>Заполните Ваши данные</p>
 
             <form className="contact-form__form">
-               <OrderInput type='text' placeholder='Имя' />
+               <OrderInput type='text' placeholder='Имя' autofocus={true} />
                <OrderInput
                   type={secondInputType}
                   placeholder={secondInputText}
@@ -59,15 +64,18 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
 
                />
 
-               <OrderButton text='Отправить' styles={{
-                  margin: '12vh  -9vw 0 auto   ',
-                  height: 70,
-                  width: 298,
-               }} />
+
 
             </form>
          </div>
-
+         <OrderButton text='Отправить' styles={{
+            position: "relative",
+            top: "40%",
+            left: "100%",
+            transform: "translateX(-100%) translateY(-100%)",
+            height: 70,
+            width: 298,
+         }} />
       </div>
    )
 }

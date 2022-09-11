@@ -5,10 +5,10 @@
    border-radius: 90px;
    height: 100%;
    width: 100%;
-   max-width: 1000px;
+   max-width: 1200px;
    margin: 0 auto;
-   padding: max(7vh, 60px) 8%;
-
+   padding: max(3vh, 60px) 8%;
+   position: relative;
 
    h3 {}
 
@@ -16,6 +16,6 @@
       display: block;
       color: $lil;
       font-size: 18px;
-      margin: 5px 0 min(9vh, 110px) 160px;
+      margin: 5px 0 min(8vh, 100px) 160px;
    }
 }

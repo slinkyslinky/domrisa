@@ -5,6 +5,6 @@ export default function OrderInput(props) {
 
 
    return (
-      <input className='order-input' type={props.type} minLength={props.minLength} placeholder={props.placeholder} required onInput={props.validation} />
+      <input className='order-input' type={props.type} minLength={props.minLength} placeholder={props.placeholder} required onInput={props.validation} autoFocus={props.autofocus} />
    )
 }

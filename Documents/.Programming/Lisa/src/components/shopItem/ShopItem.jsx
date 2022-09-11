@@ -3,24 +3,51 @@ import { useState } from 'react';
 import ShopModal from '../shopModal/ShopModal';
 import './shopItem.scss'
 import { Link } from 'react-router-dom'
+import { useRef } from 'react';
+import { useEffect } from 'react';
 
 export default function ShopItem(props) {
 
    const [isModalVisible, setIsModalVisible] = useState(false)
+   const refItem = useRef(null);
+   const refBtn = useRef(null);
+
+   function addToOrder() {
+
+      localStorage.setItem(`order-${props.id}`, `{"id": "${props.id}", "name": "${props.name}", "price": "${props.price}"}`)
+
+   }
+
+   function removeFromOrder() {
+      localStorage.removeItem(`order-${props.id}`)
+   }
 
 
-   function changeAddButton(e) {
-      const parentClassList = e.target.offsetParent.offsetParent.classList;
-      const classList = e.target.classList;
-      if (classList.contains('add-button--active')) {
-         classList.remove('add-button--active')
-         parentClassList.remove('shop-item--active')
-         props.getOrdered(props.ordered + 1)
+   useEffect(() => {
+      if (localStorage.getItem(`order-${props.id}`)) {
+         refBtn.current.classList.add('add-button--active');
+         refItem.current.classList.add('shop-item--active');
+
+         // console.log(123);
+
+      }
+   }, [])
+
+
+   function changeAddButton() {
+
+
+      if (refBtn.current.classList.contains('add-button--active')) {
+         refBtn.current.classList.remove('add-button--active')
+         refItem.current.classList.remove('shop-item--active')
+         props.getOrdered(props.ordered - 1);
+         removeFromOrder();
 
       } else {
-         classList.add('add-button--active');
-         parentClassList.add('shop-item--active');
-         props.getOrdered(props.ordered - 1)
+         refBtn.current.classList.add('add-button--active');
+         refItem.current.classList.add('shop-item--active');
+         props.getOrdered(props.ordered + 1);
+         addToOrder();
       }
 
    }
@@ -36,7 +63,7 @@ export default function ShopItem(props) {
 
 
    return (
-      <div className="shop-item">
+      <div ref={refItem} className="shop-item">
          <div className="shop-item__image" onClick={setModalVisible}>
             <img src={props.image} alt="" />
          </div>
@@ -48,7 +75,7 @@ export default function ShopItem(props) {
             <div className="shop-item__buttons">
                <Link to="/order/" className='buy-button'>Заказать</Link>
 
-               <button className='add-button' onClick={changeAddButton} ></button>
+               <button ref={refBtn} className='add-button' onClick={changeAddButton} ></button>
             </div>
             <p className='price'>
                <span>{props.price}</span>

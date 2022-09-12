@@ -3,6 +3,7 @@
 .shop-item {
    display: flex;
    flex-direction: row;
+
    padding: 25px;
    justify-content: center;
    position: relative;
@@ -12,6 +13,7 @@
    &__image {
       border: 1px solid $lil;
       border-radius: 20px;
+      align-self: center;
       flex: 0 0 auto;
       width: 250px;
       height: 250px;

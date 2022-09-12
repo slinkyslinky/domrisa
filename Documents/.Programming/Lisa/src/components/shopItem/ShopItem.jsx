@@ -73,7 +73,7 @@ export default function ShopItem(props) {
          </div>
          <div className="shop-item__order">
             <div className="shop-item__buttons">
-               <Link to="/order/" className='buy-button'>Заказать</Link>
+               <Link to="/order/" className='buy-button' onClick={addToOrder}>Заказать</Link>
 
                <button ref={refBtn} className='add-button' onClick={changeAddButton} ></button>
             </div>

@@ -32,3 +32,18 @@
       margin-bottom: 80px;
    }
 }
+
+input[type="radio"] {
+   accent-color: $grey;
+}
+
+label {}
+
+.order-input--dark {
+   color: black;
+
+   &::placeholder {
+      color: rgb(0, 0, 0);
+      opacity: 0.55;
+   }
+}

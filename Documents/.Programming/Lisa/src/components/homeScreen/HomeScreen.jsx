@@ -12,10 +12,13 @@ export default function HomeScreen() {
       <div id='homeScreen' className='homeScreen screen'>
          <img className='home-screen__title' src={title} alt="" />
          <Contacts />
-         <OrderButton styles={{
-            margin: "0 auto",
-            top: "79%"
-         }} text='Заказать' />
+         <OrderButton
+            link='/contactform'
+
+            styles={{
+               margin: "0 auto",
+               top: "79%"
+            }} text='Заказать' />
       </div>
    )
 }

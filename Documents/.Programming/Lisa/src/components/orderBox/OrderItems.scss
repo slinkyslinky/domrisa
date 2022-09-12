@@ -26,3 +26,21 @@
 .order-box__summary {
    margin-bottom: 40px;
 }
+
+#no-ordered-items {
+
+
+
+   text-align: center;
+   padding: 40px 0 60px;
+
+   span {
+      font-weight: 600;
+      font-size: 1.3em;
+   }
+
+   a {
+      font-size: 1.1em;
+      font-weight: 400;
+   }
+}

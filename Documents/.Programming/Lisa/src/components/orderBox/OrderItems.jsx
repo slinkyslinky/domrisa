@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import OrderProduct from '../orderProduct/OrderProduct'
 import FullPrice from './FullPrice'
 import './OrderItems.scss'
@@ -40,30 +41,37 @@ export default function OrderItems() {
 
 
 
+   if (orders.length > 0) {
 
+      return (
+         <div className='order-items'>
+            <div className="order-box__table">
+               <span className='table-column__name'>Товар</span>
+               <span className='table-column__name'>Цена</span>
+               <span className='table-column__name'>Количество</span>
 
-   return (
-      <div className='order-items'>
-         <div className="order-box__table">
-            <span className='table-column__name'>Товар</span>
-            <span className='table-column__name'>Цена</span>
-            <span className='table-column__name'>Количество</span>
+            </div>
+
+            {orders.map(item =>
+               <OrderProduct
+                  key={item.id}
+                  id={item.id}
+                  name={item.name}
+                  price={parseInt(item.price)}
+                  fullPrice={fullPrice}
+                  setFullPrice={setFullPrice}
+
+               />
+            )}
+            <FullPrice fullPrice={fullPrice} setFullPrice={setFullPrice} />
 
          </div>
-
-         {orders.map(item =>
-            <OrderProduct
-               key={item.id}
-               id={item.id}
-               name={item.name}
-               price={parseInt(item.price)}
-               fullPrice={fullPrice}
-               setFullPrice={setFullPrice}
-
-            />
-         )}
-         <FullPrice fullPrice={fullPrice} setFullPrice={setFullPrice} />
-
+      )
+   } else return (
+      <div id="no-ordered-items">
+         <span>У вас нет выбранных товаров</span><br />
+         <Link to="/shop">Вернуться в магазин</Link>
       </div>
+
    )
 }

@@ -8,6 +8,7 @@ import Email from '../../icons/email'
 import '../arrow/arrow.scss'
 import OrderInput from '../input/OrderInput'
 import { phoneValidation, } from '../../utils/validation'
+import { useEffect } from 'react'
 
 
 export default function ContactFormSecondScreen({ contacts, setContact }) {
@@ -40,7 +41,22 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
       minLength = 18; // Почему то не раотает
    }
 
+   const form = useRef(null)
+   let formData;
 
+   async function sendForm(e) {
+
+      formData = new FormData(form.current)
+      console.log(formData);
+
+
+      let response = await fetch("sended.php", {
+         method: "POST",
+         body: formData
+
+      })
+      if (response.ok) { console.log("ok"); } else { console.log('failed'); }
+   }
 
 
 
@@ -54,7 +70,7 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
          <div className="contact-form__inner">
             <p>Заполните Ваши данные</p>
 
-            <form className="contact-form__form">
+            <form ref={form} className="contact-form__form" id='contact-form__form'>
                <OrderInput type='text' placeholder='Имя' autofocus={true} />
                <OrderInput
                   type={secondInputType}
@@ -68,7 +84,8 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
 
             </form>
          </div>
-         <OrderButton text='Отправить' styles={{
+         <OrderButton text='Отправить' link='' form="contact-form__form" onClick={sendForm} styles={{
+
             position: "relative",
             top: "40%",
             left: "100%",

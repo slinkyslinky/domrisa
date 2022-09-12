@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import OrderInput from '../input/OrderInput'
 
 import './OrderBox.scss'
 import OrderButton from '../buttons/OrderButton'
 
 import OrderItems from './OrderItems'
+import { phoneValidation } from '../../utils/validation'
+import { useEffect } from 'react'
 
 export default function OrderBox() {
 
+   const form = useRef(null)
+   useEffect(() => {
+      form.current.childNodes.forEach(item => {
+         item.classList.add("order-input--dark")
+      })
+   }, [])
 
 
    return (
@@ -27,12 +35,12 @@ export default function OrderBox() {
             <span>После оформления заказа  я свяжусь с Вами для уточнения деталей.</span>
          </div>
 
-         <fieldset>
-            <OrderInput />
-            <OrderInput />
-            <OrderInput />
-         </fieldset>
-         <OrderButton />
+         <form ref={form} className='order-box__contact-form' >
+            <OrderInput type="text" placeholder="Имя" />
+            <OrderInput type="email" placeholder="E-mail" />
+            <OrderInput type="tel" placeholder="Phone" validation={phoneValidation} />
+         </form>
+         <OrderButton link="/order/" text="Оформить заказ" />
       </div>
    )
 }

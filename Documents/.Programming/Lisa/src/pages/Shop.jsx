@@ -11,7 +11,7 @@ import { useEffect } from 'react'
 
 export default function Shop() {
    const shopList = [
-      { id: 0, name: "Индивидуальный заказ", imageList: [{ id: 1, img: personal, alt: '' }], price: '', description: 'Выбрав индивидуальный заказ, Вы свяжитесь со мной, и вместе мы придумаем, что-то оригинальное. Любые Ваши идеи я постараюсь воплотить в неповториме вещи, которые будут радовать Вас или Ваших близких долгие годы.' },
+      { id: 0, name: "Индивидуальный заказ", imageList: [{ id: 1, img: personal, alt: '' }], price: 0, description: 'Выбрав индивидуальный заказ, Вы свяжитесь со мной, и вместе мы придумаем, что-то оригинальное. Любые Ваши идеи я постараюсь воплотить в неповториме вещи, которые будут радовать Вас или Ваших близких долгие годы.' },
       {
          id: 1, name: 'Брошь', price: 1200, imageList: [
             { id: 1, img: image1, alt: '' },
@@ -57,7 +57,7 @@ export default function Shop() {
 
    return (
       <div id='shop'>
-         <OrderButton text="Перейти к заказу" styles={{ textTransform: "none", position: "absolute", top: "4vh", right: "4vw", fontSize: "26px", opacity: showOrderButton, }} />
+         <OrderButton link="/order/" text="Перейти к заказу" styles={{ textTransform: "none", position: "absolute", top: "4vh", right: "4vw", fontSize: "26px", opacity: showOrderButton, }} />
          <div className="container">
 
             {

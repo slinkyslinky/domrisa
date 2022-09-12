@@ -57,7 +57,7 @@ export default function Main() {
         </Slide>
         <Slide>
           <ContactFormScreen />
-          <Footer />
+
         </Slide>
 
       </FullPage>}

@@ -9,8 +9,8 @@ import './OrderItems.scss'
 export default function OrderItems() {
 
 
-   const orders = []
-
+   const orders = [];
+   let allPrice = 0;
 
    if (localStorage.length > 0) {
       for (let i = 0; i < localStorage.length; i++) {
@@ -18,26 +18,27 @@ export default function OrderItems() {
 
             orders.push(JSON.parse(localStorage.getItem(localStorage.key(i))))
 
+            let item = JSON.parse(localStorage.getItem(localStorage.key(i)))
+            allPrice += item.price * item.amount
          }
       }
 
    }
 
 
+   const [fullPrice, setFullPrice] = useState(allPrice)
 
 
-   let ordersFullPrice = 0;
-   orders.forEach((item) => {
+   // orders.forEach((item) => {
 
-      ordersFullPrice += parseInt(item.price)
+   //    ordersFullPrice += parseInt(item.price)
 
-   })
+   // })
 
-   const [fullPrice, setFullPrice] = useState(ordersFullPrice)
 
-   function getFullPrice(value) {
-      setFullPrice(value)
-   }
+
+
+
 
 
 
@@ -54,16 +55,17 @@ export default function OrderItems() {
 
             {orders.map(item =>
                <OrderProduct
+                  fullPrice={fullPrice}
+                  setFullPrice={setFullPrice}
                   key={item.id}
                   id={item.id}
                   name={item.name}
                   price={parseInt(item.price)}
-                  fullPrice={fullPrice}
-                  setFullPrice={setFullPrice}
+
 
                />
             )}
-            <FullPrice fullPrice={fullPrice} setFullPrice={setFullPrice} />
+            <FullPrice fullPrice={fullPrice} />
 
          </div>
       )

@@ -7,7 +7,7 @@ export default function FullPrice({ fullPrice }) {
    return (
       <div className="order-box__summary">
          <span>Общая стоимость заказа: </span>
-         <span>{fullPrice} р.</span>
+         <span id='fullPrice'>{fullPrice} р.</span>
       </div>
    )
 }

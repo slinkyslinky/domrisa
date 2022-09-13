@@ -88,6 +88,23 @@ export function phoneValidation(e) {
 
 
 
-
 }
 
+export function formValidationIncorrect(form) {
+   for (let i = 0; i < form.elements.length; i++) {
+      let item = form.elements[i]
+      if (item.value.length < 2) {
+         item.classList.add("input--incorrect-color")
+         item.classList.add("input--incorrect-animation")
+         item.style.animationDelay = `0.${i}s`
+
+         setTimeout(() => {
+            item.classList.remove("input--incorrect-animation")
+         }, 500)
+
+         item.oninput = (e) => {
+            if (item.value.length > 1) { item.classList.remove("input--incorrect-color") }
+         }
+      }
+   }
+}

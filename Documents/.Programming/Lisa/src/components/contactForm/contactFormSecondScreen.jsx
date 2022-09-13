@@ -9,7 +9,9 @@ import '../arrow/arrow.scss'
 import OrderInput from '../input/OrderInput'
 import { phoneValidation, } from '../../utils/validation'
 import { useEffect } from 'react'
-
+import axios from 'axios'
+import { formValidationIncorrect } from '../../utils/validation'
+import { telegram as constants } from '../../variables/variables'
 
 export default function ContactFormSecondScreen({ contacts, setContact }) {
    let secondInputType;
@@ -44,18 +46,36 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
    const form = useRef(null)
    let formData;
 
-   async function sendForm(e) {
+   const TOKEN = constants.TOKEN
+   const CHAT_ID = constants.CHAT_ID
+   const URL = constants.URL
 
-      formData = new FormData(form.current)
-      console.log(formData);
+
+   function sendForm(e) {
+      let message = '';
+      e.preventDefault()
+      message += "<b>Новая заявка на связь</b> \n"
+      message += "Имя:  " + form.current.elements["name"].value + "\n";
+      message += secondInputType + ":  " + form.current.elements["contact"].value + "\n";
+      message += `Способ связи: ${backText}`
+
+      if (form.current.elements["name"].value.length > 1 &&
+         form.current.elements["contact"].value.length > 1) {
+         axios.post(URL, {
+            chat_id: CHAT_ID,
+            parse_mode: 'html',
+            text: message
+         })
+         setTimeout(() => {
+            setContact(1)
+         }, 800)
+      } else {
+         console.log(form.current.elements);
+         formValidationIncorrect(form.current)
+      }
 
 
-      let response = await fetch("sended.php", {
-         method: "POST",
-         body: formData
 
-      })
-      if (response.ok) { console.log("ok"); } else { console.log('failed'); }
    }
 
 
@@ -71,8 +91,8 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
             <p>Заполните Ваши данные</p>
 
             <form ref={form} className="contact-form__form" id='contact-form__form'>
-               <OrderInput type='text' placeholder='Имя' autofocus={true} />
-               <OrderInput
+               <OrderInput name="name" form="contact-form__form" type='text' placeholder='Имя' autofocus={true} />
+               <OrderInput name="contact" form="contact-form__form"
                   type={secondInputType}
                   placeholder={secondInputText}
                   validation={secondInputValidation}
@@ -84,7 +104,7 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
 
             </form>
          </div>
-         <OrderButton text='Отправить' link='' form="contact-form__form" onClick={sendForm} styles={{
+         <OrderButton type='submit' text='Отправить' link='' form="contact-form__form" onClick={sendForm} styles={{
 
             position: "relative",
             top: "40%",

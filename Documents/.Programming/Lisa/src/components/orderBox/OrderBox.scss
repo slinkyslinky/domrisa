@@ -47,3 +47,28 @@ label {}
       opacity: 0.55;
    }
 }
+
+.order__second-screen {
+
+   width: 100%;
+   height: 100%;
+   min-height: 65vh;
+   border: 1px solid black;
+   border-radius: 90px;
+   background-color: white;
+   text-align: center;
+   padding: 120px 120px;
+
+   span:first-child {
+      font-weight: 600;
+      font-size: 1.2em;
+   }
+
+   .order-second-text {}
+
+   a {
+      font-size: 0.7em;
+      color: $yellow;
+      line-height: 3;
+   }
+}

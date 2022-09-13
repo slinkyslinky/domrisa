@@ -6,3 +6,9 @@ export const colors = {
    violet: '#524957',
    yellow: '#F2D262',
 }
+
+export const telegram = {
+   TOKEN: '5770285650:AAESU5rYjtOcrJ0wT0XiXTkmiVVYhwZO3lc',
+   CHAT_ID: '660653825',
+   URL: `https://api.telegram.org/bot5770285650:AAESU5rYjtOcrJ0wT0XiXTkmiVVYhwZO3lc/sendMessage`,
+}

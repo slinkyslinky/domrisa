@@ -14,7 +14,7 @@ export default function ShopItem(props) {
 
    function addToOrder() {
 
-      localStorage.setItem(`order-${props.id}`, `{"id": "${props.id}", "name": "${props.name}", "price": "${props.price}"}`)
+      localStorage.setItem(`order-${props.id}`, `{"id": "${props.id}", "name": "${props.name}", "price": "${props.price}", "amount": "1"}`)
 
    }
 

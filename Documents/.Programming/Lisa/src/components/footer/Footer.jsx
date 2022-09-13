@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 import Contacts from '../contacts/Contacts';
 
-export default function Footer() {
+export default function Footer({ style }) {
    return (
-      <footer>
+      <footer style={style}>
          <div className="footer__item footer__nav">
             <ul>
                <li><Link to="/shop/">Магазин</Link></li>

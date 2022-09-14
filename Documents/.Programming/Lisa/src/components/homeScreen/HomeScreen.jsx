@@ -16,8 +16,7 @@ export default function HomeScreen() {
             link='/contactform'
 
             styles={{
-               margin: "0 auto",
-               top: "79%"
+
             }} text='Заказать' />
       </div>
    )

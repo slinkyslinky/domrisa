@@ -17,3 +17,23 @@
 .container--max {
    max-width: 1040px;
 }
+
+@media (max-width: 680px) {
+   .container {
+      padding: 80px 50px 40px;
+   }
+
+   .container--wide {
+      padding: 80px 50px;
+   }
+}
+
+@media (max-width: 540px) {
+   .container {
+      padding: 80px 35px 40px;
+   }
+
+   .container--wide {
+      padding: 80px 35px;
+   }
+}

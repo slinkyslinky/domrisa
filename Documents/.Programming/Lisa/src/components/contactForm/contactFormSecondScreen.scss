@@ -59,3 +59,15 @@
    }
 
 }
+
+@media (max-width:1100px) {
+   .contact-form__second-screen {
+      .contact-back {
+         svg {
+            height: 50px;
+            width: 50px;
+         }
+      }
+
+   }
+}

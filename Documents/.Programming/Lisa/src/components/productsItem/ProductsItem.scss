@@ -224,3 +224,39 @@ $giftboxsize: 350px;
 
    }
 }
+
+
+@media (max-width: 1300px) {
+
+   .products-item,
+   .products-back,
+   .products-item__cover {
+      width: 320px;
+      height: 320px;
+   }
+
+   .products-item__bant {}
+
+   .products-item--open {
+      height: 320px;
+      width: 65vw;
+   }
+}
+
+
+@media (max-width: 1150px) {
+
+   .products-item,
+   .products-back,
+   .products-item__cover {
+      width: 270px;
+      height: 270px;
+   }
+
+   .products-item__bant {}
+
+   .products-item--open {
+      height: 270px;
+      width: 65vw;
+   }
+}

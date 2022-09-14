@@ -22,7 +22,7 @@ nav {
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
       width: 120px;
-      height: 120px;
+      aspect-ratio: 1/1;
       border-radius: 50%;
       border: 2px solid $lil;
       background-color: $bej;
@@ -63,8 +63,128 @@ nav {
 
    .logo {
       width: 60px;
-      height: 60px;
+      aspect-ratio: 1/1;
       fill: $violet
+   }
+
+}
+
+
+@media (max-width: $laptop-large) {
+   nav {
+      width: 480px;
+      height: 85px;
+
+      .logo {
+         transform: scale(0.9);
+      }
+
+      &::before {
+         width: 110px;
+      }
+
+      ul {
+         gap: 70px;
+      }
+   }
+
+
+}
+
+@media (max-width: $tablet-large) {
+   nav {
+      width: 100%;
+      height: 80px;
+      border-radius: 0 0 20px 20px;
+
+      &::before {
+         width: 115px;
+      }
+
+      .logo {
+         transform: scale(1);
+      }
+
+
+
+      .contacts {
+         position: absolute;
+         top: 50%;
+         right: 5%;
+         transform: translateY(-50%);
+         width: 17%;
+      }
+   }
+}
+
+@media (max-width: 800px) {
+   nav {
+      .contacts {
+
+
+         a:nth-child(2),
+         a:last-child {
+            display: none;
+         }
+
+         width: 30px;
+      }
+   }
+
+}
+
+@media (max-width: 600px) {
+   nav {
+      ul {
+         gap: 60px;
+      }
+
+
+   }
+}
+
+@media (max-width: $phone) {
+   nav {
+      ul {
+         gap: 50px;
+      }
+
+
+   }
+}
+
+@media (max-width: 500px) {
+   nav {
+
+      height: 65px;
+      border-radius: 0 0 20px 20px;
+
+      &::before {
+         width: 100px;
+      }
+
+      .logo {
+         transform: scale(0.9);
+      }
+
+      ul {
+         gap: 35px;
+
+         li {
+            font-size: 16px;
+         }
+      }
+
+
+
+   }
+}
+
+@media (max-width: 404px) {
+   nav {
+      .contacts {
+         display: none;
+      }
    }
 
 }

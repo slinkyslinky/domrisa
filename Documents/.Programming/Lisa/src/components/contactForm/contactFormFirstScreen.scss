@@ -20,7 +20,7 @@
       text-align: center;
 
       p {
-         font-size: 24px;
+         font-size: 1em;
          margin-bottom: 40px;
       }
    }
@@ -75,6 +75,35 @@
       }
 
 
+   }
+
+}
+
+
+@media (max-width: 1100px) {
+   .contact-form {
+      &__contact {
+         svg {
+            height: 50px;
+            width: 50px;
+         }
+      }
+   }
+
+
+}
+
+@media (max-width: $tablet-large) {
+   .contact-form {
+      p {}
+
+      &__contacts {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: 1fr 1fr;
+         gap: 30px;
+         padding: 0 20%;
+      }
    }
 
 }

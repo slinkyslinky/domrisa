@@ -4,7 +4,7 @@ import './productsScreen.scss'
 import { colors } from '../../variables/variables.js'
 import firstImg from '../../img/балалайка.png'
 import secondImg from '../../img/py4u3x9Z--Y.jpg'
-import thirdImg from '../../img/шоппер.png'
+import thirdImg from '../../img/шоппер.webp'
 import { Link } from 'react-router-dom'
 export default function ProductsScreen() {
 

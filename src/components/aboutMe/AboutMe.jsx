@@ -1,6 +1,6 @@
 import React from 'react'
 import './aboutMe.scss'
-import aboutMeImg from "../../img/aboutme.png"
+import aboutMeImg from "../../img/aboutme.webp"
 import icon from '../../img/insta.svg'
 
 export default function AboutMe() {

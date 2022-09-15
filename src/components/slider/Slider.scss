@@ -50,17 +50,43 @@
 }
 
 @media (max-width: $tablet-large) {
+
+   .arrow--right {
+      transform: translateX(-10%) scale(0.8);
+
+   }
+
+   .arrow--left {
+      transform: translateX(10%) scale(0.8);
+
+   }
+
+
+}
+
+
+
+@media (max-width: $phone) {
    .slider {
+      max-width: 85%;
+
+
       .arrow--right {
-         transform: translateX(-10%) scale(0.8);
+         transform: translateX(-25%) scale(0.55);
 
       }
 
       .arrow--left {
-         transform: translateX(10%) scale(0.8);
+         transform: translateX(25%) scale(0.55);
 
       }
 
 
+   }
+}
+
+@media (max-height: 700px) {
+   .slider {
+      max-height: 65%;
    }
 }

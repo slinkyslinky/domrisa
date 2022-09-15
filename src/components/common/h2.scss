@@ -23,3 +23,15 @@ h2 {
       font-size: 40px;
    }
 }
+
+@media (max-height: 800px) and (max-width: 800px) {
+   h2 {
+      font-size: 36px;
+   }
+}
+
+@media (max-width: 400px) and (max-height: 800px) {
+   h2 {
+      font-size: 28px;
+   }
+}

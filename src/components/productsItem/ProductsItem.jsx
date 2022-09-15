@@ -19,31 +19,47 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
 
    let left = 0;
    let right = 0;
+   let leftPos;
    const timeout = 500
+   let minShift;
+   let midShift;
+   let maxShift;
+   let centerShift;
 
 
+   if (window.innerWidth < 992) {
+      minShift = -12;
+      centerShift = 0;
+      midShift = 12;
+      maxShift = 4;
+
+   } else {
+      minShift = 5;
+      centerShift = 5;
+      midShift = 14;
+      maxShift = 18;
+   }
 
 
-
-   function shiftProduct() {
+   function posProduct(center, leftest, lefter, righter, rightest) {
 
       switch (id) {
          case 1:
 
             switch (openedBox) {
                case 1:
-                  left = -5;
+                  leftPos = center
                   break;
                case 2:
 
-                  left = -18;
+                  leftPos = lefter;
                   classes.push('products-item--hidden')
 
 
                   break;
                case 3:
 
-                  left = -14;
+                  leftPos = leftest;
                   classes.push('products-item--hidden')
 
                   break;
@@ -55,16 +71,16 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
             switch (openedBox) {
                case 1:
 
-                  right = -14;
+                  leftPos = righter;
                   classes.push('products-item--hidden')
 
                   break;
                case 2:
-                  left = -5;
+                  leftPos = center;
                   break;
                case 3:
 
-                  left = -14;
+                  leftPos = lefter;
                   classes.push('products-item--hidden')
 
                   break;
@@ -75,19 +91,19 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
             switch (openedBox) {
                case 1:
 
-                  right = -14;
+                  leftPos = rightest;
                   classes.push('products-item--hidden')
 
                   break;
                case 2:
 
-                  right = -18;
+                  leftPos = righter;
                   classes.push('products-item--hidden')
 
                   break;
                case 3:
 
-                  right = -5;
+                  leftPos = center;
                   classes.push('products-item--hidden')
 
                   break;
@@ -98,6 +114,81 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
       }
 
    }
+
+   function shiftProduct(min, mid, max, center) {
+
+      switch (id) {
+         case 1:
+
+            switch (openedBox) {
+               case 1:
+                  left = -min;
+                  break;
+               case 2:
+
+                  left = -max;
+                  classes.push('products-item--hidden')
+
+
+                  break;
+               case 3:
+
+                  left = -mid;
+                  classes.push('products-item--hidden')
+
+                  break;
+               default: return;
+            }
+
+            break;
+         case 2:
+            switch (openedBox) {
+               case 1:
+
+                  right = -mid;
+                  classes.push('products-item--hidden')
+
+                  break;
+               case 2:
+                  left = -center;
+                  break;
+               case 3:
+
+                  left = -mid;
+                  classes.push('products-item--hidden')
+
+                  break;
+               default: return;
+            }
+            break;
+         case 3:
+            switch (openedBox) {
+               case 1:
+
+                  right = -mid;
+                  classes.push('products-item--hidden')
+
+                  break;
+               case 2:
+
+                  right = -max;
+                  classes.push('products-item--hidden')
+
+                  break;
+               case 3:
+
+                  right = -min;
+                  classes.push('products-item--hidden')
+
+                  break;
+               default: return;
+            }
+            break;
+         default: return;
+      }
+
+   }
+
 
 
 
@@ -154,12 +245,33 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
       display = 'none'
 
    }
-   shiftProduct()
-   // }, [isOpen])
+   if (window.innerWidth < 360) {
+      posProduct("calc(50% - 115px)", "-85%", "-76%", "calc(176% - 230px)", "calc(185% - 230px)")
+   } else
+      if (window.innerWidth < 390) {
+         posProduct("calc(50% - 115px)", "-80%", "-66%", "calc(166% - 230px)", "calc(180% - 230px)")
+      } else
+         if (window.innerWidth < 454) {
+            posProduct("calc(50% - 115px)", "-70%", "-55%", "calc(155% - 230px)", "calc(170% - 230px)")
+         } else
+            if (window.innerWidth < 500) {
+               posProduct("calc(50% - 135px)", "-70%", "-55%", "calc(155% - 270px)", "calc(170% - 270px)")
+            } else
+               if (window.innerWidth < 565) {
+                  posProduct("calc(50% - 135px)", "-55%", "-44%", "calc(144% - 270px)", "calc(155% - 270px)")
+               } else
+                  if (window.innerWidth < 630) {
+                     posProduct("calc(50% - 135px)", "-44%", "-34%", "calc(134% - 270px)", "calc(144% - 270px)")
+                  } else
+                     if (window.innerWidth < 768) {
+                        posProduct("calc(50% - 135px)", "-35%", "-25%", "calc(125% - 270px)", "calc(135% - 270px)")
+
+                     } else shiftProduct(minShift, midShift, maxShift, centerShift)
+
 
 
    return (
-      <div className={classes.join(' ')} style={{ marginLeft: left + 'vw', marginRight: right + 'vw', }}  >
+      <div className={classes.join(' ')} style={{ marginLeft: left + 'vw', marginRight: right + 'vw', left: leftPos }}  >
 
 
          <div className={coverClasses.join(' ')} style={{ backgroundColor: product.color, }}>

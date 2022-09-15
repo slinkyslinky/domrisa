@@ -138,3 +138,41 @@
    }
 
 }
+
+@media (max-height: 800px) and (max-width: $tablet-small) {
+   .about-screen {
+      .container {
+         padding-top: 80px;
+      }
+   }
+
+   .about-screen__item:first-child {
+
+
+      p {
+         font-size: 0.75em;
+      }
+   }
+
+   .about-screen__item:last-child {
+      justify-content: flex-start;
+
+      span {
+         font-size: 0.85em;
+      }
+   }
+
+}
+
+@media (max-height: 654px) and (max-width: $tablet-small) {
+   .about-screen__item:last-child {
+      span {
+         display: none;
+      }
+
+      .slider {
+         max-height: 90%;
+      }
+   }
+
+}

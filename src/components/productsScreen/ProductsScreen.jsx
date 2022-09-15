@@ -1,4 +1,4 @@
-import React, { useEffect, useState, } from 'react'
+import React, { useEffect, useRef, useState, } from 'react'
 import ProductsItem from '../productsItem/ProductsItem'
 import './productsScreen.scss'
 import { colors } from '../../variables/variables.js'
@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 export default function ProductsScreen() {
 
    const [openedBox, setopenedBox] = useState(0);
-
+   const article = useRef(null)
 
    const productsList = [
       { id: 1, title: "Брошь из полимерной глины", text: "Полимерная глина — это пластичный материал, который после запекания становится похож на пластик. Поэтому изделия из нее достаточно прочные. Создание из полимерной глины музыкальным инструментов достаточно трудное дело. На первом этапе, вручную создается форма, прикрепляются лады, подставка и прочее. На втором, изделие запекается и шлифуется. Третий этап — покраска и финалный — лакировка.", img: firstImg, color: colors.green, },
@@ -20,6 +20,23 @@ export default function ProductsScreen() {
 
 
    // setRandomAnimation()
+   useEffect(() => {
+      article.current.style.opacity = 0;
+      setTimeout(() => {
+         if (window.innerWidth < 768 && (openedBox)) {
+            article.current.classList.add('article-of-product')
+            article.current.innerText = productsList[openedBox - 1].text
+
+         }
+         if (window.innerWidth < 768 && (openedBox == null)) {
+            article.current.classList.remove('article-of-product')
+            article.current.innerText = "Любое из этих изделий станет замечательным подарком для близких или для себя. для тех кто дорожит деталями и уникальнотью"
+         }
+         article.current.style.opacity = 1;
+      }, 500)
+
+   }, [openedBox])
+
 
 
 
@@ -42,8 +59,8 @@ export default function ProductsScreen() {
                   />
                )}
             </div>
-            <article className='products-article'>
-               <p> Любое из этих изделий станет замечательным подарком для близких или для себя. для тех кто дорожит деталями и уникальнотью</p>
+            <article ref={article} className='products-article'>
+               Любое из этих изделий станет замечательным подарком для близких или для себя. для тех кто дорожит деталями и уникальнотью
 
             </article>
             <span>Посмотрите <Link to="/about/reviews">отзывы</Link></span>

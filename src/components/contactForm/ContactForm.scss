@@ -1,0 +1,33 @@
+@import '../../variables/variables.scss';
+
+.contact-form {
+   background-color: #626068;
+   border-radius: 90px;
+   height: 100%;
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: max(3vh, 60px) 8%;
+   position: relative;
+
+   h3 {}
+
+   &__subtitle {
+      display: block;
+      color: $lil;
+      font-size: 18px;
+      margin: 5px 0 min(8vh, 100px) 160px;
+   }
+}
+
+@media (max-width: 900px) {
+   .contact-form {
+      border-radius: 60px;
+      padding: 4vh 8%;
+
+      &__subtitle {
+         margin: 5px 0 5vh 30%;
+      }
+   }
+
+}

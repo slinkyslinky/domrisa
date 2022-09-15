@@ -1,0 +1,23 @@
+@import '../../variables/variables.scss';
+
+#contact-form__third-screen {
+   text-align: center;
+   color: $white;
+
+   span:first-child {
+      font-size: 1.2em;
+      font-weight: 600;
+   }
+
+   span:nth-child(2) {
+      font-size: 0.8em;
+   }
+
+   span:last-child {
+      background: none;
+      color: $yellow;
+      font-size: 0.75em;
+      cursor: pointer;
+      line-height: 4;
+   }
+}

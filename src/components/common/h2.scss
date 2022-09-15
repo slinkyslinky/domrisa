@@ -1,0 +1,25 @@
+@import '../../variables/variables.scss';
+
+h2 {
+   font-size: 60px;
+   color: $violet;
+   font-family: 'Lora';
+}
+
+@media (max-width: $laptop-small) {
+   h2 {
+      font-size: 50px;
+   }
+}
+
+@media (max-width: $tablet-large) {
+   h2 {
+      font-size: 44px;
+   }
+}
+
+@media (max-width: 850px) {
+   h2 {
+      font-size: 40px;
+   }
+}

@@ -1,0 +1,60 @@
+@import './utils/nullification.scss';
+@import './components/container/container.scss';
+@import './components/common//h2.scss';
+@import './components/common//h3.scss';
+@import './components/common//h4.scss';
+@import './variables/variables.scss';
+@import './fonts/fonts.scss';
+
+
+
+body {
+   max-width: 100%;
+   font-family: 'Montserrat';
+   font-weight: 400;
+   font-size: calc(20px + (26 - 18) * (100vw - 400px)/(1920 - 400));
+   scroll-behavior: smooth;
+}
+
+#root {}
+
+
+
+.about {
+   // width: 100%;
+}
+
+a {
+   color: $yellow
+}
+
+#shop {
+   min-height: 100vh;
+   position: relative;
+
+   .container {
+      padding-top: 100px;
+      padding-bottom: 170px;
+   }
+
+   footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+   }
+
+}
+
+#order {
+   background-color: $bej;
+   min-height: 100vh;
+
+
+   .container {
+      padding-top: 14vh;
+      width: 100%;
+
+   }
+
+
+}

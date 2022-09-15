@@ -1,0 +1,78 @@
+@import '../../variables/variables.scss';
+
+.products-screen {
+   height: 100vh;
+   width: 100%;
+   overflow-x: hidden;
+   text-align: center;
+
+
+
+   .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+
+   h2 {
+
+      padding: 0 20px;
+   }
+
+   a {
+      color: $yellow;
+   }
+
+   span {
+      font-size: 1.2em;
+   }
+}
+
+.products-article {
+   padding: 0 115px;
+   margin-bottom: 25px;
+   font-size: 28px;
+   text-align: center;
+}
+
+
+.products-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   padding: 0 20px 0;
+   margin-bottom: 3%;
+   margin-top: 6%;
+   height: 380px;
+}
+
+
+@media (max-width: 1400px) {
+   .products-screen {
+      .container {
+         padding: 80px 40px 40px;
+      }
+   }
+}
+
+@media (max-width: 1300px) {
+   .products-screen {
+      .container {
+         padding: 80px 20px 40px;
+      }
+   }
+
+   .products-container {
+      height: 350px;
+   }
+}
+
+@media (max-width: 1150px) {
+
+
+   .products-container {
+      height: 320px;
+   }
+}

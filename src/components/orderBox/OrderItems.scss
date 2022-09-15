@@ -1,0 +1,46 @@
+@import '../../variables/variables.scss';
+
+.order-box__table {
+   font-weight: 600;
+   color: $green;
+   display: grid;
+
+   grid-template-columns: 1fr 1.8fr 1fr 1fr 0.5fr;
+   text-align: center;
+
+}
+
+.table-column__name:first-child {
+   grid-column: 2/3;
+
+}
+
+.table-column__name:nth-child(2) {
+   grid-column: 3/4;
+}
+
+.table-column__name:last-child {
+   grid-column: 4/5;
+}
+
+.order-box__summary {
+   margin-bottom: 40px;
+}
+
+#no-ordered-items {
+
+
+
+   text-align: center;
+   padding: 40px 0 60px;
+
+   span {
+      font-weight: 600;
+      font-size: 1.3em;
+   }
+
+   a {
+      font-size: 1.1em;
+      font-weight: 400;
+   }
+}

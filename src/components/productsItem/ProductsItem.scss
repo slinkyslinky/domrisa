@@ -1,0 +1,262 @@
+$giftboxsize: 350px;
+
+.products-item {
+   position: relative;
+   display: block;
+   height: $giftboxsize;
+   width: $giftboxsize;
+   position: relative;
+
+   transform: rotateZ(0);
+   transition: margin ease 0.5s 0.5s, width ease 0.5s, height ease 0.5s;
+
+
+
+
+   article {
+      left: -450px;
+
+   }
+
+   ;
+
+   &:nth-child(2) {
+      z-index: 3;
+   }
+
+
+
+   &__cover {
+      display: block;
+      height: $giftboxsize;
+      width: $giftboxsize;
+
+      border-radius: 20px;
+      z-index: 5;
+      cursor: pointer;
+      transition: opacity linear 0.2s 0.5s;
+
+      &--open {
+         // display: none;
+      }
+
+
+   }
+
+   &--open {
+      // animation: open-product 0.5s forwards;
+      height: $giftboxsize;
+      width: 65vw;
+      margin: 0 auto;
+      animation: none;
+      // transition: margin ease 0.5s, width ease 0.5s, height ease 0.5s;
+      transition: margin ease 0.5s 0.5s, width ease 0.5s 0.5s, height ease 0.5s 0.5s;
+
+
+      .products-item__inner {
+
+         overflow: visible;
+
+         .products-item__back {
+            transition: border-radius ease 0.3s 0.4s;
+            border-radius: 20px 0 0 20px;
+         }
+
+         article {
+            transition: opacity ease 0.1s 0.5s, padding ease 0.1s 0.5s;
+            opacity: 1;
+            padding: 20px 40px 20px 40px;
+         }
+
+         img {
+            transition: opacity ease 0.3s 0.3s;
+            opacity: 1;
+         }
+
+      }
+
+
+      .products-item__cover {
+         opacity: 0;
+         transition: opacity linear 0.2s;
+
+         .products-item__cover::after {
+            // display: none;
+         }
+      }
+
+   }
+
+   &__back {
+      height: $giftboxsize;
+      width: $giftboxsize;
+
+   }
+
+   // &__cover::after {
+   //    position: absolute;
+   //    content: url(../../img/Bant2.png);
+   //    top: -28%;
+   //    left: -6%;
+   //    width: 103%;
+   //    height: 130%;
+
+   &__bant {
+      position: absolute;
+      display: block;
+      width: $giftboxsize + 30px;
+      top: -30%;
+      left: 0;
+
+      height: 130%;
+      z-index: 5;
+   }
+
+   // }
+
+   &__cover--animated {
+
+      // animation: coverHidden 0.5s forwards;
+
+   }
+
+
+
+
+
+
+   animation: jiggling 0.8s infinite;
+   animation-play-state: paused;
+   animation-fill-mode: forwards;
+
+
+   &--active {
+      animation-play-state: running;
+   }
+
+
+
+   &:hover {
+      animation-play-state: running;
+   }
+
+
+
+   &:last-child {
+      .products-item__inner {
+         flex-direction: row-reverse;
+
+         .products-item__back {
+            // border-radius: 0 20px 20px 0;
+         }
+
+         article {
+            animation: innerShowingReversed 1s forwards;
+            border-radius: 20px 0 0 20px;
+
+            padding: 20px 40px 20px 70px;
+         }
+      }
+   }
+
+
+}
+
+
+.products-item:last-child.products-item--open {
+   .products-item__inner {
+      .products-item__back {
+         border-radius: 0 20px 20px 0;
+      }
+   }
+
+}
+
+
+////////// Animations /////////////
+
+@keyframes jiggling {
+   from {
+      transform: rotateZ(0);
+
+   }
+
+   20% {
+      transform: rotateZ(-1deg);
+      transform-origin: 30% 30%
+   }
+
+   40% {
+
+      transform: rotateZ(2deg);
+
+
+   }
+
+
+
+   60% {
+      transform: rotateZ(-2deg);
+      transform-origin: 70% 70%
+   }
+
+
+
+   80% {
+      transform: rotateZ(0.5deg);
+   }
+
+   to {
+      transform: rotateZ(0);
+   }
+}
+
+@keyframes coverHidden {
+   from {
+      opacity: 1;
+      transform: translateX(100px);
+   }
+
+   to {
+      opacity: 0;
+      transform: translateX(0);
+
+
+   }
+}
+
+
+@media (max-width: 1300px) {
+
+   .products-item,
+   .products-back,
+   .products-item__cover {
+      width: 320px;
+      height: 320px;
+   }
+
+   .products-item__bant {}
+
+   .products-item--open {
+      height: 320px;
+      width: 65vw;
+   }
+}
+
+
+@media (max-width: 1150px) {
+
+   .products-item,
+   .products-back,
+   .products-item__cover {
+      width: 270px;
+      height: 270px;
+   }
+
+   .products-item__bant {}
+
+   .products-item--open {
+      height: 270px;
+      width: 65vw;
+   }
+}

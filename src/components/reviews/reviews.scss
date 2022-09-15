@@ -1,0 +1,32 @@
+@import '../../variables/variables.scss';
+
+
+.reviews {
+   background-color: $lil;
+
+   height: auto;
+   width: 100%;
+
+   padding-top: 120px;
+
+
+   &__wrapper {
+      background-color: $bej;
+      border-radius: 90px;
+      border: 1px solid $violet;
+      width: 860px;
+      min-height: 400px;
+      margin: 0 auto;
+      padding: 10px 50px;
+      margin-bottom: 100px;
+
+      h2 {
+         text-align: center;
+      }
+   }
+
+   &__content {
+      width: 100%;
+
+   }
+}

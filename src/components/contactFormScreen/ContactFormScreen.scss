@@ -1,0 +1,18 @@
+.contact-form-screen {
+   width: 100%;
+
+
+   .container {
+      height: 85vh;
+      padding-top: min(12vh, 120px);
+      padding-bottom: min(4vh, 50px)
+   }
+}
+
+@media (max-width: 768px) {
+   .contact-form-screen {
+      .container {
+         padding: 12vh 8% 4vh
+      }
+   }
+}

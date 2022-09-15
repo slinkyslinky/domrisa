@@ -1,0 +1,30 @@
+@import '../../variables/variables.scss';
+
+.contacts {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   svg {
+      width: 100%;
+      height: 100%;
+      fill: $lil;
+
+
+   }
+
+   a {
+      width: 30px;
+      height: 30px;
+
+      &:hover,
+      &:focus {
+         svg {
+            fill: $green;
+         }
+      }
+   }
+
+
+
+}

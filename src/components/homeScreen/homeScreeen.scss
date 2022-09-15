@@ -1,0 +1,106 @@
+@import '../../variables/variables.scss';
+
+.homeScreen {
+   background: url('../../img/mainscreen.png') center no-repeat;
+   width: 100%;
+   height: 100vh;
+   background-size: cover;
+   position: relative;
+
+   .order-button {
+      margin: 0 auto;
+      top: 79%;
+
+   }
+
+   .contacts {
+      position: absolute;
+      top: 26px;
+      right: 6.5vw;
+      width: min(207px, 20%);
+
+      img {
+         width: 20px;
+         height: 20px;
+      }
+   }
+
+}
+
+.home-screen__title {
+   width: 53%;
+   position: absolute;
+   bottom: 27%;
+   left: 110px;
+   transform: rotateZ(13deg);
+}
+
+@media (max-width: $laptop-large) {
+   .home-screen__title {
+      bottom: 22%;
+   }
+}
+
+@media (max-width: 1150px) {
+   .home-screen__title {
+      bottom: 20%;
+   }
+
+   .homeScreen {
+      .contacts {
+         width: 18%;
+         right: 4vw;
+      }
+   }
+}
+
+@media(max-width: $tablet-large) {
+   .homeScreen {
+      background-position: 57% 0;
+   }
+}
+
+@media(max-width: $tablet-small) {
+   .homeScreen {
+      background-position: 62% 0;
+   }
+
+   .order-button {
+      width: 280px;
+      height: 70px;
+      font-size: 28px;
+      ;
+   }
+
+   .home-screen__title {
+      width: 70%;
+      left: 10%;
+   }
+}
+
+@media(max-width: 650px) {
+
+   .home-screen__title {
+      width: 80%;
+   }
+}
+
+@media (max-width: $phone) {
+   .homeScreen {
+      .order-button {
+         width: 270px;
+         height: 60px;
+         font-size: 24px;
+         ;
+      }
+   }
+}
+
+@media (max-width: 400px) {
+   .homeScreen {
+      .order-button {
+         width: 240px;
+
+      }
+   }
+}

@@ -57,7 +57,7 @@ export default function Shop() {
 
    return (
       <div id='shop'>
-         <OrderButton link="/order/" text="Перейти к заказу" styles={{ textTransform: "none", position: "absolute", top: "4vh", right: "4vw", fontSize: "26px", opacity: showOrderButton, }} />
+         <OrderButton link="/order/" text="Перейти к заказу" styles={{ textTransform: "none", position: "absolute", top: "4%", right: "4vw", fontSize: "26px", opacity: showOrderButton, }} />
          <div className="container">
 
             {

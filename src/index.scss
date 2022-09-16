@@ -10,7 +10,9 @@
 
 body {
    max-width: 100%;
-   position: relative;
+   min-height: -moz-available;
+   min-height: -webkit-fill-available;
+   min-height: fill-available;
 
 
    font-family: 'Montserrat';

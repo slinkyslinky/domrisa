@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FullPage, Slide } from 'react-full-page'
 import AboutScreen from '../components/aboutScreen/AboutScreen.jsx'
 import ContactFormScreen from '../components/contactFormScreen/ContactFormScreen.jsx'
@@ -38,11 +38,17 @@ export default function Main() {
     }, randomDelayValue)
   }())
 
+  const [height, setHeight] = useState(window.innerHeight)
+  const [heightOut, setHeightOut] = useState(window.outerHeight)
 
+  window.onresize = () => {
+    setHeight(window.innerHeight)
+    setHeightOut(window.outerHeight)
+  }
 
 
   return (
-    <div id='main' className='main' >
+    <div id='main' className='main' style={{ minHeight: height, marginTop: heightOut - height }} >
 
 
 

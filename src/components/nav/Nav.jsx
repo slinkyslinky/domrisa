@@ -14,13 +14,13 @@ export default function Nav() {
         setNavType(0)
     }
 
-    window.onresize = () => {
-        if (navType === 0 && window.innerWidth < 992) {
-            setNavType(1)
-        } else if (navType === 1 && window.innerWidth > 992) {
-            setNavType(0)
-        }
-    }
+    // window.onresize = () => {
+    //     if (navType === 0 && window.innerWidth < 992) {
+    //         setNavType(1)
+    //     } else if (navType === 1 && window.innerWidth > 992) {
+    //         setNavType(0)
+    //     }
+    // }
 
     if (navType === 0) {
 

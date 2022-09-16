@@ -43,7 +43,7 @@
 
    &__item:last-child {
 
-      padding-top: calc(300px - 25%);
+      padding-top: max(0, calc(300px - 25%));
 
       padding-left: 6%;
       text-align: center;

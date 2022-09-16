@@ -12,7 +12,11 @@ export default function Main() {
 
   let randomBoxNumber = 1;
   let randomDelayValue = 1000;
+  let scrollMode = "full-page";
 
+  if (navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+    scrollMode = "normal";
+  };
 
 
   (function setRandomAnimation() {
@@ -42,7 +46,7 @@ export default function Main() {
 
 
 
-      {<FullPage controls={false} duration={500} >
+      {<FullPage controls={false} duration={500} scrollMode={scrollMode}>
         <Slide>
           <HomeScreen />
         </Slide>

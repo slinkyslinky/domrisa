@@ -46,25 +46,25 @@ export default function Main() {
 
 
 
-      {<FullPage controls={false} duration={500} scrollMode={scrollMode}>
-        <Slide>
-          <HomeScreen />
-        </Slide>
-        <Slide>
-          <AboutScreen />
-        </Slide>
-        <Slide>
-          <ProductsScreen />
-        </Slide>
-        <Slide>
-          <DeliveryScreen />
-        </Slide>
-        <Slide>
-          <ContactFormScreen />
+      {/* {<FullPage controls={false} duration={500} scrollMode={scrollMode}>
+        <Slide> */}
+      <HomeScreen />
+      {/* </Slide> */}
+      {/* <Slide> */}
+      <AboutScreen />
+      {/* </Slide> */}
+      {/* <Slide> */}
+      <ProductsScreen />
+      {/* </Slide> */}
+      {/* <Slide> */}
+      <DeliveryScreen />
+      {/* </Slide> */}
+      {/* <Slide> */}
+      <ContactFormScreen />
 
-        </Slide>
+      {/* </Slide> */}
 
-      </FullPage>}
+      {/* </FullPage>} */}
 
 
 

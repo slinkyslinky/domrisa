@@ -1,7 +1,7 @@
 @import '../../variables/variables.scss';
 
 .about-screen {
-   height: 100vh;
+   height: 100%;
    width: 100%;
 
 
@@ -25,7 +25,7 @@
 
    &__item:first-child {
 
-      padding: 0 9% 10vh 0px;
+      padding: 0 9% 140px 0px;
 
 
       gap: 55px;
@@ -76,7 +76,7 @@
 
       &__item:first-child {
 
-         padding: 0 6% 10vh 0px;
+         padding: 0 6% 140px 0px;
       }
 
       &__item:last-child {
@@ -116,7 +116,7 @@
       &__item:first-child {
          width: 100%;
 
-         padding: 0 15% 4vh 0;
+         padding: 0 15% 80px 0;
          gap: 10px;
       }
 
@@ -133,7 +133,7 @@
    .about-screen {
       &__item:first-child {
 
-         padding: 0 0 4vh 0;
+         padding: 0 0 60px 0;
       }
    }
 

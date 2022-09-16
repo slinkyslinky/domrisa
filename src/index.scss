@@ -10,6 +10,9 @@
 
 body {
    max-width: 100%;
+   position: relative;
+
+
    font-family: 'Montserrat';
    font-weight: 400;
    font-size: calc(20px + (26 - 18) * (100vw - 400px)/(1920 - 400));
@@ -30,7 +33,7 @@ a {
 }
 
 #shop {
-   min-height: 100vh;
+   min-height: 100%;
    position: relative;
 
    .container {
@@ -48,7 +51,7 @@ a {
 
 #order {
    background-color: $bej;
-   min-height: 100vh;
+   min-height: 100%;
 
 
    .container {

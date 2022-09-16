@@ -13,7 +13,7 @@ import ContactFormScreen from "./components/contactFormScreen/ContactFormScreen"
 
 function App() {
 
-   window.onresize((e) => { e.preventDefault() })
+   // window.onresize = (e) => { e.preventDefault() }
    return (
 
 

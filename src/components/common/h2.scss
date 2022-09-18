@@ -6,11 +6,12 @@ h2 {
    font-family: 'Lora';
 }
 
-@media (max-width: $laptop-small) {
+@media (max-width: 1250px) {
    h2 {
       font-size: 50px;
    }
 }
+
 
 @media (max-width: $tablet-large) {
    h2 {
@@ -24,13 +25,13 @@ h2 {
    }
 }
 
-@media (max-height: 800px) and (max-width: 800px) {
+@media (max-width: 800px) {
    h2 {
       font-size: 36px;
    }
 }
 
-@media (max-width: 400px) and (max-height: 800px) {
+@media (max-width: 420px) {
    h2 {
       font-size: 28px;
    }

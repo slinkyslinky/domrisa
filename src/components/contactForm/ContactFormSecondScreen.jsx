@@ -99,20 +99,12 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
                   minLength={minLength}
 
                />
-
+               <OrderButton type='submit' text='Отправить' link='' form="contact-form__form" onClick={sendForm} />
 
 
             </form>
          </div>
-         <OrderButton type='submit' text='Отправить' link='' form="contact-form__form" onClick={sendForm} styles={{
 
-            position: "relative",
-            top: "40%",
-            left: "100%",
-            transform: "translateX(-100%) translateY(-100%)",
-            height: 70,
-            width: 298,
-         }} />
       </div>
    )
 }

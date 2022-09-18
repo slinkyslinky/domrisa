@@ -16,7 +16,7 @@ body {
 
    font-family: 'Montserrat';
    font-weight: 400;
-   font-size: calc(20px + (26 - 18) * (100vw - 400px)/(1920 - 400));
+   font-size: calc(16px + (24 - 16) * (100vw - 320px)/(1920 - 320));
    scroll-behavior: smooth;
    // overflow-x: hidden;
 }
@@ -43,7 +43,7 @@ a {
    }
 
    footer {
-      overflow-x: hidden;
+
       position: absolute;
       bottom: 0;
       left: 0;

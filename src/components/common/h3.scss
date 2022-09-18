@@ -1,7 +1,20 @@
 @import '../../variables/variables.scss';
 
 h3 {
-   font-size: 40px;
+   font-size: 44px;
    color: $lil;
    font-family: 'Lora';
+}
+
+
+@media (max-width: $tablet-large) {
+   h3 {
+      font-size: 38px;
+   }
+}
+
+@media (max-width: $phone) {
+   h3 {
+      font-size: 30px;
+   }
 }

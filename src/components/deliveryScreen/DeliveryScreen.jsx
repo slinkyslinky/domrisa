@@ -9,7 +9,10 @@ export default function DeliveryScreen() {
          <div className="container container--wide">
             <div className="delivery-grid">
                <picture className='delivery-grid__item'>
-                  <img src={img1} alt="first image" />
+                  <div className="delivery-screen__img-box">
+                     <img src={img1} alt="first image" />
+                  </div>
+
                </picture>
                <article className='delivery-grid__item'>
                   <h2>Упаковка</h2>

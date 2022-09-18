@@ -7,7 +7,17 @@ import { Link } from 'react-router-dom';
 
 import Contacts from '../contacts/Contacts';
 
+
+
+
 export default function Footer({ style }) {
+
+   let copyright;
+
+   if (window.innerWidth < 540) {
+      copyright = "© 2022 Elisa domrisa"
+   } else { copyright = "© 2022 Elisa domrisa - изделия ручной работы" }
+
    return (
       <footer style={style}>
          <div className="footer__item footer__nav">
@@ -19,7 +29,7 @@ export default function Footer({ style }) {
          </div>
          <div className="footer__item">
             <Contacts />
-            <p>© 2022 Elisa domrisa - изделия ручной работы</p>
+            <p>{copyright}</p>
          </div>
          <div className="footer__item">
             <Logo />

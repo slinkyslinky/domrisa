@@ -2,14 +2,14 @@
 
 footer {
    background-color: #524957;
-   height: 15%;
+   height: 150px;
    width: 100%;
    padding: 20px 140px;
 
    display: flex;
    justify-content: space-between;
 
-   font-size: 20px;
+
    color: $lil;
    overflow: hidden;
 
@@ -22,7 +22,7 @@ footer {
    }
 
    li {
-      font-size: 16px;
+      font-size: 0.7em;
 
       &:hover,
       &:focus {
@@ -58,7 +58,7 @@ footer {
    }
 
    p {
-
+      text-align: center;
       font-size: 12px;
 
    }
@@ -74,4 +74,100 @@ footer {
 .footer__item:last-child {
    position: relative;
 
+}
+
+@media (max-width: $tablet-large) {
+   footer {
+      height: 120px;
+      padding: 10px 70px;
+
+      ul {
+         justify-content: space-around;
+      }
+   }
+
+   .footer__item:nth-child(2) {
+      gap: 20px;
+   }
+}
+
+@media (max-width: $tablet-small) {
+   footer {
+      padding: 10px 40px;
+   }
+
+   .footer__item:nth-child(2) {
+      p {
+         font-size: 0.5em;
+      }
+
+      .contacts {
+         justify-content: space-around;
+      }
+
+      a {
+         width: 25px;
+         height: 25px;
+      }
+
+      svg {
+         width: 25px;
+         height: 25px;
+      }
+   }
+
+   .footer__item:last-child {
+      scale: 0.8;
+   }
+}
+
+@media (max-width: $phone) {
+   footer {
+      padding: 10px 25px;
+
+      li {
+         font-size: 0.6em;
+      }
+
+
+   }
+
+   .footer__item:nth-child(2) {
+
+      padding: 0 20px;
+
+      .contacts {
+         gap: 30px;
+      }
+   }
+
+}
+
+@media (max-width: 400px) {
+   footer {
+      height: 100px;
+   }
+
+   .footer__item:nth-child(2) {
+
+
+
+      .contacts {
+         gap: 10px;
+
+         a {
+            width: 20px;
+            height: 20px;
+         }
+
+         svg {
+            width: 20px;
+            height: 20px;
+         }
+      }
+   }
+
+   .footer__item:last-child {
+      scale: 0.65;
+   }
 }

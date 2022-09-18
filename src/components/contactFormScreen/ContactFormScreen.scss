@@ -15,7 +15,15 @@
 @media (max-width: 768px) {
    .contact-form-screen {
       .container {
-         padding: 12% 8% 4%
+         padding: 12% 8% 8%
+      }
+   }
+}
+
+@media (max-width: 440px) {
+   .contact-form-screen {
+      .container {
+         padding: 0;
       }
    }
 }

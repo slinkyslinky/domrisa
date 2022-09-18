@@ -21,19 +21,22 @@ export default function ProductsScreen() {
 
    // setRandomAnimation()
    useEffect(() => {
-      article.current.style.opacity = 0;
-      setTimeout(() => {
-         if (window.innerWidth < 768 && (openedBox)) {
-            article.current.classList.add('article-of-product')
-            article.current.innerText = productsList[openedBox - 1].text
+      if (window.innerWidth < 767) {
+         article.current.style.opacity = 0;
+         setTimeout(() => {
+            if ((openedBox)) {
+               article.current.classList.add('article-of-product')
+               article.current.innerText = productsList[openedBox - 1].text
 
-         }
-         if (window.innerWidth < 768 && (openedBox == null)) {
-            article.current.classList.remove('article-of-product')
-            article.current.innerText = "Любое из этих изделий станет замечательным подарком для близких или для себя. для тех кто дорожит деталями и уникальнотью"
-         }
-         article.current.style.opacity = 1;
-      }, 500)
+            }
+            if ((openedBox == null)) {
+               article.current.classList.remove('article-of-product')
+               article.current.innerText = "Любое из этих изделий станет замечательным подарком для близких или для себя. для тех кто дорожит деталями и уникальнотью"
+            }
+            article.current.style.opacity = 1;
+         }, 500)
+      }
+
 
    }, [openedBox])
 

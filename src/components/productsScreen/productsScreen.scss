@@ -15,7 +15,9 @@
    }
 
 
-   h2 {}
+   h2 {
+      margin-bottom: 3.5%;
+   }
 
    a {
       color: $yellow;
@@ -27,7 +29,7 @@
 }
 
 .products-article {
-   padding: 0 115px;
+   padding: 30px 115px;
    transition: opacity ease 0.3s;
    font-size: 28px;
    text-align: center;
@@ -60,7 +62,7 @@
 @media (max-width: 1400px) {
    .products-screen {
       .container {
-         padding: 80px 40px 40px;
+         padding: 80px 40px 80px;
       }
    }
 }
@@ -68,7 +70,7 @@
 @media (max-width: 1300px) {
    .products-screen {
       .container {
-         padding: 80px 20px 40px;
+         padding: 80px 20px 80px;
       }
    }
 
@@ -89,7 +91,7 @@
 
    .products-article {
       font-size: 0.95em;
-      padding: 0 12%;
+      padding: 30px 12%;
    }
 
    .products-screen {

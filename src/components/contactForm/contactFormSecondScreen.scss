@@ -7,6 +7,19 @@
    width: 100%;
    height: 70%;
 
+   .contact-form__inner {
+      p {
+         margin-bottom: 10%;
+      }
+   }
+
+   .order-button {
+      position: relative;
+      top: 100px;
+      left: 70%;
+
+   }
+
    .contact-form__contact {
       position: absolute;
       top: 0%;
@@ -19,11 +32,7 @@
       // transform: translateY(-50%);
    }
 
-   .contact-form__inner {
-      p {
-         margin-bottom: 4%;
-      }
-   }
+
 
    .contact-back {
       span {
@@ -60,6 +69,17 @@
 
 }
 
+@media (max-width: 1300px) {
+   .contact-form {
+      .order-button {
+
+         top: 140px;
+         left: 30vw;
+
+      }
+   }
+}
+
 @media (max-width:1100px) {
    .contact-form__second-screen {
       .contact-back {
@@ -69,5 +89,118 @@
          }
       }
 
+   }
+}
+
+@media (max-width: 992px) {
+   .contact-form__second-screen {
+
+      .contact-back {
+         top: 10px;
+
+         svg {
+            width: 40px;
+            height: 40px;
+
+         }
+
+         left: 20px;
+
+         .arrow--back {
+            left: -20%;
+         }
+
+         span {
+            font-size: 14px;
+         }
+      }
+
+
+      .order-button {
+         width: 285px;
+         height: 70px;
+         font-size: 24px;
+         left: 40%;
+         top: 120px;
+
+      }
+
+   }
+}
+
+@media (max-width: 860px) {
+   .contact-form__second-screen {
+      .contact-form__inner {
+         p {
+            margin-bottom: 20%;
+         }
+      }
+
+
+
+   }
+}
+
+@media (max-width: 768px) {
+   .contact-form {
+      .order-button {
+
+         left: 35%;
+         top: 130px;
+
+      }
+   }
+
+   .contact-form__second-screen {
+      .contact-back {
+         top: 40px;
+
+         svg {
+            display: none;
+         }
+
+         span {
+            display: none;
+         }
+      }
+   }
+}
+
+@media (max-width: 660px) {
+   .contact-form {
+      .order-button {
+         top: 100px;
+         left: 50%;
+         transform: translate(-50%);
+         width: 200px;
+         height: 60px;
+         font-size: 20px;
+      }
+   }
+
+   .contact-form__form {
+      .order-input {
+         width: 80%;
+         height: 50px;
+      }
+
+
+   }
+
+}
+
+@media (max-width: 440px) {
+   .contact-form {
+      .contact-back {
+         top: 50px;
+         left: 10px;
+      }
+
+      .order-button {
+         position: relative;
+         top: 70px;
+         left: 50%;
+         transform: translateX(-50%);
+      }
    }
 }

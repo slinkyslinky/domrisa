@@ -95,7 +95,9 @@
 
 @media (max-width: $tablet-large) {
    .contact-form {
-      p {}
+      p {
+         margin-bottom: 60px;
+      }
 
       &__contacts {
          display: grid;
@@ -103,6 +105,68 @@
          grid-template-rows: 1fr 1fr;
          gap: 30px;
          padding: 0 20%;
+      }
+   }
+
+   .contact-form__inner {
+      padding: 0 10%;
+   }
+
+}
+
+@media (max-width: 860px) {
+   .contact-form {
+      &__contacts {
+
+         padding: 0 12%;
+      }
+   }
+}
+
+@media (max-width: 620px) {
+   .contact-form {
+      &__contact {
+         svg {
+            height: 44px;
+            width: 44px;
+         }
+      }
+
+      &__contacts {
+         gap: 20px;
+
+         span {
+            font-size: 0.65em;
+         }
+
+         padding: 0 12%;
+      }
+   }
+}
+
+@media (max-width: $phone) {
+   .contact-form {
+
+
+      &__inner {
+         p {
+            font-size: 0.9em;
+         }
+
+         padding: 0;
+      }
+   }
+
+}
+
+@media (max-width: 340px) {
+   .contact-form {
+      &__subtitle {
+         margin-left: 0;
+      }
+
+      &__contacts {
+         padding: 0;
       }
    }
 

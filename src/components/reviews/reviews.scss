@@ -7,18 +7,18 @@
    height: auto;
    width: 100%;
 
-   padding-top: 120px;
+
 
 
    &__wrapper {
       background-color: $bej;
-      border-radius: 90px;
+      border-radius: 80px;
       border: 1px solid $violet;
-      width: 860px;
+      max-width: 860px;
       min-height: 400px;
       margin: 0 auto;
-      padding: 10px 50px;
-      margin-bottom: 100px;
+      padding: 20px 70px;
+
 
       h2 {
          text-align: center;
@@ -29,4 +29,30 @@
       width: 100%;
 
    }
+}
+
+
+@media (max-width:992px) {
+   .reviews__wrapper {
+      border-radius: 60px;
+   }
+
+
+}
+
+@media (max-width:600px) {
+   .reviews__wrapper {
+      border-radius: 40px;
+   }
+
+
+}
+
+@media (max-width:460px) {
+   .reviews__wrapper {
+      border-radius: 25px;
+      padding: 20px 40px;
+   }
+
+
 }

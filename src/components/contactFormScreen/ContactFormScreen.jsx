@@ -9,7 +9,7 @@ export default function ContactFormScreen() {
          <div className="container">
             <ContactForm />
          </div>
-         <Footer />
+
       </div>
    )
 }

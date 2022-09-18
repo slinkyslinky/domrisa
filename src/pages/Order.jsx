@@ -13,7 +13,7 @@ export default function Order() {
             <div className="container">
                <OrderBox setScreen={setScreen} />
             </div>
-            <Footer />
+
          </div>
       )
    }
@@ -30,7 +30,7 @@ export default function Order() {
             </div>
 
          </div>
-         <Footer style={{ position: "absolute", bottom: 0, left: 0 }} />
+
       </div>
    )
 }

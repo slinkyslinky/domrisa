@@ -245,14 +245,15 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
       display = 'none'
 
    }
+
    if (window.innerWidth < 360) {
-      posProduct("calc(50% - 115px)", "-85%", "-76%", "calc(176% - 230px)", "calc(185% - 230px)")
+      posProduct("calc(50% - 75px)", "-50%", "-40%", "calc(140% - 150px)", "calc(150% - 150px)")
    } else
-      if (window.innerWidth < 390) {
-         posProduct("calc(50% - 115px)", "-80%", "-66%", "calc(166% - 230px)", "calc(180% - 230px)")
+      if (window.innerHeight < 780) {
+         posProduct("calc(50% - 100px)", "-60%", "-50%", "calc(150% - 200px)", "calc(160% - 200px)")
       } else
          if (window.innerWidth < 454) {
-            posProduct("calc(50% - 115px)", "-70%", "-55%", "calc(155% - 230px)", "calc(170% - 230px)")
+            posProduct("calc(50% - 100px)", "-60%", "-50%", "calc(150% - 200px)", "calc(160% - 200px)")
          } else
             if (window.innerWidth < 500) {
                posProduct("calc(50% - 135px)", "-70%", "-55%", "calc(155% - 270px)", "calc(170% - 270px)")

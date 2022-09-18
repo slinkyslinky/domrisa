@@ -125,8 +125,17 @@
 (max-height: 780px) {
    .products-item__inner {
       .products-item__back {
-         height: 230px;
-         min-width: 230px;
+         height: 200px;
+         min-width: 200px;
+      }
+   }
+}
+
+@media (max-width: 360px) {
+   .products-item__inner {
+      .products-item__back {
+         height: 150px;
+         min-width: 150px;
       }
    }
 }

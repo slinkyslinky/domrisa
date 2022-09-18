@@ -59,7 +59,16 @@
 
 @media(max-width: $tablet-large) {
    .homeScreen {
+
       background-position: 57% 0;
+
+      .order-button {
+         top: 72%;
+      }
+
+      .home-screen__title {
+         bottom: 25%;
+      }
    }
 }
 
@@ -96,6 +105,10 @@
          font-size: 24px;
          ;
       }
+   }
+
+   .home-screen__title {
+      bottom: 28%;
    }
 }
 

@@ -20,24 +20,27 @@ export default function Reviews() {
 
    return (
       <div className='reviews' id="reviews">
-         <div className="reviews__wrapper">
-            <h2>Отзывы</h2>
-            <div className="reviews__content">
-               {reviewList.map(review =>
-                  <ReviewsItem
-                     key={review.id}
-                     date={review.date}
-                     image={review.image}
-                     review={review.review}
-                     reviewPhoto={review.reviewPhoto}
-                     answer={review.answer}
-                     answerPhoto={review.answerPhoto}
-                  />
-               )}
+         <div className="container">
+            <div className="reviews__wrapper">
+               <h2>Отзывы</h2>
+               <div className="reviews__content">
+                  {reviewList.map(review =>
+                     <ReviewsItem
+                        key={review.id}
+                        date={review.date}
+                        image={review.image}
+                        review={review.review}
+                        reviewPhoto={review.reviewPhoto}
+                        answer={review.answer}
+                        answerPhoto={review.answerPhoto}
+                     />
+                  )}
+               </div>
+
             </div>
 
          </div>
-         <Footer />
+
       </div>
    )
 }

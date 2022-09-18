@@ -5,3 +5,17 @@ h4 {
    color: $violet;
    font-family: 'Lora';
 }
+
+@media (max-width: $laptop-small) {
+   h4 {
+      font-size: 26px;
+      line-height: 160%;
+   }
+}
+
+@media (max-width: $tablet-small) {
+   h4 {
+      font-size: 20px;
+
+   }
+}

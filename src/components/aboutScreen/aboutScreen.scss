@@ -167,7 +167,7 @@
 @media (max-height: 654px) and (max-width: $tablet-small) {
    .about-screen__item:last-child {
       span {
-         display: none;
+         font-size: 0.8em;
       }
 
       .slider {

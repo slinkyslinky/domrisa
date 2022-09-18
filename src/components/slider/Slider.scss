@@ -44,31 +44,35 @@
 @media (max-width: $laptop-small) {
    .slider {
       .products__arrow {
-         transform: scale(0.9);
+         transform: translateY(-50%) scale(0.9);
       }
    }
 }
 
 @media (max-width: $tablet-large) {
-   .slider {
-      width: 65vw;
-      height: 65vw;
 
-   }
 
    .arrow--right {
-      transform: translateX(-10%) scale(0.8);
+      transform: translateX(-10%) translateY(-50%) scale(0.8);
 
    }
 
    .arrow--left {
-      transform: translateX(10%) scale(0.8);
+      transform: translateX(10%) translateY(-50%) scale(0.8);
 
    }
 
 
 }
 
+@media (max-width: 900px) {
+   .slider {
+      width: 55vw;
+      height: 55vw;
+
+   }
+
+}
 
 
 @media (max-width: $phone) {
@@ -77,22 +81,15 @@
 
 
       .arrow--right {
-         transform: translateX(-25%) scale(0.55);
+         transform: translateX(-25%) translateY(-50%) scale(0.55);
 
       }
 
       .arrow--left {
-         transform: translateX(25%) scale(0.55);
+         transform: translateX(25%) translateY(-50%) scale(0.55);
 
       }
 
 
-   }
-}
-
-@media (max-height: 700px) {
-   .slider {
-      width: 35%;
-      height: 35%;
    }
 }

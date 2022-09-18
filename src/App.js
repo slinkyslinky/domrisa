@@ -9,6 +9,7 @@ import Order from "./pages/Order";
 import Reviews from "./components/reviews/Reviews";
 import ContactForm from "./components/contactForm/ContactForm";
 import ContactFormScreen from "./components/contactFormScreen/ContactFormScreen";
+import Footer from "./components/footer/Footer";
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
             <Route path='/order/' element={<Order />} />
 
          </Routes>
-
+         <Footer />
       </BrowserRouter>
 
 

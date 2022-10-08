@@ -1,9 +1,10 @@
 @import '../../variables/variables.scss';
 
 .contact-form {
-   background-color: #626068;
+   background-color: rgba(39, 39, 50, 0.8);
+   backdrop-filter: blur(5px);
    border-radius: 90px;
-   height: 740px;
+   height: 700px;
    width: 100%;
    max-width: 1200px;
    margin: 0 auto;

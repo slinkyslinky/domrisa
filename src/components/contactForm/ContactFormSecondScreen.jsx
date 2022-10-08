@@ -70,7 +70,7 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
             setContact(1)
          }, 800)
       } else {
-         console.log(form.current.elements);
+       
          formValidationIncorrect(form.current)
       }
 

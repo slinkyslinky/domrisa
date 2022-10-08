@@ -9,6 +9,22 @@
 
    padding: 60px 120px;
 
+   @media (max-width: 1200px) {
+      padding: 60px 80px;
+   }
+   @media (max-width: 992px) {
+      border-radius: 60px;
+      padding: 60px 40px;
+   }
+   @media (max-width: 580px) {
+      border-radius: 50px;
+      padding: 30px 30px;
+   }
+   @media (max-width: 540px) {
+      border-radius: 0;
+      border: none;
+      padding: 30px 25px;
+   }
    h2 {
       margin-bottom: 20px;
    }
@@ -18,26 +34,47 @@
    &__delivery {
       font-size: 24px;
       padding: 70px 20px 70px 50px;
-
+      @media (max-width: 640px) {
+         padding: 30px 20px;
+         font-size: 0.8rem;
+      }
       input {
-         margin-bottom: 40px;
+        margin-top: 30px;
+        
       }
    }
 
    &__warning {
       span {
          font-size: 20px;
+         @media (max-width: 640px) {
+            font-size: 1rem
+         }
       }
 
       margin-bottom: 80px;
+      @media (max-width: 640px) {
+         margin-bottom: 40px;
+      }
    }
+   .order-button{
+      @media (max-width: 992px) {
+         font-size: 28px;
+      }
+   }
+   
 }
 
 input[type="radio"] {
    accent-color: $grey;
 }
 
-label {}
+label {
+   font-size: 1.2rem;
+   @media (max-width: 640px) {
+      font-size: 1.1em;
+   }
+}
 
 .order-input--dark {
    color: black;
@@ -45,6 +82,15 @@ label {}
    &::placeholder {
       color: rgb(0, 0, 0);
       opacity: 0.55;
+   }
+
+   @media (max-width: 762px) {
+      width: 300px;
+      height: 55px;
+   }
+   @media (max-width: 600px) {
+      width: 270px;
+      height: 47px;
    }
 }
 
@@ -70,5 +116,10 @@ label {}
       font-size: 0.7em;
       color: $yellow;
       line-height: 3;
+
    }
+
+
 }
+
+

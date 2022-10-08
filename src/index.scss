@@ -40,8 +40,10 @@ a {
    .container {
       padding-top: 100px;
       padding-bottom: 170px;
+    
+   
    }
-
+ 
    footer {
 
       position: absolute;
@@ -49,6 +51,7 @@ a {
       left: 0;
    }
 
+  
 }
 
 #order {
@@ -60,7 +63,17 @@ a {
       padding-top: 15%;
       width: 100%;
 
+      @media (max-width:992px) {
+      
+         padding:17% 40px 50px 40px;
    }
+   @media (max-width:540px) {
+      
+      padding:18% 0 0;
+}
 
+
+   }
+ 
 
 }

@@ -36,9 +36,12 @@ export default function OrderItems() {
    // })
 
 
+   let amount = '';
 
-
-
+   if (window.innerWidth > 700 ) {amount = 'Количество'} else {
+      amount = 'Кол.'
+   }
+   
 
 
 
@@ -47,9 +50,10 @@ export default function OrderItems() {
       return (
          <div className='order-items'>
             <div className="order-box__table">
+               <span className='table-column__name'></span>
                <span className='table-column__name'>Товар</span>
                <span className='table-column__name'>Цена</span>
-               <span className='table-column__name'>Количество</span>
+               <span className='table-column__name'>{amount}</span>
 
             </div>
 

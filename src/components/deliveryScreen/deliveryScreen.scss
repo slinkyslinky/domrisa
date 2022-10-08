@@ -41,7 +41,7 @@
    align-items: center;
 
    .delivery-screen__img-box {
-      width: 350px;
+      width: 300px;
       border: 2px solid $grey;
       border-radius: 40px;
       overflow: hidden;
@@ -82,7 +82,7 @@
    .delivery-screen__img-box {
       position: relative;
       display: block;
-      width: 500px;
+      width: 400px;
       z-index: 3;
       padding: 50px 0;
 
@@ -96,8 +96,8 @@
          top: 50%;
          left: 50%;
          transform: translate(-50%, -50%);
-         height: 400px;
-         width: 400px;
+         height: 300px;
+         width: 300px;
          background-color: $yellow;
          border-radius: 50%;
          z-index: -1;

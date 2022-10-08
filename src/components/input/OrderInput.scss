@@ -20,10 +20,10 @@
 }
 
 .input--incorrect-color {
-   border-color: red;
+   border-color: $warning;
 
    &::placeholder {
-      color: red;
+      color: $warning;
    }
 }
 

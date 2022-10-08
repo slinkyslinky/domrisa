@@ -8,7 +8,23 @@
    align-items: center;
    justify-content: center;
 
-
+   @media (max-width: 860px) {
+      width: 100px;
+   height: 50px;
+   }
+   @media (max-width: 700px) {
+      width: 70px;
+      height: 34px;
+   }
+   @media (max-width: 540px) {
+      flex-direction: column;
+      width: 40px;
+      height: 80px;
+      border-radius: 18px;
+      text-align: center;
+     
+   }
+  
 
    .products__arrow {
       position: relative;
@@ -18,5 +34,19 @@
       width: 50px;
       padding: 30px;
       transform: scale(0.7);
+      @media (max-width: 860px) {
+         width: 45px;
+         padding: 10px;
+         transform: scale(0.6);
+      }
+      @media (max-width: 700px) {
+         width: 30px;
+         transform: scale(0.5);
+      }
+      @media (max-width: 540px) {
+         width: 10px;
+         height: 30px;
+         transform: scale(0.5) rotateZ(90deg);
+      }
    }
 }

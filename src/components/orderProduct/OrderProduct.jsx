@@ -11,18 +11,20 @@ export default function OrderProduct(props) {
    const [amount, setAmount] = useState(parseInt(JSON.parse(localStorage.getItem(`order-${props.id}`)).amount))
    const [amountChange, setAmountChange] = useState(0)
    let allPrice = 0;
-
+let item = JSON.parse(localStorage.getItem(`order-${props.id}`));
 
 
    useEffect(() => {
 
-      // props.setFullPrice(props.fullPrice + amountChange * props.price)
-      let item = localStorage.getItem(`order-${props.id}`);
-      localStorage.setItem(`order-${props.id}`, item.slice(0, item.length - 3) + `${amount}"}`)
+     
+      
+     item.amount = amount;
+      localStorage.setItem(`order-${props.id}`, JSON.stringify(item))
+     
       for (let i = 0; i < localStorage.length; i++) {
          if (localStorage.key(i).slice(0, 5) === "order") {
             let item = JSON.parse(localStorage.getItem(localStorage.key(i)))
-            console.log(item);
+           
             allPrice += item.price * item.amount
          }
       }

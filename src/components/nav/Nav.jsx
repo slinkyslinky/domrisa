@@ -7,6 +7,7 @@ import Contacts from '../contacts/Contacts.jsx'
 export default function Nav() {
 
     const [navType, setNavType] = useState(0)
+    const navbar = useRef(null)
 
     if (navType === 0 && window.innerWidth < 992) {
         setNavType(1)
@@ -22,10 +23,26 @@ export default function Nav() {
         }
     }
 
+    let prevOffset = window.scrollY;
+    
+    window.addEventListener('scroll', ()=> {
+        
+        if (prevOffset <= window.scrollY) {
+            navbar.current.classList.add('nav--hidden');
+        } else {navbar.current.classList.remove('nav--hidden')}
+
+        prevOffset = window.scrollY;
+    }
+       
+    )
+    
+
+
+
     if (navType === 0) {
 
         return (
-            <nav>
+            <nav ref={navbar}>
 
 
                 <ul>
@@ -39,7 +56,7 @@ export default function Nav() {
         )
     } else {
         return (
-            <nav>
+            <nav ref={navbar}>
 
 
                 <ul>

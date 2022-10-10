@@ -8,6 +8,7 @@ import personal from '../img/individ.svg'
 import OrderButton from '../components/buttons/OrderButton'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import ScrollToTop from '../utils/scrollToTop'
 
 export default function Shop() {
    const shopList = [
@@ -62,7 +63,8 @@ export default function Shop() {
 
 
    return (
-      <div id='shop' className='shop'>
+      <ScrollToTop>
+<div id='shop' className='shop'>
          <OrderButton link="/order/" text={orderButtonText} styles={{ opacity: showOrderButton, }} />
          <div className="container">
 
@@ -86,5 +88,7 @@ export default function Shop() {
          </div>
 
       </div>
+      </ScrollToTop>
+      
    )
 }

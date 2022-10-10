@@ -95,7 +95,7 @@
    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
    .products-item__inner {
       article {
          display: none;
@@ -121,8 +121,7 @@
    }
 }
 
-@media (max-width: 454px),
-(max-height: 780px) {
+@media (max-width: 454px) {
    .products-item__inner {
       .products-item__back {
          height: 200px;

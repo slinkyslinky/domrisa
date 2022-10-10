@@ -21,7 +21,7 @@ export default function ProductsScreen() {
 
    // setRandomAnimation()
    useEffect(() => {
-      if (window.innerWidth < 767) {
+      if (window.innerWidth < 993) {
          article.current.style.opacity = 0;
          setTimeout(() => {
             if ((openedBox)) {

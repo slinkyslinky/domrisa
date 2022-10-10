@@ -15,6 +15,7 @@ export default function Nav() {
         setNavType(0)
     }
 
+  
     window.onresize = () => {
         if (navType === 0 && window.innerWidth < 992) {
             setNavType(1)
@@ -28,7 +29,10 @@ export default function Nav() {
     window.addEventListener('scroll', ()=> {
         
         if (prevOffset <= window.scrollY ) {
-            navbar.current.classList.add('nav--hidden');
+            if (window.scrollY > 50) {
+                navbar.current.classList.add('nav--hidden');
+            }
+            
         } else 
    
         

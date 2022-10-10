@@ -84,9 +84,8 @@
 
    .products-container {
       position: relative;
-      width: 130%;
-      left: 50%;
-      transform: translateX(-50%);
+      width: 100%;
+      
    }
 
    .products-article {
@@ -117,8 +116,7 @@
 
 }
 
-@media (max-width: 454px),
-(max-height: 780px) {
+@media (max-width: 454px)  {
    .products-container {
       height: 270px;
       margin-bottom: 1%;
@@ -129,8 +127,7 @@
    }
 }
 
-@media (max-width: 400px),
-(max-height: 700px) {
+@media (max-width: 400px) {
    .products-article {
       font-size: 0.8em;
       padding: 0;

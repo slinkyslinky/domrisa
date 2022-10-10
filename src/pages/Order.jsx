@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../components/footer/Footer'
 import OrderBox from '../components/orderBox/OrderBox'
+import ScrollToTop from '../utils/scrollToTop'
 
 export default function Order() {
 
@@ -9,19 +10,21 @@ export default function Order() {
 
    if (screen === 0) {
       return (
-         <div id='order'>
+         <ScrollToTop>
+ <div id='order'>
             <div className="container">
                <OrderBox setScreen={setScreen} />
             </div>
 
          </div>
+         </ScrollToTop>
+        
       )
    }
 
    else return (
-
-
-      <div id='order'>
+      <ScrollToTop>
+  <div id='order'>
          <div className="container">
             <div className="order__second-screen">
                <span>Заявка успешно отправлена!</span><br />
@@ -32,5 +35,8 @@ export default function Order() {
          </div>
 
       </div>
+      </ScrollToTop>
+
+    
    )
 }

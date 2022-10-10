@@ -4,6 +4,7 @@ import Reviews from '../components/reviews/Reviews'
 import { FullPage, Slide } from 'react-full-page'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import ScrollToTop from '../utils/scrollToTop'
 
 export default function About() {
 
@@ -12,9 +13,12 @@ export default function About() {
 
    return (
       <div className="about-page">
+         <ScrollToTop>
          <AboutMe />
 
-         <Reviews />
+<Reviews />
+         </ScrollToTop>
+         
       </div>
 
 

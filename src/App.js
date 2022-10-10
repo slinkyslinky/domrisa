@@ -12,6 +12,7 @@ import ContactFormScreen from "./components/contactFormScreen/ContactFormScreen"
 import Footer from "./components/footer/Footer";
 
 
+
 function App() {
 
    // window.onresize = (e) => { e.preventDefault() }
@@ -23,7 +24,11 @@ function App() {
       <BrowserRouter>
          <Nav />
          <Routes>
+           
             <Route path='/' element={<Main />} />
+           
+            
+          
             <Route path='/contactform/' element={<ContactFormScreen />} />
             <Route path='/shop/' element={<Shop />} />
             <Route path='/about/' element={<About />} />

@@ -27,9 +27,12 @@ export default function Nav() {
     
     window.addEventListener('scroll', ()=> {
         
-        if (prevOffset <= window.scrollY) {
+        if (prevOffset <= window.scrollY ) {
             navbar.current.classList.add('nav--hidden');
-        } else {navbar.current.classList.remove('nav--hidden')}
+        } else 
+   
+        
+        {navbar.current.classList.remove('nav--hidden')}
 
         prevOffset = window.scrollY;
     }

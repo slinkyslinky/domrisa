@@ -5,9 +5,11 @@
    color: $green;
    display: grid;
 
-   grid-template-columns: 1fr 1.8fr 1fr 1fr 0.5fr;
+   grid-template-columns:  25% 30% 20% 20% 5%;
    text-align: center;
-
+   @media (max-width:762px) {
+      grid-template-columns:  20% 30% 22% 23% 5%;
+   }
 }
 
 .table-column__name:nth-child(1) {

@@ -68,8 +68,14 @@ footer {
 .footer__item:nth-child(2) {
    display: flex;
    flex-direction: column;
-   justify-content: flex-end;
-   gap: 25px;
+   justify-content: space-between;
+   p{
+      height: 20px;
+   }
+   .contacts{
+      gap:10px
+   }
+  
 }
 
 .footer__item:last-child {
@@ -88,7 +94,7 @@ footer {
    }
 
    .footer__item:nth-child(2) {
-      gap: 20px;
+      
    }
 }
 

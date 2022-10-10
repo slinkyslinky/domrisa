@@ -69,6 +69,9 @@
       .home-screen__title {
          bottom: 25%;
       }
+      .contacts{
+         display: none;
+      }
    }
 }
 
@@ -77,13 +80,7 @@
       background-position: 62% 0;
    }
 
-   .order-button {
-      width: 280px;
-      height: 70px;
-      font-size: 28px;
-      ;
-   }
-
+  
    .home-screen__title {
       width: 70%;
       left: 10%;
@@ -99,12 +96,7 @@
 
 @media (max-width: $phone) {
    .homeScreen {
-      .order-button {
-         width: 270px;
-         height: 60px;
-         font-size: 24px;
-         ;
-      }
+  
    }
 
    .home-screen__title {
@@ -114,9 +106,6 @@
 
 @media (max-width: 400px) {
    .homeScreen {
-      .order-button {
-         width: 240px;
-
-      }
+    
    }
 }

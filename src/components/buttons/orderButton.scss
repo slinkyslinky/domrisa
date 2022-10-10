@@ -38,4 +38,25 @@
 
 
    }
+
+   @media (max-width: $laptop-small) {
+      width: 290px;
+      height: 70px;
+      font-size: 28px;
+   }
+   @media (max-width: $tablet-large) {
+      width: 260px;
+      height: 65px;
+      font-size: 26px;
+   }
+   @media (max-width: $tablet-small) {
+      width: 220px;
+      height: 60px;
+      font-size: 24px;
+   }
+   @media (max-width: $phone) {
+      width: 200px;
+      height: 55px;
+      font-size: 22px;
+   }
 }

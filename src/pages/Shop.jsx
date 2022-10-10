@@ -11,7 +11,7 @@ import { useEffect } from 'react'
 
 export default function Shop() {
    const shopList = [
-      { id: 0, name: "Индивидуальный заказ", imageList: [{ id: 1, img: personal, alt: '' }], price: 0, description: 'Выбрав индивидуальный заказ, Вы свяжитесь со мной, и вместе мы придумаем, что-то оригинальное. Любые Ваши идеи я постараюсь воплотить в неповториме вещи, которые будут радовать Вас или Ваших близких долгие годы.' },
+      { id: 0, name: "Индивидуальный заказ", imageList: [{ id: 1, img: personal, alt: '' }], price: 1000, description: 'Выбрав индивидуальный заказ, Вы свяжитесь со мной, и вместе мы придумаем, что-то оригинальное. Любые Ваши идеи я постараюсь воплотить в неповториме вещи, которые будут радовать Вас или Ваших близких долгие годы.' },
       {
          id: 1, name: 'Брошь', price: 1200, imageList: [
             { id: 1, img: image1, alt: '' },
@@ -53,11 +53,17 @@ export default function Shop() {
    useEffect(() => {
       setOrdered(orders)
    }, [])
+   let orderButtonText
+   if (window.innerWidth >540) {
+      orderButtonText = 'Перейти к заказу'
+   } else {
+      orderButtonText = 'К заказу'
+   }
 
 
    return (
-      <div id='shop'>
-         <OrderButton link="/order/" text="Перейти к заказу" styles={{ opacity: showOrderButton, }} />
+      <div id='shop' className='shop'>
+         <OrderButton link="/order/" text={orderButtonText} styles={{ opacity: showOrderButton, }} />
          <div className="container">
 
             {

@@ -58,8 +58,19 @@
       }
    }
    .order-button{
-      @media (max-width: 992px) {
-         font-size: 28px;
+      font-size: 28px;
+
+      @media (max-width: $laptop-small) {
+         font-size: 26px;
+      }
+      @media (max-width: $tablet-large) {
+         font-size: 24px;
+      }
+      @media (max-width: $tablet-small) {
+         font-size: 20px;
+      }
+      @media (max-width: $phone) {
+         font-size: 18px;
       }
    }
    
@@ -93,7 +104,9 @@ label {
       height: 47px;
    }
 }
-
+.order-input--dark:last-child{
+   margin-bottom: 50px;
+}
 .order__second-screen {
 
    width: 100%;

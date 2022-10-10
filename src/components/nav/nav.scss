@@ -2,17 +2,17 @@
 
 nav {
 
-   width: 540px;
-   height: 75px;
-   padding: 10px;
+   width: 500px;
+   height: 65px;
+   padding: 5px;
    position: fixed;
    top: 0;
    left: 50%;
    transform: translateX(-50%);
    background-color: $bej;
-   border-radius: 0 0 40px 40px;
+   border-radius: 0 0 35px 35px;
    z-index: 10;
-   transition: top ease 0.2s;
+   transition: top ease 0.25s;
 
   
    &::before {
@@ -21,8 +21,8 @@ nav {
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
-      width: 105px;
-      height: 105px;
+      width: 95px;
+      height: 95px;
       border-radius: 50%;
       border: 2px solid $lil;
       background-color: $bej;
@@ -34,7 +34,7 @@ nav {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 90px;
+      gap: 50px;
       z-index: 11;
       height: 100%;
 
@@ -43,10 +43,10 @@ nav {
          line-height: 1;
          font-weight: bold;
          color: $violet;
+         cursor: pointer;
 
+         padding: 15px 15px;
          &:hover,
-         &:focus,
-
          &:focus-within {
             color: $yellow;
 
@@ -62,8 +62,8 @@ nav {
    }
 
    .logo {
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
       fill: $violet
    }
 
@@ -73,33 +73,12 @@ nav {
 }
 
 
-@media (max-width: $laptop-large) {
-   nav {
-      width: 480px;
-      height: 75px;
-
-      .logo {
-         transform: scale(0.9);
-      }
-
-      &::before {
-         width: 110px;
-         height: 110px;
-      }
-
-      ul {
-         gap: 70px;
-      }
-   }
-
-
-}
 
 @media (max-width: $tablet-large) {
    nav {
       width: 100vw;
-      height: 80px;
-      border-radius: 0 0 20px 20px;
+    
+      border-radius: 0 0 0 0;
 
       &::before {}
 
@@ -138,7 +117,7 @@ nav {
 @media (max-width: 600px) {
    nav {
       ul {
-         gap: 60px;
+         gap: 40px;
       }
 
 
@@ -148,7 +127,7 @@ nav {
 @media (max-width: $phone) {
    nav {
       ul {
-         gap: 50px;
+         gap: 20px;
       }
 
 
@@ -159,22 +138,23 @@ nav {
    nav {
 
       height: 65px;
-      border-radius: 0 0 20px 20px;
+
 
       &::before {
-         width: 100px;
-         height: 100px;
+         width: 90px;
+         height: 90px;
       }
-
-      .logo {
-         transform: scale(0.9);
+      .logo{
+         scale: 0.87;
       }
+    
 
       ul {
-         gap: 35px;
+        
 
          li {
             font-size: 16px;
+            padding: 10px;
          }
       }
 

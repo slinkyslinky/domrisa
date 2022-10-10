@@ -28,17 +28,17 @@ export default function OrderCount({ amount, setAmount, setAmountChange }) {
       marginRight = 'auto'
       if (amount === 1) {
          displayLeft = 'none'
-         marginTop = "auto"
+         marginTop = "0"
       } else {
          displayLeft = 'block'
-         marginTop = "0"
+         marginTop = "auto"
       }
       if (amount === 10) {
          displayRight = 'none'
-         marginBottom = "auto"
+         marginBottom = "0"
       } else {
          displayRight = 'block';
-         marginBottom = "0"
+         marginBottom = "auto"
       }
    }
    

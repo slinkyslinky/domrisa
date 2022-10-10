@@ -25,13 +25,19 @@ export default function SliderPreview({ itemList, count, getCount }) {
       } else setContentShift(0)
 
    }, [count])
+   let width = 100;
+   if (window.innerWidth > 640) {
+      width = 100;
+   } else {
+      width = 50
+   }
 
-
+  
 
 
    return (
-      <div className='slider-preview' style={{ width: (itemList.length) * 100 }}>
-         <div className="slider-preview__content" style={{ left: contentShift * 100 }}>
+      <div className='slider-preview' style={{ width: (itemList.length) * width }}>
+         <div className="slider-preview__content" style={{ left: contentShift * width }}>
             {itemList.map(item =>
                <picture className='slider-preview__picture' id={'slider-preview__picture-' + (item.id - 1)} key={item.id} onClick={() => getCount(item.id - 1)}>
                   <img src={item.img} />

@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 export default function OrderProduct(props) {
 
    const [ordered, setOrdered] = useState(true)
-   const [amount, setAmount] = useState(parseInt(JSON.parse(localStorage.getItem(`order-${props.id}`)).amount))
+   const [amount, setAmount] = useState(parseInt(JSON.parse(localStorage.getItem(`order-${props.id}`))?.amount))
    const [amountChange, setAmountChange] = useState(0)
    let allPrice = 0;
 let item = JSON.parse(localStorage.getItem(`order-${props.id}`));

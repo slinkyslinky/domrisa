@@ -28,6 +28,7 @@ export default function Footer({ style }) {
             </ul>
          </div>
          <div className="footer__item">
+            <p></p>
             <Contacts />
             <p>{copyright}</p>
          </div>

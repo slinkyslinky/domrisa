@@ -57,6 +57,7 @@ export default function ShopItem(props) {
       const item = e.target.parentNode.parentNode
 
       if (item !== container.children[0]) {
+         document.getElementsByTagName('body')[0].style.overflow = 'hidden'
          setIsModalVisible(true)
       }
    }

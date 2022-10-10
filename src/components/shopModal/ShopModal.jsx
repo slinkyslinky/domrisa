@@ -15,9 +15,11 @@ export default function ShopModal({ isVisible = false, setIsModalVisible, imageL
 
       return (
          <div className='modal' >
+           <div className='close-button' onClick={() => { setIsModalVisible(false) }} />
             <div className="modal__content">
+            
                <SliderWrapper imageList={imageList} hasPreview={true} />
-               <div className='close-button' onClick={() => { setIsModalVisible(false) }} />
+               
 
 
             </div>

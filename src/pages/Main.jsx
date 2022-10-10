@@ -22,9 +22,9 @@ export default function Main() {
 
 
 
-      document.getElementById('productsContainer').children[randomBoxNumber].classList.add('products-item--active')
+      document?.getElementById('productsContainer')?.children[randomBoxNumber]?.classList.add('products-item--active')
       setTimeout(() => {
-        document.getElementById('productsContainer').children[randomBoxNumber].classList.remove('products-item--active')
+        document?.getElementById('productsContainer')?.children[randomBoxNumber]?.classList.remove('products-item--active')
         setRandomAnimation()
       }, 800)
 

@@ -33,7 +33,7 @@ export default function Slider({ itemList, count, getCount }) {
 
 
             <div className="slider__content" id='sliderContent' style={{ left: "-" + (count * 100) + '%' }} >
-               {itemList.map(item => <img key={item.id} src={item.img} alt={item.alt} />)}
+               {itemList.map(item => <img key={item.id} src={`../../img/${item.img}`} alt={item.alt} />)}
             </div>
 
          </div>

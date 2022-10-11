@@ -66,7 +66,7 @@ export default function ShopItem(props) {
    return (
       <div ref={refItem} className="shop-item">
          <div className="shop-item__image" onClick={setModalVisible}>
-            <img src={props.image} alt="" />
+            <img src={`../../img/${props.image}`} alt="" />
          </div>
          <div className="shop-item__description">
             <h4>{props.name}</h4>

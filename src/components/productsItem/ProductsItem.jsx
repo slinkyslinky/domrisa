@@ -251,7 +251,7 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
    } 
       else
          if (window.innerWidth < 454) {
-            posProduct("calc(50% - 100px)", "-60%", "-50%", "calc(150% - 200px)", "calc(160% - 200px)")
+            posProduct("calc(50% - 100px)", "-55%", "-45%", "calc(145% - 200px)", "calc(165% - 200px)")
          } else
             if (window.innerWidth < 500) {
                posProduct("calc(50% - 135px)", "-70%", "-55%", "calc(155% - 270px)", "calc(170% - 270px)")
@@ -262,8 +262,12 @@ export default function ProductsItem({ product, setopenedBox, openedBox }) {
                   if (window.innerWidth < 630) {
                      posProduct("calc(50% - 135px)", "-44%", "-34%", "calc(134% - 270px)", "calc(144% - 270px)")
                   } else
-                     if (window.innerWidth < 992) {
+                     if (window.innerWidth < 768) {
                         posProduct("calc(50% - 135px)", "-35%", "-25%", "calc(125% - 270px)", "calc(135% - 270px)")
+
+                     } else 
+                     if (window.innerWidth < 992) {
+                        posProduct("calc(50% - 135px)", "-20%", "-10%", "calc(110% - 270px)", "calc(120% - 270px)")
 
                      } else shiftProduct(minShift, midShift, maxShift, centerShift)
 

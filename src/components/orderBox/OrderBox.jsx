@@ -93,7 +93,7 @@ export default function OrderBox({ setScreen }) {
          <form ref={form} className='order-box__contact-form' id='order-box__contact-form' >
             <OrderInput type="text" name="name" placeholder="Имя" />
             <OrderInput type="email" name="email" placeholder="E-mail" />
-            <OrderInput type="tel" name="tel" placeholder="Phone" validation={phoneValidation} />
+            <OrderInput type="tel" name="tel" placeholder="Телефон" validation={phoneValidation} />
          </form>
          <OrderButton link="/order/" text="Оформить заказ" onClick={sendForm} />
       </div>

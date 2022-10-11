@@ -273,7 +273,7 @@ $giftboxsize: 300px;
 
 
       &:first-child {
-         left: -25%;
+         left: -10%;
          z-index: 5
       }
 
@@ -283,7 +283,7 @@ $giftboxsize: 300px;
       }
 
       &:last-child {
-         left: calc(125% - 270px);
+         left: calc(110% - 270px);
          z-index: 5;
       }
 
@@ -297,6 +297,23 @@ $giftboxsize: 300px;
 
 }
 
+@media (max-width: 768px) {
+   .products-item {
+
+      &:first-child {
+         left: -25%;
+      }
+
+      &:nth-child(2) {
+         left: calc(50% - 135px);
+
+      }
+
+      &:last-child {
+         left: calc(125% - 270px)
+      }
+   }
+}
 @media (max-width: 630px) {
    .products-item {
 

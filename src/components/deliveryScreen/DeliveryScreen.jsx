@@ -1,7 +1,7 @@
 import React from 'react'
 import './deliveryScreen.scss'
-import img1 from '../../img/delivery.webp'
-import img2 from '../../img/box.webp'
+import img1 from '../../img/delivery/delivery.webp'
+import img2 from '../../img/delivery/delivery2.webp'
 
 export default function DeliveryScreen() {
    return (

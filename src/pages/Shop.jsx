@@ -6,22 +6,21 @@ import OrderButton from '../components/buttons/OrderButton'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import ScrollToTop from '../utils/scrollToTop'
+import { server } from '../variables/variables'
+import Preloader from '../components/preloader/Preloader'
 
-export default function Shop() {
+export default function Shop({shopList, isFullfield}) {
 
 
-   const [shopList, setShopList] = useState([])
-
-   useEffect(()=> {
-      fetch('https://domrisa-server.herokuapp.com/data/products')
-      .then(response => response.json())
-      .then(response => setShopList(response))
-      
-   }, [])
+ 
    
    
 
  
+   const [isLoaded, setIsLoaded] = useState(false)
+   window.addEventListener('load', () => {
+      setIsLoaded(true)
+   })
 
    const [ordered, setOrdered] = useState(0)
    let showOrderButton = 0;
@@ -32,10 +31,10 @@ export default function Shop() {
 
    let orders = 0;
 
-   if (localStorage.length > 0) {
+   if (sessionStorage.length > 0) {
 
-      for (let i = 0; i < localStorage.length; i++) {
-         if (localStorage.key(i).substring(0, 5) == 'order') {
+      for (let i = 0; i < sessionStorage.length; i++) {
+         if (sessionStorage.key(i).substring(0, 5) == 'order') {
             orders++;
          }
       }
@@ -51,10 +50,12 @@ export default function Shop() {
       orderButtonText = 'К заказу'
    }
 
+ 
 
    return (
       <ScrollToTop>
 <div id='shop' className='shop'>
+         <Preloader isFullfield={isFullfield} isLoaded={isLoaded}/>
          <OrderButton link="/order/" text={orderButtonText} styles={{ opacity: showOrderButton, }} />
          <div className="container">
 

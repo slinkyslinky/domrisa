@@ -1,8 +1,7 @@
 import React from 'react'
 import './aboutScreen.scss'
 
-import img1 from '../../img/item1.png'
-import img2 from '../../img/py4u3x9Z--Y.jpg'
+
 import SliderWrapper from '../slider/SliderWrapper'
 
 export default function AboutScreen() {
@@ -10,9 +9,13 @@ export default function AboutScreen() {
 
 
    const imageList = [
-      { id: 1, img: img1, alt: 'Image of the product' },
-      { id: 2, img: img2, alt: 'Image of the product' },
-      { id: 3, img: '', alt: 'Image of the product' },
+      { id: 1, img: "about/about1.png", alt: 'Image of the product' },
+      { id: 2, img: "about/about2.png", alt: 'Image of the product' },
+      { id: 3, img: "about/about3.png", alt: 'Image of the product' },
+      { id: 4, img: "about/about5.png", alt: 'Image of the product' },
+      { id: 5, img: "about/about6.png", alt: 'Image of the product' },
+      { id: 6, img: "about/about7.png", alt: 'Image of the product' },
+  
    ]
 
 

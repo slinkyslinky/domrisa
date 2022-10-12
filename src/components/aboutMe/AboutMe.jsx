@@ -1,7 +1,7 @@
 import React from 'react'
 import './aboutMe.scss'
-import aboutMeImg from "../../img/aboutme.webp"
-import icon from '../../img/insta.svg'
+import aboutMeImg from "../../img/about/aboutme.webp"
+import icon from '../../img/svg/insta.svg'
 
 export default function AboutMe() {
    return (

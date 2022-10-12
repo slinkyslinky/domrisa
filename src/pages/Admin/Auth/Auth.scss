@@ -1,0 +1,15 @@
+@import '../../../variables/variables.scss';
+
+.auth {
+    width: 50vw;
+    height: 30vh;
+    margin: 0 auto;
+    padding: 60px;
+    border-radius: 30px;
+    background-color: $violet ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

@@ -9,11 +9,11 @@ export default function ReviewsItem(props) {
 
          <picture className='reviews__review'>
             <img src={props.review} alt="" />
-            <img className='reviews__avatar' src={props.reviewPhoto} alt="" />
+            <img className='reviews__avatar' src={props.avatar} alt="" />
          </picture>
          <picture className='reviews__review'>
             <img src={props.answer} alt="" />
-            <img className='reviews__avatar' src={props.answerPhoto} alt="" />
+            <img className='reviews__avatar' src="../../img/avatar.png" alt="" />
          </picture>
 
 

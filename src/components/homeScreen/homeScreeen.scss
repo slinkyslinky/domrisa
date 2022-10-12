@@ -1,9 +1,9 @@
 @import '../../variables/variables.scss';
 
 .homeScreen {
-   background: url('../../img/mainscreen.webp') center no-repeat;
+   background: url('../../img/home/mainscreen.webp') center no-repeat;
    width: 100%;
-   min-height: 100vh;
+   min-height: max(100vh,300px);
    background-size: cover;
    position: relative;
 
@@ -33,21 +33,15 @@
 .home-screen__title {
    width: 53%;
    position: absolute;
-   bottom: 27%;
+   bottom: 10%;
    left: 110px;
-   transform: rotateZ(13deg);
+  
 }
 
-@media (max-width: $laptop-large) {
-   .home-screen__title {
-      bottom: 22%;
-   }
-}
+
 
 @media (max-width: 1150px) {
-   .home-screen__title {
-      bottom: 20%;
-   }
+  
 
    .homeScreen {
       .contacts {
@@ -66,12 +60,13 @@
          top: 72%;
       }
 
-      .home-screen__title {
-         bottom: 25%;
-      }
       .contacts{
          display: none;
       }
+   }
+   
+   .home-screen__title {
+      bottom: 20%;
    }
 }
 
@@ -83,6 +78,7 @@
   
    .home-screen__title {
       width: 70%;
+      bottom: 23%;
       left: 10%;
    }
 }
@@ -100,12 +96,15 @@
    }
 
    .home-screen__title {
-      bottom: 28%;
+    
    }
 }
 
 @media (max-width: 400px) {
    .homeScreen {
     
+   }
+   .home-screen__title {
+      bottom: 25%;
    }
 }

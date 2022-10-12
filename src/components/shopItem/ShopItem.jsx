@@ -14,17 +14,17 @@ export default function ShopItem(props) {
 
    function addToOrder() {
 
-      localStorage.setItem(`order-${props.id}`, `{"id": "${props.id}", "name": "${props.name}", "price": "${props.price}", "amount": "1"}`)
+      sessionStorage.setItem(`order-${props.id}`, `{"id": "${props.id}", "name": "${props.name}", "img": "${props.image}", "price": "${props.price}", "amount": "1"}`)
 
    }
 
    function removeFromOrder() {
-      localStorage.removeItem(`order-${props.id}`)
+      sessionStorage.removeItem(`order-${props.id}`)
    }
 
 
    useEffect(() => {
-      if (localStorage.getItem(`order-${props.id}`)) {
+      if (sessionStorage.getItem(`order-${props.id}`)) {
          refBtn.current.classList.add('add-button--active');
          refItem.current.classList.add('shop-item--active');
 

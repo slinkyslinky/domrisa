@@ -36,11 +36,11 @@ export default function OrderBox({ setScreen }) {
 
       let allPrice = 0;
       let k = 1;
-      for (let i = 0; i < localStorage.length; i++) {
+      for (let i = 0; i < sessionStorage.length; i++) {
 
 
-         if (localStorage.key(i).slice(0, 5) === "order") {
-            let item = localStorage.getItem(localStorage.key(i))
+         if (sessionStorage.key(i).slice(0, 5) === "order") {
+            let item = sessionStorage.getItem(sessionStorage.key(i))
             item = JSON.parse(item)
             message += `   #${k}. ${item.name} (id: ${item.id}) ${item.price}р.  -  ${item.amount}шт. \n`
             allPrice += item.price * item.amount
@@ -61,7 +61,7 @@ export default function OrderBox({ setScreen }) {
             text: message
          })
          setScreen(1)
-         localStorage.clear()
+         sessionStorage.clear()
 
       } else {
 

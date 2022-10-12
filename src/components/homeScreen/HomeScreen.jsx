@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import title from '../../img/elisa_dorisa.png'
-import OrderButton from '../buttons/OrderButton'
+import title from '../../img/title.png'
+
 
 import Contacts from '../contacts/Contacts'
 import './homeScreeen.scss'

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './ProductsItem.scss'
-import bant from '../../img/Bant2.png'
+import bant from '../../img/boxes/bant1.png'
 import ProductsItemInner from './ProductsItemInner';
 
 export default function ProductsItem({ product, setopenedBox, openedBox }) {

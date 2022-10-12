@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState, } from 'react'
 import ProductsItem from '../productsItem/ProductsItem'
 import './productsScreen.scss'
 import { colors } from '../../variables/variables.js'
-import firstImg from '../../img/балалайка.png'
-import secondImg from '../../img/py4u3x9Z--Y.jpg'
-import thirdImg from '../../img/шоппер.webp'
+import firstImg from '../../img/boxes/firstBox.png'
+import secondImg from '../../img/boxes/secondBox.png'
+import thirdImg from '../../img/boxes/thirdBox.png'
 import { Link } from 'react-router-dom'
 export default function ProductsScreen() {
 

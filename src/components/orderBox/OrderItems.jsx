@@ -12,13 +12,13 @@ export default function OrderItems() {
    const orders = [];
    let allPrice = 0;
 
-   if (localStorage.length > 0) {
-      for (let i = 0; i < localStorage.length; i++) {
-         if (localStorage.key(i).substring(0, 5) === "order") {
+   if (sessionStorage.length > 0) {
+      for (let i = 0; i < sessionStorage.length; i++) {
+         if (sessionStorage.key(i).substring(0, 5) === "order") {
 
-            orders.push(JSON.parse(localStorage.getItem(localStorage.key(i))))
+            orders.push(JSON.parse(sessionStorage.getItem(sessionStorage.key(i))))
 
-            let item = JSON.parse(localStorage.getItem(localStorage.key(i)))
+            let item = JSON.parse(sessionStorage.getItem(sessionStorage.key(i)))
             allPrice += item.price * item.amount
          }
       }

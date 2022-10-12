@@ -12,3 +12,8 @@ export const telegram = {
    CHAT_ID: '660653825',
    URL: `https://api.telegram.org/bot5770285650:AAESU5rYjtOcrJ0wT0XiXTkmiVVYhwZO3lc/sendMessage`,
 }
+
+export const server = {
+   // URL: 'http://localhost:3001'
+   URL: 'https://domrisa-server.herokuapp.com'
+}

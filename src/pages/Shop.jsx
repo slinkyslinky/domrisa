@@ -13,7 +13,7 @@ export default function Shop() {
    const [shopList, setShopList] = useState([])
 
    useEffect(()=> {
-      fetch('https://domrisa-server.vercel.app/data/products')
+      fetch('https://domrisa-server.herokuapp.com/data/products')
       .then(response => response.json())
       .then(response => setShopList(response))
       

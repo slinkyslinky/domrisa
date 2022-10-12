@@ -30,6 +30,11 @@
    }
  }
 
+.slider{
+   img{
+      object-fit: cover;
+   }
+}
 
 }
 
@@ -46,6 +51,7 @@
    &__image {
       border: 1px solid $lil;
       border-radius: 20px;
+      overflow: hidden;
       align-self: center;
       flex: 0 0 auto;
       width: 250px;
@@ -55,7 +61,7 @@
       img {
          width: 100%;
          height: 100%;
-         object-fit: contain;
+         object-fit: cover;
       }
    }
 

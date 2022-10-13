@@ -26,14 +26,14 @@ export default function AboutScreen() {
          <div className="container">
             <article className='about-screen__item'>
                <h2>Ручная работа</h2>
-               <p>В этом магазине все товары ручной работы, созданы с индивидуальным подходом и любовью. <br /><br />
+               <p>Все изделия в этом магазине ручной работы, созданы с индивидуальным подходом и любовью. <br/><br/>
 
-                  Можно сделать индивидуальный заказ или приобрести уже готовые изделия в магазине.</p>
+Можно сделать индивидуальный заказ или приобрести уже готовые изделия в магазине. </p>
             </article>
             <div className='about-screen__item'>
                <SliderWrapper imageList={imageList} hasPreview={false} />
 
-               <span>Посмотрите больше в <a href='https://vk.com/elisa_domrisa'>Instagram</a></span>
+               <span>Посмотрите больше в <a href='https://www.instagram.com/elisa_domrisa/'>Instagram</a></span>
             </div>
          </div>
 

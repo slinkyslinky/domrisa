@@ -3,7 +3,7 @@ import './ProductsItem.scss'
 import bant from '../../img/boxes/bant1.png'
 import ProductsItemInner from './ProductsItemInner';
 
-export default function ProductsItem({ product, setopenedBox, openedBox }) {
+export default function ProductsItem({ product, setopenedBox, openedBox, bant}) {
 
 
 

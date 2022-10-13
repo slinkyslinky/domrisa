@@ -3,7 +3,7 @@ import './contactFormSecondScreen.scss'
 import OrderButton from '../buttons/OrderButton'
 import Telegram from '../../icons/telegram'
 import Phone from '../../icons/phone'
-import Whatsapp from '../../icons/whatsapp'
+import Vkontacte from '../../icons/Vkontacte'
 import Email from '../../icons/email'
 import '../arrow/arrow.scss'
 import OrderInput from '../input/OrderInput'
@@ -12,6 +12,7 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import { formValidationIncorrect } from '../../utils/validation'
 import { telegram as constants } from '../../variables/variables'
+import Whatsapp from '../../icons/whatsapp'
 
 export default function ContactFormSecondScreen({ contacts, setContact }) {
    let secondInputType;
@@ -26,7 +27,7 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
       case 'phone': backButton = <Phone />; backText = 'Звонок'; break;
       case 'telegram': backButton = <Telegram />; backText = 'Телеграм'; break;
       case 'email': backButton = <Email />; backText = 'E-mail'; break;
-      case 'whatsapp': backButton = <Whatsapp />; backText = 'Whats App'; break;
+      case 'Vkontacte': backButton = <Whatsapp />; backText = 'Whats App'; break;
       default: backButton = <Phone />;
 
    }

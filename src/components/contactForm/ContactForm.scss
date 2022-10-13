@@ -20,6 +20,42 @@
       margin: 5px 0 min(10%, 100px) 160px;
    }
 }
+.stars{
+   position: absolute;
+   top: 10%;
+   right: 10%;
+   width: 50px;
+   
+   img:last-child{
+      margin-top: -20%;
+      width:50%;
+   }
+
+   @media (max-width:762px) {
+      top: 7%;
+      
+   }
+   @media (max-width:540px) {
+      top: 4%;
+      right: 5%;
+      width:30px;
+      
+   }
+}
+
+.notes{
+   position: absolute;
+   bottom: 10%;
+   left: 10%;
+   width: 50px;
+
+   @media (max-width:540px) {
+      bottom: 4%;
+      left: 5%;
+      width:30px;
+      
+   }
+}
 
 @media (max-width: 992px) {
    .contact-form {

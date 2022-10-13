@@ -1,9 +1,10 @@
 import React from 'react';
 import './contactFormFirstScreen.scss';
 import Telegram from '../../icons/telegram';
-import WhatsApp from '../../icons/whatsapp';
+import Vkontacte from '../../icons/Vkontacte';
 import Email from '../../icons/email';
 import Phone from '../../icons/phone';
+import Whatsapp from '../../icons/whatsapp';
 
 export default function contactFormFirstScreen({ setContact }) {
 
@@ -25,8 +26,8 @@ export default function contactFormFirstScreen({ setContact }) {
 
                   <span>Телеграмм</span>
                </button>
-               <button className="contact-form__contact" onClick={() => setContact('whatsapp')}>
-                  <WhatsApp />
+               <button className="contact-form__contact" onClick={() => setContact('Vkontacte')}>
+                  <Whatsapp />
 
                   <span>Whats App</span>
                </button>

@@ -1,1 +1,11 @@
 @import '../../variables/variables.scss';
+
+
+.logo:hover{
+    
+        fill:$yellow;
+        stroke: $yellow;
+     
+        stroke-width: 1px;
+        
+}

@@ -5,9 +5,7 @@
   box-sizing: border-box;
 }
 
-*:focus {
-  outline: none;
-}
+
 
 /* Убираем внутренние отступы */
 ul,
@@ -104,7 +102,7 @@ a:visited {
 button,
 button:active,
 button:focus {
-  outline: none;
+ 
   border: 0;
 }
 

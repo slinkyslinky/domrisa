@@ -1,15 +1,15 @@
 import React from 'react';
 import './contacts.scss';
-import Whatsapp from '../../icons/whatsapp'
+import Vkontacte from '../../icons/Vkontacte'
 import Instagram from '../../icons/instagram'
 import Telegram from '../../icons/telegram'
 
 export default function Contacts() {
    return (
       <div className='contacts'>
-         <a href="https://vk.com/elisa_domrisa"><Instagram />                  </a>
-         <a href=""><Telegram />                        </a>
-         <a href=""><Whatsapp />                 </a>
+         <a href="https://www.instagram.com/elisa_domrisa/"><Instagram />                  </a>
+         <a href="https://t.me/elisa_domrisa"><Telegram />                        </a>
+         <a href="https://vk.com/elisa_domrisa"><Vkontacte />                 </a>
 
       </div>
    )

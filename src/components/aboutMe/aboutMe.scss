@@ -1,6 +1,7 @@
+@import '../../variables/variables.scss';
+
 .about-me {
    min-height: 100vh;
-   max-height: 105vh;
    width: 100%;
    display: flex;
    flex-direction: row;
@@ -39,9 +40,12 @@
 .about-me__contacts {
    display: flex;
    align-items: center;
-
+   padding-top: 20px;
    img {
       margin-right: 30px;
+   }
+   p{
+      color: $yellow;
    }
 
 }

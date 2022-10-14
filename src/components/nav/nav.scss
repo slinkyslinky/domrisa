@@ -13,9 +13,9 @@ nav {
    border-radius: 0 0 35px 35px;
    z-index: 10;
    transition: top ease 0.25s;
- 
+
    border-top: none;
-  
+
 
    &::before {
       content: '';
@@ -48,10 +48,12 @@ nav {
          cursor: pointer;
 
          padding: 15px 15px;
-         &:hover{
+
+         &:hover {
             color: $yellow;
          }
-         a{
+
+         a {
             display: block;
          }
       }
@@ -70,6 +72,7 @@ nav {
    }
 
 }
+
 .nav--hidden {
    top: - 100px;
 }
@@ -79,7 +82,7 @@ nav {
 @media (max-width: $tablet-large) {
    nav {
       width: 100vw;
-    
+
       border-radius: 0 0 0 0;
 
       &::before {}
@@ -146,13 +149,14 @@ nav {
          width: 83px;
          height: 83px;
       }
-      .logo{
+
+      .logo {
          scale: 0.87;
       }
-    
+
 
       ul {
-        
+
 
          li {
             font-size: 16px;

@@ -1,40 +1,43 @@
 @import '../../variables/variables.scss';
 
 .shop {
- .order-button{
-   position: absolute;
-   top: 50px;
-   right: 4%;
-   font-size: 28px;
-   z-index: 5;
+   .order-button {
+      position: absolute;
+      top: 50px;
+      right: 4%;
+      font-size: 28px;
+      z-index: 5;
 
-   @media (max-width: $laptop-small) {
-      top: 70px;
-   right: 2.5%;
-      font-size: 26px;
-   }
-   @media (max-width: $tablet-large) {
-      top: 90px;
+      @media (max-width: $laptop-small) {
+         top: 70px;
+         right: 2.5%;
+         font-size: 26px;
+      }
 
-      font-size: 24px;
-   }
-   @media (max-width: $tablet-small) {
-      top: 90px;
+      @media (max-width: $tablet-large) {
+         top: 90px;
 
-      font-size: 20px;
-   }
-   @media (max-width: $phone) {
-    
-      width: 180px;
-      font-size: 18px;
-   }
- }
+         font-size: 24px;
+      }
 
-.slider{
-   img{
-      object-fit: cover;
+      @media (max-width: $tablet-small) {
+         top: 90px;
+
+         font-size: 20px;
+      }
+
+      @media (max-width: $phone) {
+
+         width: 180px;
+         font-size: 18px;
+      }
    }
-}
+
+   .slider {
+      img {
+         object-fit: cover;
+      }
+   }
 
 }
 
@@ -123,8 +126,7 @@
       text-align: center;
       padding-left: 10px;
 
-      &:hover,
-      &:focus {
+      &:hover {
          background-color: $yellow;
       }
    }
@@ -239,9 +241,7 @@
       }
    }
 
-   #shop {
-    
-   }
+   #shop {}
 
 }
 
@@ -253,7 +253,7 @@
          padding: 100px 60px 100px;
       }
 
-    
+
    }
 
    .shop-item {
@@ -302,7 +302,7 @@
          padding: 120px 40px 100px;
       }
 
-     
+
    }
 
    .shop-item {
@@ -488,10 +488,10 @@
 }
 
 .shop-item:first-child {
- 
-      .price{
-         display:none;
-      }
-   
-   
+
+   .price {
+      display: none;
+   }
+
+
 }

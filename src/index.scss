@@ -29,9 +29,6 @@ body {
    // width: 100%;
 }
 
-a {
-   color: $yellow
-}
 
 #shop {
    min-height: 100%;
@@ -40,10 +37,10 @@ a {
    .container {
       padding-top: 100px;
       padding-bottom: 170px;
-    
-   
+
+
    }
- 
+
    footer {
 
       position: absolute;
@@ -51,16 +48,17 @@ a {
       left: 0;
    }
 
-  
+
 }
 
 #order {
    background-color: $bej;
    min-height: 81.9vh;
-   
+
    @media (max-width:992px) {
       min-height: 85.5vh;
    }
+
    @media (max-width:400px) {
       min-height: 87.9vh;
    }
@@ -69,17 +67,19 @@ a {
       padding-top: 15%;
       width: 100%;
       min-height: 100%;
+
       @media (max-width:992px) {
-         
-         padding:17% 40px 50px 40px;
-   }
-   @media (max-width:540px) {
-      background-color: $white;
-      padding:18% 0 0;
-}
+
+         padding: 17% 40px 50px 40px;
+      }
+
+      @media (max-width:540px) {
+         background-color: $white;
+         padding: 18% 0 0;
+      }
 
 
    }
- 
+
 
 }

@@ -33,7 +33,7 @@ export default function Footer({ style }) {
             <p>{copyright}</p>
          </div>
          <div className="footer__item">
-            <Logo />
+            <a href="#main"><Logo /></a>
             <picture>
                <img src={title} alt="" />
             </picture>

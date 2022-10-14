@@ -12,7 +12,7 @@ export default function ProductsItemInner({ product, hideProduct }) {
 
          </div>
 
-         <article  >
+         <article style={{ backgroundColor: product.color + "88" }} >
 
             <h5>{product.title}</h5>
             <p>{product.text}</p>

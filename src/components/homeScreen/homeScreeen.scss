@@ -1,9 +1,9 @@
 @import '../../variables/variables.scss';
 
 .homeScreen {
-   background: url('../../img/home/mainscreen.webp') center no-repeat;
+   background: url('../../img/home/mainscreen.png') center no-repeat;
    width: 100%;
-   min-height: max(100vh,300px);
+   min-height: max(100vh, 300px);
    background-size: cover;
    position: relative;
 
@@ -35,13 +35,13 @@
    position: absolute;
    bottom: 10%;
    left: 110px;
-  
+
 }
 
 
 
 @media (max-width: 1150px) {
-  
+
 
    .homeScreen {
       .contacts {
@@ -60,11 +60,11 @@
          top: 72%;
       }
 
-      .contacts{
+      .contacts {
          display: none;
       }
    }
-   
+
    .home-screen__title {
       bottom: 20%;
    }
@@ -75,7 +75,7 @@
       background-position: 62% 0;
    }
 
-  
+
    .home-screen__title {
       width: 70%;
       bottom: 23%;
@@ -91,19 +91,14 @@
 }
 
 @media (max-width: $phone) {
-   .homeScreen {
-  
-   }
+   .homeScreen {}
 
-   .home-screen__title {
-    
-   }
+   .home-screen__title {}
 }
 
 @media (max-width: 400px) {
-   .homeScreen {
-    
-   }
+   .homeScreen {}
+
    .home-screen__title {
       bottom: 25%;
    }

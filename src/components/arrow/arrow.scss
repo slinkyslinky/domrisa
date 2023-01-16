@@ -1,13 +1,12 @@
 @import '../../variables/variables.scss';
 
 .products__arrow {
-   background: none;
-   height: 50px;
-   width: 100px;
-
    position: absolute;
    top: 50%;
    transform: translateY(-50%);
+   height: 50px;
+   width: 100px;
+   background: none;
    cursor: pointer;
 }
 

@@ -5,22 +5,23 @@
    color: $green;
    display: grid;
 
-   grid-template-columns:  25% 30% 20% 20% 5%;
+   grid-template-columns: 25% 30% 20% 20% 5%;
    text-align: center;
+
    @media (max-width:762px) {
-      grid-template-columns:  20% 35% 20% 20% 5%;
+      grid-template-columns: 20% 35% 20% 20% 5%;
    }
+
    @media (max-width: 560px) {
       grid-template-columns: 18% 40% 20% 16% 6%;
-     
-   
    }
+
    @media (max-width: 360px) {
       grid-template-columns: 18% 34% 22% 18% 8%;
-     
-   
+
+
    }
-   
+
 }
 
 .table-column__name:nth-child(1) {
@@ -29,15 +30,19 @@
    @media (max-width: 768px) {
       min-width: 100px;
    }
+
    @media (max-width: 560px) {
       min-width: 50px;
    }
+
    @media (max-width: 360px) {
       display: none;
    }
 }
+
 .table-column__name:nth-child(2) {
    grid-column: 2/3;
+
    @media (max-width: 360px) {
       grid-column: 1/3;
    }

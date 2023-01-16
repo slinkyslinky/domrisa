@@ -13,30 +13,22 @@ export function phoneValidation(e) {
          input.value = '+7' + input.value.substring(1)
          break;
       case '9':
-
          input.value = '+7' + input.value;
          break;
       default:
 
          input.value = '+' + input.value;
-
    }
-
-
-
-
 
    if (secondSymbol === "1" || secondSymbol === "2" || secondSymbol === "3" || secondSymbol === "4" || secondSymbol === "5" || secondSymbol === "6") {
       return;
    }
-
    if (input.value.length > 10) {
       input.value = input.value.substring(0, 2) + ' (' + input.value.substring(2, 5) + ') ' + input.value.substring(5, 8) + '-' + input.value.substring(8, 10) + '-' + input.value.substring(10, 12)
 
    } else
       if (input.value.length > 8) {
          input.value = input.value.substring(0, 2) + ' (' + input.value.substring(2, 5) + ') ' + input.value.substring(5, 8) + '-' + input.value.substring(8, 10)
-
       } else
          if (input.value.length > 5) {
             input.value = input.value.substring(0, 2) + ' (' + input.value.substring(2, 5) + ') ' + input.value.substring(5, 8)
@@ -47,10 +39,10 @@ export function phoneValidation(e) {
 
             }
 
-
    if (e.nativeEvent.inputType === "insertFromPaste") {
       cursorPosition = 18;
    }
+
    if (input.value.length === 18) {
       if (e.nativeEvent.data) {
          e.target.onkeypress = (e) => { e.preventDefault() }
@@ -79,15 +71,6 @@ export function phoneValidation(e) {
 
          }
       }
-
-   // if (cursorPosition() < input.value.length) {
-   //    console.log(true);
-   // }
-
-
-
-
-
 }
 
 export function formValidationIncorrect(form) {

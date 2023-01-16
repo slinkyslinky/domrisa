@@ -13,29 +13,21 @@ export default function ShopItem(props) {
    const refBtn = useRef(null);
 
    function addToOrder() {
-
       sessionStorage.setItem(`order-${props.id}`, `{"id": "${props.id}", "name": "${props.name}", "img": "${props.image}", "price": "${props.price}", "amount": "1"}`)
-
    }
 
    function removeFromOrder() {
       sessionStorage.removeItem(`order-${props.id}`)
    }
 
-
    useEffect(() => {
       if (sessionStorage.getItem(`order-${props.id}`)) {
          refBtn.current.classList.add('add-button--active');
          refItem.current.classList.add('shop-item--active');
-
-         // console.log(123);
-
       }
    }, [])
 
-
    function changeAddButton() {
-
 
       if (refBtn.current.classList.contains('add-button--active')) {
          refBtn.current.classList.remove('add-button--active')
@@ -75,14 +67,12 @@ export default function ShopItem(props) {
          <div className="shop-item__order">
             <div className="shop-item__buttons">
                <Link to="/order/" className='buy-button' onClick={addToOrder}>Заказать</Link>
-
                <button ref={refBtn} className='add-button' onClick={changeAddButton} ></button>
             </div>
             <p className='price'>
                <span>{props.price}</span>
                <span>{props.valute}</span>
             </p>
-
          </div>
          <ShopModal isVisible={isModalVisible} setIsModalVisible={setIsModalVisible} imageList={props.imageList} />
       </div>

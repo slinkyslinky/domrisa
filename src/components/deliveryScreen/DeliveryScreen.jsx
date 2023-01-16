@@ -1,7 +1,7 @@
-import React from 'react'
-import './deliveryScreen.scss'
-import img1 from '../../img/delivery/delivery.webp'
-import img2 from '../../img/delivery/delivery2.webp'
+import React from 'react';
+import './deliveryScreen.scss';
+import img1 from '../../img/delivery/delivery.webp';
+import img2 from '../../img/delivery/delivery2.webp';
 
 export default function DeliveryScreen() {
    return (
@@ -12,7 +12,6 @@ export default function DeliveryScreen() {
                   <div className="delivery-screen__img-box">
                      <img src={img1} alt="first image" />
                   </div>
-
                </picture>
                <article className='delivery-grid__item'>
                   <h2>Упаковка</h2>
@@ -20,22 +19,15 @@ export default function DeliveryScreen() {
                </article>
                <article className='delivery-grid__item'>
                   <h2>Способы доставки</h2>
-                  <p>Доставка курьерской службой СДЭК — от 300 рублей, рассчитывается индивидуально. <br/> <br/>
-
+                  <p>Доставка курьерской службой СДЭК — от 300 рублей, рассчитывается индивидуально. <br /> <br />
                      Доставка Почтой России — от 300 рублей, рассчитывается индивидуально.</p>
                </article>
                <picture className='delivery-grid__item'>
                   <div className="delivery-screen__img-box">
                      <img src={img2} alt="second image" />
                      {/* <div className="delivery-grid__backround" /> */}
-
                   </div>
-
-
-
-
                </picture>
-
             </div>
          </div>
       </div>

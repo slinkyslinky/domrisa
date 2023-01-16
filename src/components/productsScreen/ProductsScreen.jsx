@@ -21,8 +21,6 @@ export default function ProductsScreen() {
 
    ]
 
-
-   // setRandomAnimation()
    useEffect(() => {
       if (window.innerWidth < 993) {
          article.current.style.opacity = 0;
@@ -30,7 +28,6 @@ export default function ProductsScreen() {
             if ((openedBox)) {
                article.current.classList.add('article-of-product')
                article.current.innerText = productsList[openedBox - 1].text
-
             }
             if ((openedBox == null)) {
                article.current.classList.remove('article-of-product')
@@ -39,23 +36,14 @@ export default function ProductsScreen() {
             article.current.style.opacity = 1;
          }, 500)
       }
-
-
    }, [openedBox])
 
-
-
-
-
-
    return (
-
       <div id='productsScreen' className='products-screen screen' >
          <div className="container ">
             <h2>Отличные подарки</h2>
             <div className="products-container" id='productsContainer'>
                {productsList.map(product =>
-
                   <ProductsItem
                      key={product.id}
                      product={product}
@@ -67,15 +55,9 @@ export default function ProductsScreen() {
             </div>
             <article ref={article} className='products-article'>
                Любое из этих изделий станет замечательным подарком для близких или для себя. для тех кто дорожит деталями и уникальнотью
-
             </article>
             <span>Посмотрите <Link to="/about/reviews">отзывы</Link></span>
-
-
          </div>
-
-
       </div>
-
    )
 }

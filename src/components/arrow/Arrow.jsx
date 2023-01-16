@@ -6,17 +6,14 @@ export default function Arrow(props) {
    function getDirection() {
       switch (props.arrowType) {
          case 'arrow--right':
-        
-            return props.count + 1
+            return props.count + 1;
          case 'arrow--left':
-           
-            return props.count - 1
+            return props.count - 1;
+         default: return '';
       }
-   }
+   };
 
    return (
       <button style={{ display: props.display }} className={'products__arrow ' + props.arrowType} onClick={() => { props.onClick(getDirection()) }} />
-
-
-   )
-}
+   );
+};

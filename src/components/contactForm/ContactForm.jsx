@@ -23,15 +23,13 @@ export default function ContactForm() {
             <ContactFormFirstScreen setContact={setContact} />
             <picture className='notes'>
                <img src={notes} alt="" />
-               
             </picture>
-
          </div>
       )
    } else if (contacts === 1) {
       return (
          <div className='contact-form'>
-             <picture className='stars'>
+            <picture className='stars'>
                <img src={backStar1} alt="" />
                <img src={backStar2} alt="" />
             </picture>
@@ -40,15 +38,13 @@ export default function ContactForm() {
             <ContactFormThirdtScreen setContact={setContact} />
             <picture className='notes'>
                <img src={notes} alt="" />
-               
             </picture>
-
          </div>
       )
    } else {
       return (
          <div className='contact-form'>
-             <picture className='stars'>
+            <picture className='stars'>
                <img src={backStar1} alt="" />
                <img src={backStar2} alt="" />
             </picture>
@@ -57,7 +53,6 @@ export default function ContactForm() {
             <ContactFormSecondScreen contacts={contacts} setContact={setContact} />
             <picture className='notes'>
                <img src={notes} alt="" />
-               
             </picture>
          </div>
       )

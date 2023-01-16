@@ -1,27 +1,33 @@
-import React, { useState, useRef } from 'react'
-import './contactFormSecondScreen.scss'
-import OrderButton from '../buttons/OrderButton'
-import Telegram from '../../icons/telegram'
-import Phone from '../../icons/phone'
-import Vkontacte from '../../icons/Vkontacte'
-import Email from '../../icons/email'
-import '../arrow/arrow.scss'
-import OrderInput from '../input/OrderInput'
-import { phoneValidation, } from '../../utils/validation'
-import { useEffect } from 'react'
 import axios from 'axios'
-import { formValidationIncorrect } from '../../utils/validation'
-import { telegram as constants } from '../../variables/variables'
+import React, { useRef } from 'react'
+import Email from '../../icons/email'
+import Phone from '../../icons/phone'
+import Telegram from '../../icons/telegram'
 import Whatsapp from '../../icons/whatsapp'
+import { formValidationIncorrect, phoneValidation } from '../../utils/validation'
+import { telegram as constants } from '../../variables/variables'
+import '../arrow/arrow.scss'
+import OrderButton from '../buttons/OrderButton'
+import OrderInput from '../input/OrderInput'
+import './contactFormSecondScreen.scss'
 
 export default function ContactFormSecondScreen({ contacts, setContact }) {
+
+   const form = useRef(null)
+   const TOKEN = constants.TOKEN
+   const CHAT_ID = constants.CHAT_ID
+   const URL = constants.URL
+   // const secondInputRef = useRef();
+
    let secondInputType;
    let secondInputValidation;
    let secondInputText;
    let backButton;
    let backText;
    let minLength;
-   // const secondInputRef = useRef();
+   let formData;
+
+
 
    switch (contacts) {
       case 'phone': backButton = <Phone />; backText = 'Звонок'; break;
@@ -29,9 +35,7 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
       case 'email': backButton = <Email />; backText = 'E-mail'; break;
       case 'Vkontacte': backButton = <Whatsapp />; backText = 'Whats App'; break;
       default: backButton = <Phone />;
-
    }
-
    if (contacts === 'email') {
       secondInputType = 'email';
       secondInputText = 'E-mail';
@@ -41,16 +45,8 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
       secondInputType = 'tel';
       secondInputText = 'Телефон';
       secondInputValidation = phoneValidation;
-      minLength = 18; // Почему то не раотает
+      minLength = 18; //
    }
-
-   const form = useRef(null)
-   let formData;
-
-   const TOKEN = constants.TOKEN
-   const CHAT_ID = constants.CHAT_ID
-   const URL = constants.URL
-
 
    function sendForm(e) {
       let message = '';
@@ -71,15 +67,9 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
             setContact(1)
          }, 800)
       } else {
-       
          formValidationIncorrect(form.current)
       }
-
-
-
    }
-
-
 
    return (
       <div className="contact-form__second-screen">
@@ -90,7 +80,6 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
          </button>
          <div className="contact-form__inner">
             <p>Заполните Ваши данные</p>
-
             <form ref={form} className="contact-form__form" id='contact-form__form'>
                <OrderInput name="name" form="contact-form__form" type='text' placeholder='Имя' autofocus={true} />
                <OrderInput name="contact" form="contact-form__form"
@@ -98,11 +87,8 @@ export default function ContactFormSecondScreen({ contacts, setContact }) {
                   placeholder={secondInputText}
                   validation={secondInputValidation}
                   minLength={minLength}
-
                />
                <OrderButton type='submit' text='Отправить' link='' form="contact-form__form" onClick={sendForm} />
-
-
             </form>
          </div>
 

@@ -10,27 +10,25 @@ export default function OrderProduct(props) {
    const [ordered, setOrdered] = useState(true)
    const [amount, setAmount] = useState(parseInt(JSON.parse(sessionStorage.getItem(`order-${props.id}`))?.amount))
    const [amountChange, setAmountChange] = useState(0)
+
    let allPrice = 0;
-let item = JSON.parse(sessionStorage.getItem(`order-${props.id}`));
+   let item = JSON.parse(sessionStorage.getItem(`order-${props.id}`));
 
 
    useEffect(() => {
-
-     
-      
-     item.amount = amount;
+      item.amount = amount;
       sessionStorage.setItem(`order-${props.id}`, JSON.stringify(item))
-     
+
       for (let i = 0; i < sessionStorage.length; i++) {
          if (sessionStorage.key(i).slice(0, 5) === "order") {
             let item = JSON.parse(sessionStorage.getItem(sessionStorage.key(i)))
-           
+
             allPrice += item.price * item.amount
          }
       }
 
-
       props.setFullPrice(allPrice)
+
    }, [amount])
 
    function delFromStorage() {
@@ -48,7 +46,7 @@ let item = JSON.parse(sessionStorage.getItem(`order-${props.id}`));
          <div className="table__item">
             <OrderCount setAmountChange={setAmountChange} amount={amount} setAmount={setAmount} id={props.id} />
          </div>
-         <button className='del-button' onClick={() => { setOrdered(false); props.setFullPrice(props.fullPrice - amount * props.price); delFromStorage() }} />
+         <button className='del-button' onClick={() => { setOrdered(false); props.setFullPrice(props.fullPrice + amount * props.price); delFromStorage() }} />
       </div>
    )
 }

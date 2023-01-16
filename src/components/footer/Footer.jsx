@@ -2,13 +2,8 @@ import React from 'react';
 import './footer.scss';
 import Logo from '../logo/Logo'
 import title from '../../img/title.png'
-
 import { Link } from 'react-router-dom';
-
 import Contacts from '../contacts/Contacts';
-
-
-
 
 export default function Footer({ style }) {
 

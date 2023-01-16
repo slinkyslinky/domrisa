@@ -1,13 +1,13 @@
-import React from 'react'
-import './aboutMe.scss'
-import aboutMeImg from "../../img/about/aboutme.webp"
-import icon from '../../img/svg/insta.svg'
+import React from 'react';
+import './aboutMe.scss';
+import aboutMeImg from "../../img/about/aboutme.webp";
+import icon from '../../img/svg/insta.svg';
 
 export default function AboutMe() {
    return (
       <div className='about-me'>
          <div className="about-me__img">
-            <img src={aboutMeImg} alt="photo of me" />
+            <img src={aboutMeImg} alt="Me" />
          </div>
 
          <article>

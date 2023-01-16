@@ -14,6 +14,6 @@ export const telegram = {
 }
 
 export const server = {
-   // URL: 'http://localhost:3001'
-   URL: 'https://domrisa-server.herokuapp.com'
+   URL: 'http://localhost:3001'
+   // URL: 'https://domrisa-server.herokuapp.com'
 }

@@ -11,7 +11,6 @@ export default function SliderWrapper({ imageList, hasPreview = false }) {
    }
 
    if (hasPreview) {
-
       return (
          <div className='slider-extended'>
             <Slider itemList={imageList} count={count} getCount={getCount} />
@@ -19,9 +18,6 @@ export default function SliderWrapper({ imageList, hasPreview = false }) {
          </div>
       )
    } else return (
-
       <Slider itemList={imageList} count={count} getCount={getCount} />
-
-
    )
 }

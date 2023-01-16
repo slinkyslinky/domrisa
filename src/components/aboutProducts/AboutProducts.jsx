@@ -6,21 +6,18 @@ import img2 from '../../img/py4u3x9Z--Y.jpg'
 
 export default function AboutProducts() {
 
-   let displayRight, displayLeft;
-
+   const [count, setCount] = useState(0);
    const imageList = [
       { id: 1, img: img1, alt: 'Image of the product' },
       { id: 2, img: img2, alt: 'Image of the product' },
       { id: 3, img: '', alt: 'Image of the product' },
-   ]
-
-   const [count, setCount] = useState(0)
+   ];
+   let displayRight, displayLeft;
 
    function countInfinite() {
       if (count <= imageList.length - 2) {
          setCount(count + 1)
       } else setCount(0)
-
    }
 
    if (count === 0) {
@@ -37,13 +34,12 @@ export default function AboutProducts() {
             <div className="slider__content" id='sliderContent' style={{ left: "-" + (count * 600) + 'px' }} >
                {imageList.map(image => <img key={image.id} src={image.img} alt={image.alt} />)}
             </div>
-
          </div>
 
          <Arrow arrowType='arrow--right' display={displayRight} count={count} onClick={setCount} />
          <Arrow arrowType='arrow--left' display={displayLeft} count={count} onClick={setCount} />
       </div>
-   )
-}
+   );
+};
 
 

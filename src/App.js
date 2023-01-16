@@ -12,45 +12,32 @@ import ContactFormScreen from "./components/contactFormScreen/ContactFormScreen"
 import Footer from "./components/footer/Footer";
 import { server } from "./variables/variables";
 
-
-
 function App() {
 
-   // window.onresize = (e) => { e.preventDefault() }
    const [shopList, setShopList] = useState([])
    const [isFullfield, setIsFullfield] = useState(false)
 
-
-   useEffect(()=> {
+   useEffect(() => {
       fetch(server.URL + '/data/products')
-      .then(response => response.json())
-      .then(response => {setShopList(response); setIsFullfield(true)})
-      
+         .then(response => response.json())
+         .then(response => { setShopList(response); setIsFullfield(true) })
    }, [])
 
    return (
-
-
       <BrowserRouter>
          <Nav />
          <Routes>
-           
             <Route path='/' element={<Main />} />
             <Route path='/contactform/' element={<ContactFormScreen />} />
-            <Route path='/shop/' element={<Shop shopList={shopList} isFullfield={isFullfield}/>} />
+            <Route path='/shop/' element={<Shop shopList={shopList} isFullfield={isFullfield} />} />
             <Route path='/about/' element={<About />} />
             <Route path='/about/reviews' element={<Reviews />} />
             <Route path='/order/' element={<Order />} />
-            <Route path='/admin/' element={<Admin shopList={shopList}/>} />
+            <Route path='/admin/' element={<Admin shopList={shopList} />} />
 
          </Routes>
          <Footer />
       </BrowserRouter>
-
-
-
-
-
    );
 }
 

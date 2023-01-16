@@ -13,6 +13,5 @@ export default function phone() {
             </clipPath>
          </defs>
       </svg>
-
    )
 }

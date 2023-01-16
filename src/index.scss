@@ -33,7 +33,7 @@ body {
 #shop {
    min-height: 100%;
    position: relative;
-
+   overflow-x: hidden;
    .container {
       padding-top: 100px;
       padding-bottom: 170px;

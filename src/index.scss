@@ -31,9 +31,10 @@ body {
 
 
 #shop {
-   min-height: 100%;
+   min-height: 100vh;
    position: relative;
    overflow-x: hidden;
+
    .container {
       padding-top: 100px;
       padding-bottom: 170px;
